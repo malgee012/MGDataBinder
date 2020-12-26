@@ -1,24 +1,20 @@
 //
-//  MGTargetModel.m
+//  MGTargetEntity.m
 //  MGDataBinder_Example
 //
 //  Created by maling on 2020/12/25.
 //  Copyright © 2020 Maling1255. All rights reserved.
 //
 
-#import "MGTargetModel.h"
+#import "MGTargetEntity.h"
+#import "MGDataBinderManager.h"
 
-@interface MGTargetModel ()
+@interface MGTargetEntity ()
 
 @property (nonatomic, assign, getter=isChangeValue) BOOL changeValue;
 
-@property (nonatomic, copy, readonly) MGBlock;
-@property (nonatomic, copy, readonly) MGBlockObj;
-@property (nonatomic, copy, readonly) MGBlockReturnObj;
-@property (nonatomic, copy, readonly) MGBlockObjReturnObj;
-
 @end
-@implementation MGTargetModel
+@implementation MGTargetEntity
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"🔥 %@ %@ %@ %@", [self class], ({
@@ -61,11 +57,13 @@
 }
 
 - (void)setControlEvent:(UIControlEvents)controlEvent {
-    if (controlEvent < 0) {
+    if (controlEvent <= 0) {
+        _controlAction = NO;
         return;
     }
+    _controlAction = YES;
     _controlEvent = controlEvent;
-    [self.target addTarget:self action:@selector(onRespondForUIByEvents:) forControlEvents:controlEvent];
+    [self.target addTarget:[MGDataBinderManager sharedBinderManager] action:self.actionEvent forControlEvents:controlEvent];
 }
 
 - (id)handelActionBlockWithValue:(id)newValue {

@@ -1,5 +1,5 @@
 //
-//  MGTargetModel.h
+//  MGTargetEntity.h
 //  MGDataBinder_Example
 //
 //  Created by maling on 2020/12/25.
@@ -17,8 +17,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) id target;
 @property (nonatomic, copy) NSString *property;
 @property (nonatomic, strong) MGPropertyType *propertyType;
-@property (nonatomic, assign, getter=isControlAction) BOOL controlAction;
+
+@property (nonatomic, assign) SEL actionEvent;
+@property (nonatomic, assign, readonly, getter=isControlAction) BOOL controlAction;
 @property (nonatomic, assign) UIControlEvents controlEvent;
+
+@property (nonatomic, copy, readonly) MGBlock;
+@property (nonatomic, copy, readonly) MGBlockObj;
+@property (nonatomic, copy, readonly) MGBlockReturnObj;
+@property (nonatomic, copy, readonly) MGBlockObjReturnObj;
 @property (nonatomic, copy, nullable) id actionBlock;
 @property (nonatomic, assign) MGBlockType blockType;
 

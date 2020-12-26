@@ -15,6 +15,12 @@
     return [NSString stringWithFormat:@"%lx", (unsigned long)[self hash]];
 }
 
+- (void)setTargetEntity:(MGTargetEntity *)targetEntity {
+    objc_setAssociatedObject(self, @selector(targetEntity), targetEntity, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
 
+- (MGTargetEntity *)targetEntity {
+    return objc_getAssociatedObject(self, _cmd);
+}
 
 @end

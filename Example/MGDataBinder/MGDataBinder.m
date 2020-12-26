@@ -75,6 +75,39 @@
     };
 }
 
+- (MGBinderTargetEventBlock)binderTargetEventBlockSet {
+    return ^MGDataBinder * (id target, NSString *property, UIControlEvents controlEvent, void(^block)(void)) {
+        [self assertWithTarget:target property:property];
+        [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId controlEvent:controlEvent blockType:MGBlockTypeVoidVoid actionBlock:block];
+        return self;
+    };
+}
+
+- (MGBinderTargetEventBlockObj)binderTargetEventBlockObjSet {
+    return ^MGDataBinder * (id target, NSString *property, UIControlEvents controlEvent, void(^block)(id obj)) {
+        [self assertWithTarget:target property:property];
+        [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId controlEvent:controlEvent blockType:MGBlockTypeObjVoid actionBlock:block];
+        return self;
+    };
+}
+
+- (MGBinderTargetEventBlockReturnObj)binderTargetEventBlockReturnObjSet {
+    return ^MGDataBinder * (id target, NSString *property, UIControlEvents controlEvent, id(^block)(void)) {
+        [self assertWithTarget:target property:property];
+        [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId controlEvent:controlEvent blockType:MGBlockTypeVoidObj actionBlock:block];
+        return self;
+    };
+}
+
+- (MGBinderTargetEventBlockObjReturnObj)binderTargetEventBlockObjReturnObjSet {
+    return ^MGDataBinder * (id target, NSString *property, UIControlEvents controlEvent, id(^block)(id obj)) {
+        [self assertWithTarget:target property:property];
+        [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId controlEvent:controlEvent blockType:MGBlockTypeObjObj actionBlock:block];
+        return self;
+    };
+}
+
+
 - (void)assertWithTarget:(id)target property:(NSString *)property {
     NSAssert(target, @"target 不能为空");
     NSAssert(property, @"property 不能为空");

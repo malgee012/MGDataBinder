@@ -28,7 +28,7 @@
 		F871F1C0259617BE00605689 /* MGSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F1BF259617BE00605689 /* MGSliderViewController.m */; };
 		F871F1CD259618F300605689 /* MGDataBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F1CC259618F300605689 /* MGDataBinder.m */; };
 		F871F1D72596201500605689 /* MGDataBinderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F1D62596201500605689 /* MGDataBinderManager.m */; };
-		F871F1DC259620E400605689 /* MGTargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F1DB259620E400605689 /* MGTargetModel.m */; };
+		F871F1DC259620E400605689 /* MGTargetEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F1DB259620E400605689 /* MGTargetEntity.m */; };
 		F871F1E02596282200605689 /* MGSliderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F871F1DF2596282200605689 /* MGSliderViewController.storyboard */; };
 		F871F211259629A000605689 /* MGBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F210259629A000605689 /* MGBaseViewController.m */; };
 		F871F21B259629F100605689 /* MGBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F21A259629F100605689 /* MGBaseView.m */; };
@@ -86,8 +86,8 @@
 		F871F1D2259619CF00605689 /* MGDataBinderHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGDataBinderHelper.h; sourceTree = "<group>"; };
 		F871F1D52596201500605689 /* MGDataBinderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGDataBinderManager.h; sourceTree = "<group>"; };
 		F871F1D62596201500605689 /* MGDataBinderManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGDataBinderManager.m; sourceTree = "<group>"; };
-		F871F1DA259620E400605689 /* MGTargetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTargetModel.h; sourceTree = "<group>"; };
-		F871F1DB259620E400605689 /* MGTargetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTargetModel.m; sourceTree = "<group>"; };
+		F871F1DA259620E400605689 /* MGTargetEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTargetEntity.h; sourceTree = "<group>"; };
+		F871F1DB259620E400605689 /* MGTargetEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTargetEntity.m; sourceTree = "<group>"; };
 		F871F1DF2596282200605689 /* MGSliderViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MGSliderViewController.storyboard; sourceTree = "<group>"; };
 		F871F20F259629A000605689 /* MGBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGBaseViewController.h; sourceTree = "<group>"; };
 		F871F210259629A000605689 /* MGBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGBaseViewController.m; sourceTree = "<group>"; };
@@ -260,8 +260,8 @@
 				F871F1CC259618F300605689 /* MGDataBinder.m */,
 				F871F1D52596201500605689 /* MGDataBinderManager.h */,
 				F871F1D62596201500605689 /* MGDataBinderManager.m */,
-				F871F1DA259620E400605689 /* MGTargetModel.h */,
-				F871F1DB259620E400605689 /* MGTargetModel.m */,
+				F871F1DA259620E400605689 /* MGTargetEntity.h */,
+				F871F1DB259620E400605689 /* MGTargetEntity.m */,
 				F8617FA92596C55100FCE782 /* MGPropertyType.h */,
 				F8617FAA2596C55100FCE782 /* MGPropertyType.m */,
 				F871F21E259631DD00605689 /* NSObject+MGBinder.h */,
@@ -449,7 +449,7 @@
 				6003F5A7195388D20070C39A /* MGViewController.m in Sources */,
 				F871F226259643D400605689 /* MGBaseModel.m in Sources */,
 				F8617FAB2596C55100FCE782 /* MGPropertyType.m in Sources */,
-				F871F1DC259620E400605689 /* MGTargetModel.m in Sources */,
+				F871F1DC259620E400605689 /* MGTargetEntity.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				F871F220259631DD00605689 /* NSObject+MGBinder.m in Sources */,
 				F871F1D72596201500605689 /* MGDataBinderManager.m in Sources */,

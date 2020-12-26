@@ -51,6 +51,11 @@
                                     <action selector="tapStepper:" destination="Uu8-jH-AFO" eventType="valueChanged" id="KbB-p1-5An"/>
                                 </connections>
                             </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCa-z2-qP8">
+                                <rect key="frame" x="45" y="496" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="测试button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ef7-d3-4an"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -75,6 +80,7 @@
                         <outlet property="rightLbl" destination="DOL-yM-Rg3" id="ejk-1h-0Xs"/>
                         <outlet property="slider" destination="0sT-x9-dmH" id="luD-31-TCR"/>
                         <outlet property="stepper" destination="ygp-pc-m8G" id="D3d-Nu-Eii"/>
+                        <outlet property="testButton" destination="cCa-z2-qP8" id="AuJ-ED-8oZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kd4-Js-pMi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -17,12 +17,21 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 @property (weak, nonatomic) IBOutlet UIStepper *stepper;
 
+@property (weak, nonatomic) IBOutlet UIButton *testButton;
 @property (nonatomic, strong) MGBaseModel *model;
 
 
 @end
 
 @implementation MGSliderViewController
+
+- (void)clickButton1 {
+    NSLog(@"响应了事件1");
+}
+
+- (void)clickButton2 {
+    NSLog(@"响应了事件2");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,6 +44,9 @@
     
     self.slider.value = 0;
     self.slider.maximumValue = 100;
+    
+    [self.testButton addTarget:self action:@selector(clickButton1) forControlEvents:UIControlEventTouchUpInside];
+    [self.testButton addTarget:self action:@selector(clickButton1) forControlEvents:UIControlEventTouchUpInside];
     
     
     MGDataBinder *binder = [MGDataBinder new];
@@ -69,8 +81,8 @@
 //    .binderTargetSet(self.model, @"info")
 //    .binderTargetSet(self.model, @"mutableInfo")
     .binderTargetSet(self.leftLbl, binder_text)
-    .binderTargetBlockSet(self.slider, binder_value, ^{
-        NSLog(@"更新了block");
+    .binderTargetEventBlockSet(self.slider, binder_value, UIControlEventValueChanged, ^{
+        NSLog(@"外面回到更新了");
     })
     .binderTargetBlockObjReturnObjSet(self.progressView, binder_progress, ^NSNumber *(NSNumber *value) {
         float tempValue = [value floatValue];
@@ -107,6 +119,10 @@ int current = 0;
     }
     
     current = value;
+}
+
+- (void)dealloc {
+    NSLog(@"🐱🐱🐱  dealloc: %s", __func__);
 }
 
 @end

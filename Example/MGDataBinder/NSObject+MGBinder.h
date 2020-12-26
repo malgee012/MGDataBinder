@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MGDataBinderHelper.h"
+#import "MGTargetEntity.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
 @interface NSObject (MGBinder)
 
+@property (nonatomic, strong) MGTargetEntity *targetEntity;
 - (NSString *)hash_id;
 
 @end
