@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Slider View Controller-->
+        <scene sceneID="4i8-ss-d4K">
+            <objects>
+                <viewController storyboardIdentifier="MGSliderViewController" id="Uu8-jH-AFO" customClass="MGSliderViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OM7-Y3-bdt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Mu-PM-H6e">
+                                <rect key="frame" x="20" y="74" width="22" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOL-yM-Rg3">
+                                <rect key="frame" x="365" y="74" width="29" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0sT-x9-dmH">
+                                <rect key="frame" x="18" y="118.5" width="378" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QeU-oz-vgr"/>
+                                </constraints>
+                            </slider>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cJn-Yw-5Hx">
+                                <rect key="frame" x="20" y="188.5" width="374" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="5T6-kY-eIl"/>
+                                </constraints>
+                            </progressView>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ygp-pc-m8G">
+                                <rect key="frame" x="20" y="268.5" width="94" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="FIQ-1X-nyp"/>
+                                    <constraint firstAttribute="width" constant="94" id="IET-Hk-1TF"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="tapStepper:" destination="Uu8-jH-AFO" eventType="valueChanged" id="KbB-p1-5An"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ef7-d3-4an"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cJn-Yw-5Hx" firstAttribute="leading" secondItem="ef7-d3-4an" secondAttribute="leading" constant="20" id="0Lk-rf-A8y"/>
+                            <constraint firstItem="ygp-pc-m8G" firstAttribute="top" secondItem="cJn-Yw-5Hx" secondAttribute="bottom" constant="75" id="1qE-1F-4iR"/>
+                            <constraint firstItem="5Mu-PM-H6e" firstAttribute="top" secondItem="ef7-d3-4an" secondAttribute="top" constant="30" id="4ox-Ma-4lg"/>
+                            <constraint firstItem="0sT-x9-dmH" firstAttribute="top" secondItem="5Mu-PM-H6e" secondAttribute="bottom" constant="25" id="5Xv-Vr-Q4x"/>
+                            <constraint firstItem="0sT-x9-dmH" firstAttribute="leading" secondItem="ef7-d3-4an" secondAttribute="leading" constant="20" id="7b2-Ws-csR"/>
+                            <constraint firstItem="ef7-d3-4an" firstAttribute="trailing" secondItem="cJn-Yw-5Hx" secondAttribute="trailing" constant="20" id="Adu-Zx-6Qx"/>
+                            <constraint firstItem="DOL-yM-Rg3" firstAttribute="centerY" secondItem="5Mu-PM-H6e" secondAttribute="centerY" id="ZL5-lU-IqU"/>
+                            <constraint firstItem="5Mu-PM-H6e" firstAttribute="leading" secondItem="ef7-d3-4an" secondAttribute="leading" constant="20" id="bVD-wR-Oos"/>
+                            <constraint firstItem="cJn-Yw-5Hx" firstAttribute="top" secondItem="0sT-x9-dmH" secondAttribute="bottom" constant="40" id="mR2-xr-zQf"/>
+                            <constraint firstItem="ef7-d3-4an" firstAttribute="trailing" secondItem="DOL-yM-Rg3" secondAttribute="trailing" constant="20" id="nws-9W-tmn"/>
+                            <constraint firstItem="ef7-d3-4an" firstAttribute="trailing" secondItem="0sT-x9-dmH" secondAttribute="trailing" constant="20" id="yEH-he-gnV"/>
+                            <constraint firstItem="ygp-pc-m8G" firstAttribute="leading" secondItem="ef7-d3-4an" secondAttribute="leading" constant="20" id="yyY-ue-vvj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="leftLbl" destination="5Mu-PM-H6e" id="WAN-48-VK3"/>
+                        <outlet property="progressView" destination="cJn-Yw-5Hx" id="85B-K5-f0P"/>
+                        <outlet property="rightLbl" destination="DOL-yM-Rg3" id="ejk-1h-0Xs"/>
+                        <outlet property="slider" destination="0sT-x9-dmH" id="luD-31-TCR"/>
+                        <outlet property="stepper" destination="ygp-pc-m8G" id="D3d-Nu-Eii"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kd4-Js-pMi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-97.101449275362327" y="-77.008928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

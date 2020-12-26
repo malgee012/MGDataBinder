@@ -1,0 +1,6 @@
+framework module MGDataBinder {
+  umbrella header "MGDataBinder-umbrella.h"
+
+  export *
+  module * { export * }
+}

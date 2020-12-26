@@ -24,6 +24,16 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		F30FE8019C9212AD09E4C376 /* Pods_MGDataBinder_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843F5330D78F6D64E95B5DDB /* Pods_MGDataBinder_Example.framework */; };
+		F8617FAB2596C55100FCE782 /* MGPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = F8617FAA2596C55100FCE782 /* MGPropertyType.m */; };
+		F871F1C0259617BE00605689 /* MGSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F1BF259617BE00605689 /* MGSliderViewController.m */; };
+		F871F1CD259618F300605689 /* MGDataBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F1CC259618F300605689 /* MGDataBinder.m */; };
+		F871F1D72596201500605689 /* MGDataBinderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F1D62596201500605689 /* MGDataBinderManager.m */; };
+		F871F1DC259620E400605689 /* MGTargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F1DB259620E400605689 /* MGTargetModel.m */; };
+		F871F1E02596282200605689 /* MGSliderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F871F1DF2596282200605689 /* MGSliderViewController.storyboard */; };
+		F871F211259629A000605689 /* MGBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F210259629A000605689 /* MGBaseViewController.m */; };
+		F871F21B259629F100605689 /* MGBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F21A259629F100605689 /* MGBaseView.m */; };
+		F871F220259631DD00605689 /* NSObject+MGBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F21F259631DD00605689 /* NSObject+MGBinder.m */; };
+		F871F226259643D400605689 /* MGBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F225259643D400605689 /* MGBaseModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +49,7 @@
 /* Begin PBXFileReference section */
 		23A6E1DBDF4C49CCA052E788 /* Pods_MGDataBinder_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MGDataBinder_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		339BD2C0595956ECDD4953D2 /* Pods-MGDataBinder_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGDataBinder_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MGDataBinder_Tests/Pods-MGDataBinder_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		3C79FD074ADA56CBC0438DE2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		3C79FD074ADA56CBC0438DE2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		473C7A294B04151D413739EC /* Pods-MGDataBinder_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGDataBinder_Example.release.xcconfig"; path = "Target Support Files/Pods-MGDataBinder_Example/Pods-MGDataBinder_Example.release.xcconfig"; sourceTree = "<group>"; };
 		57FE532F0390364C6AD1C8A2 /* Pods-MGDataBinder_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGDataBinder_Example.debug.xcconfig"; path = "Target Support Files/Pods-MGDataBinder_Example/Pods-MGDataBinder_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* MGDataBinder_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGDataBinder_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,8 +75,28 @@
 		719DFB4F65B4D09A4B96A656 /* Pods-MGDataBinder_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGDataBinder_Tests.release.xcconfig"; path = "Target Support Files/Pods-MGDataBinder_Tests/Pods-MGDataBinder_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		843F5330D78F6D64E95B5DDB /* Pods_MGDataBinder_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MGDataBinder_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A591C0921B56D156D0326A8B /* MGDataBinder.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MGDataBinder.podspec; path = ../MGDataBinder.podspec; sourceTree = "<group>"; };
-		C433DB6F15EDF60EC1697303 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		A591C0921B56D156D0326A8B /* MGDataBinder.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MGDataBinder.podspec; path = ../MGDataBinder.podspec; sourceTree = "<group>"; };
+		C433DB6F15EDF60EC1697303 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F8617FA92596C55100FCE782 /* MGPropertyType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGPropertyType.h; sourceTree = "<group>"; };
+		F8617FAA2596C55100FCE782 /* MGPropertyType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGPropertyType.m; sourceTree = "<group>"; };
+		F871F1BE259617BE00605689 /* MGSliderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGSliderViewController.h; sourceTree = "<group>"; };
+		F871F1BF259617BE00605689 /* MGSliderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGSliderViewController.m; sourceTree = "<group>"; };
+		F871F1CB259618F300605689 /* MGDataBinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGDataBinder.h; sourceTree = "<group>"; };
+		F871F1CC259618F300605689 /* MGDataBinder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGDataBinder.m; sourceTree = "<group>"; };
+		F871F1D2259619CF00605689 /* MGDataBinderHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGDataBinderHelper.h; sourceTree = "<group>"; };
+		F871F1D52596201500605689 /* MGDataBinderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGDataBinderManager.h; sourceTree = "<group>"; };
+		F871F1D62596201500605689 /* MGDataBinderManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGDataBinderManager.m; sourceTree = "<group>"; };
+		F871F1DA259620E400605689 /* MGTargetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTargetModel.h; sourceTree = "<group>"; };
+		F871F1DB259620E400605689 /* MGTargetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTargetModel.m; sourceTree = "<group>"; };
+		F871F1DF2596282200605689 /* MGSliderViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MGSliderViewController.storyboard; sourceTree = "<group>"; };
+		F871F20F259629A000605689 /* MGBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGBaseViewController.h; sourceTree = "<group>"; };
+		F871F210259629A000605689 /* MGBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGBaseViewController.m; sourceTree = "<group>"; };
+		F871F219259629F100605689 /* MGBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGBaseView.h; sourceTree = "<group>"; };
+		F871F21A259629F100605689 /* MGBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGBaseView.m; sourceTree = "<group>"; };
+		F871F21E259631DD00605689 /* NSObject+MGBinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MGBinder.h"; sourceTree = "<group>"; };
+		F871F21F259631DD00605689 /* NSObject+MGBinder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MGBinder.m"; sourceTree = "<group>"; };
+		F871F224259643D400605689 /* MGBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGBaseModel.h; sourceTree = "<group>"; };
+		F871F225259643D400605689 /* MGBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGBaseModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +167,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* MGViewController.h */,
 				6003F5A6195388D20070C39A /* MGViewController.m */,
+				F871F1CA2596189C00605689 /* MGBinderLibs */,
+				F871F1BA2595E92000605689 /* New Group */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -193,8 +225,49 @@
 				339BD2C0595956ECDD4953D2 /* Pods-MGDataBinder_Tests.debug.xcconfig */,
 				719DFB4F65B4D09A4B96A656 /* Pods-MGDataBinder_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F871F1BA2595E92000605689 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				F871F20F259629A000605689 /* MGBaseViewController.h */,
+				F871F210259629A000605689 /* MGBaseViewController.m */,
+				F871F219259629F100605689 /* MGBaseView.h */,
+				F871F21A259629F100605689 /* MGBaseView.m */,
+				F871F224259643D400605689 /* MGBaseModel.h */,
+				F871F225259643D400605689 /* MGBaseModel.m */,
+				F871F1BD2596179400605689 /* UISlider */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		F871F1BD2596179400605689 /* UISlider */ = {
+			isa = PBXGroup;
+			children = (
+				F871F1BE259617BE00605689 /* MGSliderViewController.h */,
+				F871F1BF259617BE00605689 /* MGSliderViewController.m */,
+				F871F1DF2596282200605689 /* MGSliderViewController.storyboard */,
+			);
+			name = UISlider;
+			sourceTree = "<group>";
+		};
+		F871F1CA2596189C00605689 /* MGBinderLibs */ = {
+			isa = PBXGroup;
+			children = (
+				F871F1D2259619CF00605689 /* MGDataBinderHelper.h */,
+				F871F1CB259618F300605689 /* MGDataBinder.h */,
+				F871F1CC259618F300605689 /* MGDataBinder.m */,
+				F871F1D52596201500605689 /* MGDataBinderManager.h */,
+				F871F1D62596201500605689 /* MGDataBinderManager.m */,
+				F871F1DA259620E400605689 /* MGTargetModel.h */,
+				F871F1DB259620E400605689 /* MGTargetModel.m */,
+				F8617FA92596C55100FCE782 /* MGPropertyType.h */,
+				F8617FAA2596C55100FCE782 /* MGPropertyType.m */,
+				F871F21E259631DD00605689 /* NSObject+MGBinder.h */,
+				F871F21F259631DD00605689 /* NSObject+MGBinder.m */,
+			);
+			name = MGBinderLibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +321,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Maling1255;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = SAD9GVSU92;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +334,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -279,6 +356,7 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				F871F1E02596282200605689 /* MGSliderViewController.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -365,8 +443,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* MGAppDelegate.m in Sources */,
+				F871F1C0259617BE00605689 /* MGSliderViewController.m in Sources */,
+				F871F1CD259618F300605689 /* MGDataBinder.m in Sources */,
+				F871F21B259629F100605689 /* MGBaseView.m in Sources */,
 				6003F5A7195388D20070C39A /* MGViewController.m in Sources */,
+				F871F226259643D400605689 /* MGBaseModel.m in Sources */,
+				F8617FAB2596C55100FCE782 /* MGPropertyType.m in Sources */,
+				F871F1DC259620E400605689 /* MGTargetModel.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				F871F220259631DD00605689 /* NSObject+MGBinder.m in Sources */,
+				F871F1D72596201500605689 /* MGDataBinderManager.m in Sources */,
+				F871F211259629A000605689 /* MGBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +581,7 @@
 			baseConfigurationReference = 57FE532F0390364C6AD1C8A2 /* Pods-MGDataBinder_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SAD9GVSU92;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MGDataBinder/MGDataBinder-Prefix.pch";
 				INFOPLIST_FILE = "MGDataBinder/MGDataBinder-Info.plist";
@@ -510,6 +598,7 @@
 			baseConfigurationReference = 473C7A294B04151D413739EC /* Pods-MGDataBinder_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SAD9GVSU92;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MGDataBinder/MGDataBinder-Prefix.pch";
 				INFOPLIST_FILE = "MGDataBinder/MGDataBinder-Info.plist";
