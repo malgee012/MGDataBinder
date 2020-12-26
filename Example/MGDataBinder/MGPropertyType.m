@@ -51,19 +51,19 @@ NSString *const MGPropertyTypeMethod = @"^{objc_method=}";
 //
 //    NSString *str = @(property_getName(property));
     
-    NSLog(@";;;;;;;;   %@  %s   %@ ", propertyName, property_attr, code);
+//    NSLog(@";;;;;;;;   %@  %s   %@ ", propertyName, property_attr, code);
     
-    const char *attrsChar = property_getAttributes(property);
-    NSString *attrs = [NSString stringWithFormat:@"%s", attrsChar];
-    NSUInteger dotLoc = [attrs rangeOfString:@","].location;
-    NSString *code1 = nil;
-    NSUInteger loc = 1;
-    if (dotLoc == NSNotFound) { // 没有,
-        code1 = [attrs substringFromIndex:loc];
-    } else {
-        code1 = [attrs substringWithRange:NSMakeRange(loc, dotLoc - loc)];
-    }
-    NSLog(@"... MJcode: %@   %@", code1, attrs);
+//    const char *attrsChar = property_getAttributes(property);
+//    NSString *attrs = [NSString stringWithFormat:@"%s", attrsChar];
+//    NSUInteger dotLoc = [attrs rangeOfString:@","].location;
+//    NSString *code1 = nil;
+//    NSUInteger loc = 1;
+//    if (dotLoc == NSNotFound) { // 没有,
+//        code1 = [attrs substringFromIndex:loc];
+//    } else {
+//        code1 = [attrs substringWithRange:NSMakeRange(loc, dotLoc - loc)];
+//    }
+//    NSLog(@"... MJcode: %@   %@", code1, attrs);
     
     
     MGPropertyType *propertyType = [[MGPropertyType alloc] init];

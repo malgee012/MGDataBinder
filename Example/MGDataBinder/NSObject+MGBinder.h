@@ -14,7 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSObject (MGBinder)
 
 - (NSString *)hash_id;
-//- (MGPropertyType)getPropertyTypeWithProperty:(NSString *)property;
 
 @end
 

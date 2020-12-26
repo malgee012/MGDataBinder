@@ -12,6 +12,10 @@
 
 @property (nonatomic, assign, getter=isChangeValue) BOOL changeValue;
 
+@property (nonatomic, copy, readonly) MGBlock;
+@property (nonatomic, copy, readonly) MGBlockObj;
+@property (nonatomic, copy, readonly) MGBlockReturnObj;
+@property (nonatomic, copy, readonly) MGBlockObjReturnObj;
 
 @end
 @implementation MGTargetModel
@@ -31,14 +35,73 @@
     return self.isChangeValue;
 }
 
+- (void)setBlockType:(MGBlockType)blockType {
+    _blockType = blockType;
+    switch (blockType) {
+        case MGBlockTypeVoidVoid:
+            _block1 = self.actionBlock;
+            break;
+        case MGBlockTypeVoidObj:
+            _block3 = self.actionBlock;
+            break;
+        case MGBlockTypeObjVoid:
+            _block2 = self.actionBlock;
+            break;
+        case MGBlockTypeObjObj:
+            _block4 = self.actionBlock;
+            break;
+        default: {
+            _block1 = nil;
+            _block2 = nil;
+            _block3 = nil;
+            _block4 = nil;
+        }
+            break;
+    }
+}
+
+- (void)setControlEvent:(UIControlEvents)controlEvent {
+    if (controlEvent < 0) {
+        return;
+    }
+    _controlEvent = controlEvent;
+    [self.target addTarget:self action:@selector(onRespondForUIByEvents:) forControlEvents:controlEvent];
+}
+
+- (id)handelActionBlockWithValue:(id)newValue {
+    if (self.blockType == MGBlockTypeVoidVoid) {
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            self.block1();
+        });
+    } else if (self.blockType == MGBlockTypeVoidObj) {
+        return self.block3();
+    } else if (self.blockType == MGBlockTypeObjVoid) {
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            self.block2(newValue);
+        });
+    } else if (self.blockType == MGBlockTypeObjObj) {
+        return self.block4(newValue);
+    }
+    return newValue;
+}
+
 - (void)setValue:(id)value {
+    
+    value = [self handelActionBlockWithValue:value];
     if (self.propertyType.isKVCDisabled || value == nil) return;
+    
     self.changeValue = YES;
     
-    NSLog(@"--------------------------------------------------------------------- %@  %@\n", value, [value class]);
+//    NSLog(@"************************************************ %@  %@", value, [value class]);
     if (self.propertyType.isNumberType) {
         value = [self wrapNumberValue:value];
+    } else if ([value isKindOfClass:[NSNumber class]]) {
+        value = [NSString stringWithFormat:@"%@", value];
     }
+    
+//    NSLog(@"------------------------------------------------ %@  %@  %@  %@ ", value, [value class], self.target, self.property);
+//    NSLog(@"\n");
+    
     [self.target setValue:value forKey:self.property];
 }
 

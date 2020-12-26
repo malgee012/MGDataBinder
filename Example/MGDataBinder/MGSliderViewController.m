@@ -36,38 +36,47 @@
     self.slider.value = 0;
     self.slider.maximumValue = 100;
     
-    MGDataBinder *binder = [MGDataBinder binder];
+    
+    MGDataBinder *binder = [MGDataBinder new];
     NSLog(@":: %@", binder.bindId);
     
     binder
     .binderTargetSet(self.model, @"identification")
     
-//    .binderTargetSet(self.slider, binder_value)
 //    .binderTargetSet(self.model, @"myBlock")
 //    .binderTargetSet(self.model, @"delegate")
 //    .binderTargetSet(self.model, @"isChange")
 //    .binderTargetSet(self.model, @"selecter")
-    .binderTargetSet(self.model, @"int_age")
-    .binderTargetSet(self.model, @"unsigned_int_age")
-    .binderTargetSet(self.model, @"short_age")
-    .binderTargetSet(self.model, @"unsigned_short_age")
-    .binderTargetSet(self.model, @"long_age")
-//    .binderTargetSet(self.model, @"unsigned_long_age")
-    .binderTargetSet(self.model, @"long_long_age")
-    .binderTargetSet(self.model, @"unsigned_long_long_age")
-    .binderTargetSet(self.model, @"float_age")
-    .binderTargetSet(self.model, @"double_age")
-    .binderTargetSet(self.model, @"BOOL_age1")
-    .binderTargetSet(self.model, @"BOOL_age")
-    .binderTargetSet(self.model, @"integer_age")
-    .binderTargetSet(self.model, @"uinteger_age")
+    
+//    .binderTargetSet(self.model, @"int_age")
+//    .binderTargetSet(self.model, @"unsigned_int_age")
+//    .binderTargetSet(self.model, @"short_age")
+//    .binderTargetSet(self.model, @"unsigned_short_age")
+//    .binderTargetSet(self.model, @"long_age")
+//    .binderTargetSet(self.model, @"long_long_age")
+//    .binderTargetSet(self.model, @"unsigned_long_long_age")
+//    .binderTargetSet(self.model, @"float_age")
+//    .binderTargetSet(self.model, @"double_age")
+//    .binderTargetSet(self.model, @"BOOL_age1")
+//    .binderTargetSet(self.model, @"BOOL_age")
+//    .binderTargetSet(self.model, @"integer_age")
+//    .binderTargetSet(self.model, @"uinteger_age")
+//    .binderTargetSet(self.model, @"array")
+    
     
 //    .binderTargetSet(self.model, @"array")
 //    .binderTargetSet(self.model, @"mutableArray")
 //    .binderTargetSet(self.model, @"info")
 //    .binderTargetSet(self.model, @"mutableInfo")
-//    .binderTargetSet(self.leftLbl, binder_text)
-//    .binderTargetSet(self.progressView, binder_progress)
+    .binderTargetSet(self.leftLbl, binder_text)
+    .binderTargetBlockSet(self.slider, binder_value, ^{
+        NSLog(@"更新了block");
+    })
+    .binderTargetBlockObjReturnObjSet(self.progressView, binder_progress, ^NSNumber *(NSNumber *value) {
+        float tempValue = [value floatValue];
+        tempValue = tempValue / 100.f;
+        return @(tempValue);
+    })
     ;
     
 }
@@ -87,9 +96,14 @@ int current = 0;
         
         self.model.identification = [NSString stringWithFormat:@"%d", value];
     } else {
-        NSLog(@"------ %d", value);
-        
-        self.model.int_age = _count++;
+        self.model.identification = [NSString stringWithFormat:@"%d", ({
+            int temp = value;
+            if (value <= 0) {
+                temp = 50;
+            }
+            temp;
+        })];
+    
     }
     
     current = value;

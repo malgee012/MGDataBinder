@@ -36,17 +36,33 @@
 }
 
 - (MGBinderTargetBlock)binderTargetBlockSet {
-    return ^MGDataBinder * (id target, NSString *property, void(^block)(id obj)) {
+    return ^MGDataBinder * (id target, NSString *property, void(^block)(void)) {
         [self assertWithTarget:target property:property];
-        [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId block:block];
+        [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId blockType:MGBlockTypeVoidVoid actionBlock:block];
         return self;
     };
 }
 
-- (MGBinderTargetBlockReturn)binderTargetBlockReturnSet {
+- (MGBinderTargetBlockObj)binderTargetBlockObjSet {
+    return ^MGDataBinder * (id target, NSString *property, void(^block)(id obj)) {
+        [self assertWithTarget:target property:property];
+        [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId blockType:MGBlockTypeObjVoid actionBlock:block];
+        return self;
+    };
+}
+
+- (MGBinderTargetBlockReturnObj)binderTargetBlockReturnObjSet {
+    return ^MGDataBinder * (id target, NSString *property, id(^block)(void)) {
+        [self assertWithTarget:target property:property];
+        [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId blockType:MGBlockTypeVoidObj actionBlock:block];
+        return self;
+    };
+}
+
+- (MGBinderTargetBlockObjReturnObj)binderTargetBlockObjReturnObjSet {
     return ^MGDataBinder * (id target, NSString *property, id(^block)(id obj)) {
         [self assertWithTarget:target property:property];
-        [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId returnBlock:block];
+        [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId blockType:MGBlockTypeObjObj actionBlock:block];
         return self;
     };
 }

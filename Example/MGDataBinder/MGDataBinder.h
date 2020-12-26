@@ -22,11 +22,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) MGBinderTarget binderTargetSet;
 
 @property (nonatomic, copy, readonly) MGBinderTargetBlock binderTargetBlockSet;
-
-@property (nonatomic, copy, readonly) MGBinderTargetBlockReturn binderTargetBlockReturnSet;
+@property (nonatomic, copy, readonly) MGBinderTargetBlockObj binderTargetBlockObjSet;
+@property (nonatomic, copy, readonly) MGBinderTargetBlockReturnObj binderTargetBlockReturnObjSet;
+@property (nonatomic, copy, readonly) MGBinderTargetBlockObjReturnObj binderTargetBlockObjReturnObjSet;
 
 @property (nonatomic, copy, readonly) MGBinderTargetEvent binderTargetEventSet;
+@property (nonatomic, copy, readonly) MGBinderTargetEventBlock binderTargetEventBlockSet;
+@property (nonatomic, copy, readonly) MGBinderTargetEventBlockObj binderTargetEventBlockObjSet;
+@property (nonatomic, copy, readonly) MGBinderTargetEventBlockReturnObj binderTargetEventBlockReturnObjSet;
+@property (nonatomic, copy, readonly) MGBinderTargetEventBlockObjReturnObj binderTargetEventBlockObjReturnObjSet;
 
 @end
 
 NS_ASSUME_NONNULL_END
+

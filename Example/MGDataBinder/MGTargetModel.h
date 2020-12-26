@@ -17,12 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) id target;
 @property (nonatomic, copy) NSString *property;
 @property (nonatomic, strong) MGPropertyType *propertyType;
+@property (nonatomic, assign, getter=isControlAction) BOOL controlAction;
 @property (nonatomic, assign) UIControlEvents controlEvent;
-@property (nonatomic, copy) void(^ _Nullable actionBlock)(id _Nullable obj);
-@property (nonatomic, copy) id _Nullable (^ _Nullable actionReturnBlock)(id _Nullable obj);
+@property (nonatomic, copy, nullable) id actionBlock;
+@property (nonatomic, assign) MGBlockType blockType;
 
 - (BOOL)didChangeValue;
-
 - (void)setValue:(id)value;
 
 @end

@@ -39,16 +39,17 @@
     [self bindTarget:target property:property bindId:bindId controlEvent:-1];
 }
 
-- (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId block:(void(^_Nullable)(id _Nullable obj))actionBlock {
-    
-}
-
-- (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId returnBlock:(id(^_Nullable)(id _Nullable obj))actionReturnBlock {
-    
+- (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId blockType:(MGBlockType)blockType actionBlock:(id)actionBlock {
+    MGTargetModel *targetModel = [self getTargetModelWidthTarget:target property:property bindId:bindId controlEvent:-1 blockType:blockType actionBlock:actionBlock];
+    [self bindTargetModel:targetModel];
 }
 
 - (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId controlEvent:(UIControlEvents)controlEvent {
-    MGTargetModel *targetModel = [self getTargetModelWidthTarget:target property:property bindId:bindId controlEvent:controlEvent block:nil returnBlock:nil];
+    [self bindTarget:target property:property bindId:bindId controlEvent:controlEvent blockType:MGBlockTypeNone actionBlock:nil];
+}
+
+- (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId controlEvent:(UIControlEvents)controlEvent blockType:(MGBlockType)blockType actionBlock:(id)actionBlock {
+    MGTargetModel *targetModel = [self getTargetModelWidthTarget:target property:property bindId:bindId controlEvent:controlEvent blockType:MGBlockTypeNone actionBlock:nil];
     [self bindTargetModel:targetModel];
 }
 
@@ -58,7 +59,6 @@
     if (!targetModel) {
         return;
     }
-    
     [targetModel.target addObserver:self forKeyPath:targetModel.property options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:(__bridge void * _Nullable)targetModel];
 }
 
@@ -71,6 +71,7 @@
     id oldValue = change[NSKeyValueChangeOldKey];
     id newValue = change[NSKeyValueChangeNewKey];
     
+    NSLog(@"\n------------------------------------------------------------------------------------------------------------------------------------------\n");
     NSLog(@"oldValue: %@  type: %@", oldValue, [oldValue class]);
     NSLog(@"newValue: %@  type: %@", newValue, [newValue class]);
     
@@ -86,11 +87,10 @@
     NSMutableArray <MGTargetModel *>*modelsArray = [self getTargetModelArrayWithBindId:targetModel.bindId];
     
     for (MGTargetModel *model in modelsArray) {
-        
-        
+    
         [model setValue:newValue];
         
-        NSLog(@"::: %@", model);
+        NSLog(@"::: %@ ", model);
     }
     
     [modelsArray setValue:@(NO) forKeyPath:@"changeValue"];
@@ -108,8 +108,8 @@
                                     property:(NSString *)property
                                       bindId:(NSString *)bindId
                                 controlEvent:(UIControlEvents)controlEvent
-                                       block:(void(^_Nullable)(id _Nullable obj))actionBlock
-                                 returnBlock:(id(^_Nullable)(id _Nullable obj))actionReturnBlock {
+                                   blockType:(MGBlockType)blockType
+                                 actionBlock:(id _Nullable)actionBlock {
 
     NSMutableArray <MGTargetModel *>*modelsArray = [self getTargetModelArrayWithBindId:bindId];
     NSString *signId = [self getSignIdWithTarget:target property:property bindId:bindId];
@@ -126,9 +126,8 @@
     targetModel.propertyType = [MGPropertyType getPropertyTypeWithTarget:target property:property];
     targetModel.controlEvent = controlEvent;
     targetModel.actionBlock = actionBlock;
-    targetModel.actionReturnBlock = actionReturnBlock;
+    targetModel.blockType = blockType;
     [modelsArray addObject:targetModel];
-    
     return targetModel;
 }
 

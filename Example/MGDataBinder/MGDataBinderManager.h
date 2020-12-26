@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MGDataBinderHelper.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,9 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedBinderManager;
 - (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId;
-- (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId block:(void(^_Nullable)(id _Nullable obj))actionBlock;
-- (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId returnBlock:(id(^_Nullable)(id _Nullable obj))actionBlock;
+- (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId blockType:(MGBlockType)blockType actionBlock:(nullable id)actionBlock;
+
 - (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId controlEvent:(UIControlEvents)controlEvent;
+- (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId controlEvent:(UIControlEvents)controlEvent blockType:(MGBlockType)blockType actionBlock:(nullable id)actionBlock;
 
 @end
 
