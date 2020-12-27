@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MGPerson.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -38,6 +39,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSMutableArray *mutableArray;
 @property (nonatomic, strong) NSDictionary *info;
 @property (nonatomic, strong) NSMutableDictionary *mutableInfo;
+
+@property (nonatomic, strong) MGPerson *person;
 
 @end
 

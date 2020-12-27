@@ -10,16 +10,16 @@
 #import "MGDataBinderHelper.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
+@class MGTargetEntity;
 @interface MGDataBinderManager : NSObject
 
 + (instancetype)sharedBinderManager;
 - (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId;
 - (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId blockType:(MGBlockType)blockType actionBlock:(nullable id)actionBlock;
-
 - (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId controlEvent:(UIControlEvents)controlEvent;
 - (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId controlEvent:(UIControlEvents)controlEvent blockType:(MGBlockType)blockType actionBlock:(nullable id)actionBlock;
 
+- (void)updateValue:(id)newValue withTargetEntity:(MGTargetEntity *)targetEntity;
 @end
 
 NS_ASSUME_NONNULL_END

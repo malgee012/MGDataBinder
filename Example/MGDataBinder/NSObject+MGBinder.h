@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface NSObject (MGBinder)
 
-@property (nonatomic, strong) MGTargetEntity *targetEntity;
+@property (nonatomic, weak) MGTargetEntity *targetEntity;
 - (NSString *)hash_id;
 
 @end

@@ -14,7 +14,7 @@
 
 @interface MGDataBinderManager ()
 
-@property(nonatomic, strong) NSMutableDictionary<NSString *, NSMutableArray<MGTargetEntity *>*> *binderTargetModelsHashMap;
+@property(nonatomic, strong) NSMutableDictionary<NSString *, NSMutableArray<MGTargetEntity *>*> *binderTargetEntitysHashMap;
 
 @end
 
@@ -97,30 +97,9 @@
 }
 
 - (BOOL)compare:(id)value another:(id)anotherValue {
-    
-
     return [value isEqual:anotherValue];
 }
 
-- (void)binderActionEvent:(id)target {
-    NSObject *targetObj = (NSObject *)target;
-    MGTargetEntity *targetEntity = targetObj.targetEntity;
-    
-    NSLog(@"UI控件响应： %@  %@", target, targetEntity);
-    if (targetEntity.blockType == MGBlockTypeVoidVoid) {
-        dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            targetEntity.block1();
-        });
-    } else if (targetEntity.blockType == MGBlockTypeVoidObj) {
-        targetEntity.block3();
-    } else if (targetEntity.blockType == MGBlockTypeObjVoid) {
-        dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            targetEntity.block2(@(-1));
-        });
-    } else if (targetEntity.blockType == MGBlockTypeObjObj) {
-        targetEntity.block4(@(-2));
-    }
-}
 
 #pragma mark - Private Method
 
@@ -146,7 +125,6 @@
     targetEntity.propertyType = [MGPropertyType getPropertyTypeWithTarget:target property:property];
     targetEntity.actionBlock = actionBlock;
     targetEntity.blockType = blockType;
-    targetEntity.actionEvent = @selector(binderActionEvent:);
     targetEntity.controlEvent = controlEvent;
     ((NSObject *)targetEntity.target).targetEntity = targetEntity;
     [modelsArray addObject:targetEntity];
@@ -155,10 +133,10 @@
 
 
 - (NSMutableArray <MGTargetEntity *>*)getTargetModelArrayWithBindId:(NSString *)bindId {
-    NSMutableArray <MGTargetEntity *>*modelsArray = self.binderTargetModelsHashMap[bindId];
+    NSMutableArray <MGTargetEntity *>*modelsArray = self.binderTargetEntitysHashMap[bindId];
     if (!modelsArray) {
         modelsArray = [[NSMutableArray array] init];
-        self.binderTargetModelsHashMap[bindId] = modelsArray;
+        self.binderTargetEntitysHashMap[bindId] = modelsArray;
     }
     return modelsArray;
 }
@@ -169,12 +147,18 @@
 
 #define mark - Setter & Getter
 
-- (NSMutableDictionary<NSString *, NSMutableArray<MGTargetEntity *>*>*)binderTargetModelsHashMap {
-    if (!_binderTargetModelsHashMap) {
-        _binderTargetModelsHashMap = [[NSMutableDictionary alloc] init];
+- (NSMutableDictionary<NSString *, NSMutableArray<MGTargetEntity *>*>*)binderTargetEntitysHashMap {
+    if (!_binderTargetEntitysHashMap) {
+        _binderTargetEntitysHashMap = [[NSMutableDictionary alloc] init];
     }
-    return _binderTargetModelsHashMap;;
+    return _binderTargetEntitysHashMap;;
 }
 
+
+- (void)dealloc {
+    
+    // [targetEntity.target addObserver:self forKeyPath:targetEntity.property options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:(__bridge void * _Nullable)targetEntity];
+//     [targetEntity.target removeObserver:self forKeyPath:targetEntity.property context:(__bridge void * _Nullable)targetEntity];
+}
 
 @end

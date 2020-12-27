@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy, readonly) NSString *bindId;
 @property (nonatomic, copy, readonly) NSString *signId;
+@property(nonatomic, weak) id observer;
 @property (nonatomic, strong) id target;
 @property (nonatomic, copy) NSString *property;
 @property (nonatomic, strong) MGPropertyType *propertyType;
@@ -22,10 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly, getter=isControlAction) BOOL controlAction;
 @property (nonatomic, assign) UIControlEvents controlEvent;
 
-@property (nonatomic, copy, readonly) MGBlock;
-@property (nonatomic, copy, readonly) MGBlockObj;
-@property (nonatomic, copy, readonly) MGBlockReturnObj;
-@property (nonatomic, copy, readonly) MGBlockObjReturnObj;
 @property (nonatomic, copy, nullable) id actionBlock;
 @property (nonatomic, assign) MGBlockType blockType;
 

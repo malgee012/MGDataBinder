@@ -19,18 +19,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 #define mark - 绑定
 
-@property (nonatomic, copy, readonly) MGBinderTarget binderTargetSet;
+@property (nonatomic, copy, readonly) MGBind bindSet;
 
-@property (nonatomic, copy, readonly) MGBinderTargetBlock binderTargetBlockSet;
-@property (nonatomic, copy, readonly) MGBinderTargetBlockObj binderTargetBlockObjSet;
-@property (nonatomic, copy, readonly) MGBinderTargetBlockReturnObj binderTargetBlockReturnObjSet;
-@property (nonatomic, copy, readonly) MGBinderTargetBlockObjReturnObj binderTargetBlockObjReturnObjSet;
+@property (nonatomic, copy, readonly) MGBindBlock bindBlockSet;
+@property (nonatomic, copy, readonly) MGBindBlockObj bindBlockObjSet;
+@property (nonatomic, copy, readonly) MGBindBlockReturnObj bindBlockReturnObjSet;
+@property (nonatomic, copy, readonly) MGBindBlockObjReturnObj bindBlockObjReturnObjSet;
 
-@property (nonatomic, copy, readonly) MGBinderTargetEvent binderTargetEventSet;
-@property (nonatomic, copy, readonly) MGBinderTargetEventBlock binderTargetEventBlockSet;
-@property (nonatomic, copy, readonly) MGBinderTargetEventBlockObj binderTargetEventBlockObjSet;
-@property (nonatomic, copy, readonly) MGBinderTargetEventBlockReturnObj binderTargetEventBlockReturnObjSet;
-@property (nonatomic, copy, readonly) MGBinderTargetEventBlockObjReturnObj binderTargetEventBlockObjReturnObjSet;
+@property (nonatomic, copy, readonly) MGBindEvent bindEventSet;
+@property (nonatomic, copy, readonly) MGBindEventBlock bindEventBlockSet;
+@property (nonatomic, copy, readonly) MGBindEventBlockObj bindEventBlockObjSet;
+@property (nonatomic, copy, readonly) MGBindEventBlockReturnObj bindEventBlockReturnObjSet;
+@property (nonatomic, copy, readonly) MGBindEventBlockObjReturnObj bindEventBlockObjReturnObjSet;
 
 @end
 

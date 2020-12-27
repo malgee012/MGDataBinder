@@ -37,6 +37,7 @@
     [super viewDidLoad];
     
     self.model = [MGBaseModel new];
+    self.model.person = [MGPerson new];
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.leftLbl.text = @"123";
@@ -49,42 +50,47 @@
     [self.testButton addTarget:self action:@selector(clickButton1) forControlEvents:UIControlEventTouchUpInside];
     
     
+    __weak typeof(self)weakSelf = self;
     MGDataBinder *binder = [MGDataBinder new];
     NSLog(@":: %@", binder.bindId);
     
     binder
-    .binderTargetSet(self.model, @"identification")
-    
-//    .binderTargetSet(self.model, @"myBlock")
-//    .binderTargetSet(self.model, @"delegate")
-//    .binderTargetSet(self.model, @"isChange")
-//    .binderTargetSet(self.model, @"selecter")
-    
-//    .binderTargetSet(self.model, @"int_age")
-//    .binderTargetSet(self.model, @"unsigned_int_age")
-//    .binderTargetSet(self.model, @"short_age")
-//    .binderTargetSet(self.model, @"unsigned_short_age")
-//    .binderTargetSet(self.model, @"long_age")
-//    .binderTargetSet(self.model, @"long_long_age")
-//    .binderTargetSet(self.model, @"unsigned_long_long_age")
-//    .binderTargetSet(self.model, @"float_age")
-//    .binderTargetSet(self.model, @"double_age")
-//    .binderTargetSet(self.model, @"BOOL_age1")
-//    .binderTargetSet(self.model, @"BOOL_age")
-//    .binderTargetSet(self.model, @"integer_age")
-//    .binderTargetSet(self.model, @"uinteger_age")
-//    .binderTargetSet(self.model, @"array")
-    
-    
-//    .binderTargetSet(self.model, @"array")
-//    .binderTargetSet(self.model, @"mutableArray")
-//    .binderTargetSet(self.model, @"info")
-//    .binderTargetSet(self.model, @"mutableInfo")
-    .binderTargetSet(self.leftLbl, binder_text)
-    .binderTargetEventBlockSet(self.slider, binder_value, UIControlEventValueChanged, ^{
-        NSLog(@"外面回到更新了");
+    .bindSet(self.model, @"identification")
+    .bindBlockObjSet(self.model, @"person.age", ^(id obj){
+        NSLog(@"age: %@", obj);
     })
-    .binderTargetBlockObjReturnObjSet(self.progressView, binder_progress, ^NSNumber *(NSNumber *value) {
+    
+//    .bindSet(self.model, @"myBlock")
+//    .bindSet(self.model, @"delegate")
+//    .bindSet(self.model, @"isChange")
+//    .bindSet(self.model, @"selecter")
+//    .bindSet(self.model, @"int_age")
+//    .bindSet(self.model, @"unsigned_int_age")
+//    .bindSet(self.model, @"short_age")
+//    .bindSet(self.model, @"unsigned_short_age")
+//    .bindSet(self.model, @"long_age")
+//    .bindSet(self.model, @"long_long_age")
+//    .bindSet(self.model, @"unsigned_long_long_age")
+//    .bindSet(self.model, @"float_age")
+//    .bindSet(self.model, @"double_age")
+//    .bindSet(self.model, @"BOOL_age1")
+//    .bindSet(self.model, @"BOOL_age")
+//    .bindSet(self.model, @"integer_age")
+//    .bindSet(self.model, @"uinteger_age")
+//    .bindSet(self.model, @"array")
+//    .bindSet(self.model, @"array")
+//    .bindSet(self.model, @"mutableArray")
+//    .bindSet(self.model, @"info")
+//    .bindSet(self.model, @"mutableInfo")
+    .bindSet(self.leftLbl, binder_text)
+    .bindEventBlockObjSet(self.slider, binder_value, UIControlEventValueChanged, ^(id obj){
+        if ([obj isKindOfClass:[weakSelf.slider class]]) {
+            NSLog(@"UI主动更新回调");
+        } else {
+            NSLog(@"同步更新回调------ %@", obj);
+        }
+    })
+    .bindBlockObjReturnObjSet(self.progressView, binder_progress, ^NSNumber *(NSNumber *value) {
         float tempValue = [value floatValue];
         tempValue = tempValue / 100.f;
         return @(tempValue);
@@ -122,6 +128,10 @@ int current = 0;
 }
 
 - (void)dealloc {
+    
+    
+    
+    
     NSLog(@"🐱🐱🐱  dealloc: %s", __func__);
 }
 

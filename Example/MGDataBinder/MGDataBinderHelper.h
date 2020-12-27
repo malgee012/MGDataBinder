@@ -48,16 +48,16 @@ static NSString * _Nonnull const binder_progress = @"progress";
 
 @class MGDataBinder;
 
-typedef MGDataBinder * _Nullable(^MGBinderTarget)(MGTargetProperty);
-typedef MGDataBinder * _Nullable(^MGBinderTargetBlock)(MGTargetProperty, MGBlock);
-typedef MGDataBinder * _Nullable(^MGBinderTargetBlockObj)(MGTargetProperty, MGBlockObj);
-typedef MGDataBinder * _Nullable(^MGBinderTargetBlockReturnObj)(MGTargetProperty, MGBlockReturnObj);
-typedef MGDataBinder * _Nullable(^MGBinderTargetBlockObjReturnObj)(MGTargetProperty, MGBlockObjReturnObj);
-typedef MGDataBinder * _Nullable(^MGBinderTargetEvent)(MGTargetProperty, UIControlEvents controlEvent);
-typedef MGDataBinder * _Nullable(^MGBinderTargetEventBlock)(MGTargetProperty, UIControlEvents controlEvent, MGBlock);
-typedef MGDataBinder * _Nullable(^MGBinderTargetEventBlockObj)(MGTargetProperty, UIControlEvents controlEvent, MGBlockObj);
-typedef MGDataBinder * _Nullable(^MGBinderTargetEventBlockReturnObj)(MGTargetProperty, UIControlEvents controlEvent, MGBlockReturnObj);
-typedef MGDataBinder * _Nullable(^MGBinderTargetEventBlockObjReturnObj)(MGTargetProperty, UIControlEvents controlEvent, MGBlockObjReturnObj);
+typedef MGDataBinder * _Nullable(^MGBind)(MGTargetProperty);
+typedef MGDataBinder * _Nullable(^MGBindBlock)(MGTargetProperty, MGBlock);
+typedef MGDataBinder * _Nullable(^MGBindBlockObj)(MGTargetProperty, MGBlockObj);
+typedef MGDataBinder * _Nullable(^MGBindBlockReturnObj)(MGTargetProperty, MGBlockReturnObj);
+typedef MGDataBinder * _Nullable(^MGBindBlockObjReturnObj)(MGTargetProperty, MGBlockObjReturnObj);
+typedef MGDataBinder * _Nullable(^MGBindEvent)(MGTargetProperty, UIControlEvents controlEvent);
+typedef MGDataBinder * _Nullable(^MGBindEventBlock)(MGTargetProperty, UIControlEvents controlEvent, MGBlock);
+typedef MGDataBinder * _Nullable(^MGBindEventBlockObj)(MGTargetProperty, UIControlEvents controlEvent, MGBlockObj);
+typedef MGDataBinder * _Nullable(^MGBindEventBlockReturnObj)(MGTargetProperty, UIControlEvents controlEvent, MGBlockReturnObj);
+typedef MGDataBinder * _Nullable(^MGBindEventBlockObjReturnObj)(MGTargetProperty, UIControlEvents controlEvent, MGBlockObjReturnObj);
 
 
 #endif /* MGDataBinderHelper_h */

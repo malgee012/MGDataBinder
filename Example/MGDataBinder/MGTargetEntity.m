@@ -8,9 +8,14 @@
 
 #import "MGTargetEntity.h"
 #import "MGDataBinderManager.h"
+#import "NSObject+MGBinder.h"
 
 @interface MGTargetEntity ()
 
+@property (nonatomic, copy, readonly) MGBlock;
+@property (nonatomic, copy, readonly) MGBlockObj;
+@property (nonatomic, copy, readonly) MGBlockReturnObj;
+@property (nonatomic, copy, readonly) MGBlockObjReturnObj;
 @property (nonatomic, assign, getter=isChangeValue) BOOL changeValue;
 
 @end
@@ -24,7 +29,7 @@
             str = [str stringByAppendingString:@">"];
         }
         str;
-    }), _property, [_target valueForKey:_property]];
+    }), _property, [_target valueForKeyPath:_property]];
 }
 
 - (BOOL)didChangeValue {
@@ -63,10 +68,23 @@
     }
     _controlAction = YES;
     _controlEvent = controlEvent;
-    [self.target addTarget:[MGDataBinderManager sharedBinderManager] action:self.actionEvent forControlEvents:controlEvent];
+    [self.target addTarget:self action:@selector(binderActionEvent:) forControlEvents:controlEvent];
 }
 
-- (id)handelActionBlockWithValue:(id)newValue {
+- (void)binderActionEvent:(id)target {
+    target = [self handelActionBlockWithValue:target];
+    id value = [target valueForKeyPath:self.property];
+    if (!value) {
+        return;
+    }
+
+    MGTargetEntity *targetEntity = ((NSObject *)target).targetEntity;
+    [[MGDataBinderManager sharedBinderManager] updateValue:value withTargetEntity:targetEntity];
+
+    NSLog(@"-----------------------------UI主动改变后的值：： %@   %@", [target valueForKeyPath:self.property], [[target valueForKeyPath:self.property] class]);
+}
+
+- (id)handelActionBlockWithValue:(id)value {
     if (self.blockType == MGBlockTypeVoidVoid) {
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             self.block1();
@@ -75,12 +93,12 @@
         return self.block3();
     } else if (self.blockType == MGBlockTypeObjVoid) {
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            self.block2(newValue);
+            self.block2(value);
         });
     } else if (self.blockType == MGBlockTypeObjObj) {
-        return self.block4(newValue);
+        return self.block4(value);
     }
-    return newValue;
+    return value;
 }
 
 - (void)setValue:(id)value {
@@ -100,7 +118,7 @@
 //    NSLog(@"------------------------------------------------ %@  %@  %@  %@ ", value, [value class], self.target, self.property);
 //    NSLog(@"\n");
     
-    [self.target setValue:value forKey:self.property];
+    [self.target setValue:value forKeyPath:self.property];
 }
 
 - (id)wrapNumberValue:(id)value  {
@@ -156,6 +174,10 @@
             break;
     }
     return numberValue;
+}
+
+- (void)dealloc {
+    
 }
 
 @end

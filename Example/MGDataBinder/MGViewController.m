@@ -9,6 +9,7 @@
 #import "MGViewController.h"
 #import "MGSliderViewController.h"
 
+#import "MGDataBinderManager.h"
 @interface MGViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *displayTableView;
@@ -54,6 +55,12 @@
         MGSliderViewController *SlideVC = [MGSliderViewController loadVCFromStoryboard];
         [self.navigationController pushViewController:SlideVC animated:YES];
     }
+}
+
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    NSLog(@"绑定的内容:::: %@", [[MGDataBinderManager sharedBinderManager] valueForKeyPath:@"binderTargetEntitysHashMap"]);
 }
 
 - (UITableView *)displayTableView {

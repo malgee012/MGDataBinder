@@ -27,7 +27,7 @@
     return [[NSString stringWithFormat:@"%p", self] substringFromIndex:2];
 }
 
-- (MGBinderTarget)binderTargetSet {
+- (MGBind)bindSet {
     return ^MGDataBinder * (id target, NSString *property) {
         [self assertWithTarget:target property:property];
         [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId];
@@ -35,7 +35,7 @@
     };
 }
 
-- (MGBinderTargetBlock)binderTargetBlockSet {
+- (MGBindBlock)bindBlockSet {
     return ^MGDataBinder * (id target, NSString *property, void(^block)(void)) {
         [self assertWithTarget:target property:property];
         [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId blockType:MGBlockTypeVoidVoid actionBlock:block];
@@ -43,7 +43,7 @@
     };
 }
 
-- (MGBinderTargetBlockObj)binderTargetBlockObjSet {
+- (MGBindBlockObj)bindBlockObjSet {
     return ^MGDataBinder * (id target, NSString *property, void(^block)(id obj)) {
         [self assertWithTarget:target property:property];
         [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId blockType:MGBlockTypeObjVoid actionBlock:block];
@@ -51,7 +51,7 @@
     };
 }
 
-- (MGBinderTargetBlockReturnObj)binderTargetBlockReturnObjSet {
+- (MGBindBlockReturnObj)bindBlockReturnObjSet {
     return ^MGDataBinder * (id target, NSString *property, id(^block)(void)) {
         [self assertWithTarget:target property:property];
         [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId blockType:MGBlockTypeVoidObj actionBlock:block];
@@ -59,7 +59,7 @@
     };
 }
 
-- (MGBinderTargetBlockObjReturnObj)binderTargetBlockObjReturnObjSet {
+- (MGBindBlockObjReturnObj)bindBlockObjReturnObjSet {
     return ^MGDataBinder * (id target, NSString *property, id(^block)(id obj)) {
         [self assertWithTarget:target property:property];
         [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId blockType:MGBlockTypeObjObj actionBlock:block];
@@ -67,7 +67,7 @@
     };
 }
 
-- (MGBinderTargetEvent)binderTargetEventSet {
+- (MGBindEvent)bindEventSet {
     return ^MGDataBinder * (id target, NSString *property, UIControlEvents controlEvent) {
         [self assertWithTarget:target property:property];
         [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId controlEvent:controlEvent];
@@ -75,7 +75,7 @@
     };
 }
 
-- (MGBinderTargetEventBlock)binderTargetEventBlockSet {
+- (MGBindEventBlock)bindEventBlockSet {
     return ^MGDataBinder * (id target, NSString *property, UIControlEvents controlEvent, void(^block)(void)) {
         [self assertWithTarget:target property:property];
         [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId controlEvent:controlEvent blockType:MGBlockTypeVoidVoid actionBlock:block];
@@ -83,7 +83,7 @@
     };
 }
 
-- (MGBinderTargetEventBlockObj)binderTargetEventBlockObjSet {
+- (MGBindEventBlockObj)bindEventBlockObjSet {
     return ^MGDataBinder * (id target, NSString *property, UIControlEvents controlEvent, void(^block)(id obj)) {
         [self assertWithTarget:target property:property];
         [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId controlEvent:controlEvent blockType:MGBlockTypeObjVoid actionBlock:block];
@@ -91,7 +91,7 @@
     };
 }
 
-- (MGBinderTargetEventBlockReturnObj)binderTargetEventBlockReturnObjSet {
+- (MGBindEventBlockReturnObj)bindeEventBlockReturnObjSet {
     return ^MGDataBinder * (id target, NSString *property, UIControlEvents controlEvent, id(^block)(void)) {
         [self assertWithTarget:target property:property];
         [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId controlEvent:controlEvent blockType:MGBlockTypeVoidObj actionBlock:block];
@@ -99,7 +99,7 @@
     };
 }
 
-- (MGBinderTargetEventBlockObjReturnObj)binderTargetEventBlockObjReturnObjSet {
+- (MGBindEventBlockObjReturnObj)bindEventBlockObjReturnObjSet {
     return ^MGDataBinder * (id target, NSString *property, UIControlEvents controlEvent, id(^block)(id obj)) {
         [self assertWithTarget:target property:property];
         [[MGDataBinderManager sharedBinderManager] bindTarget:target property:property bindId:_bindId controlEvent:controlEvent blockType:MGBlockTypeObjObj actionBlock:block];
