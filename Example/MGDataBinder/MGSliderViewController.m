@@ -55,13 +55,13 @@
     
     __weak typeof(self)weakSelf = self;
     MGDataBinder *binder = [MGDataBinder new];
-    NSLog(@":: %@", binder.bindId);
+    NSLog(@"创建bindid:: %@", binder.bindId);
     
     binder
     .bindSet(self.model, @"identification")
-    .bindBlockObjSet(self.model, @"person.age", ^(id obj){
-        NSLog(@"age: %@", obj);
-    })
+//    .bindBlockObjSet(self.model, @"person.age", ^(id obj){
+//        NSLog(@"age: %@", obj);
+//    })
     
 //    .bindSet(self.model, @"myBlock")
 //    .bindSet(self.model, @"delegate")
@@ -86,19 +86,27 @@
 //    .bindSet(self.model, @"info")
 //    .bindSet(self.model, @"mutableInfo")
     .bindSet(self.leftLbl, binder_text)
-    .bindEventBlockObjSet(self.slider, binder_value, UIControlEventValueChanged, ^(id obj){
+    .bindEventBlockObjSet(self.slider, binder_value, UIControlEventValueChanged, ^(id obj) {
         if ([obj isKindOfClass:[weakSelf.slider class]]) {
             NSLog(@"UI主动更新回调");
         } else {
             NSLog(@"同步更新回调------ %@", obj);
         }
     })
-    .bindBlockObjReturnObjSet(self.progressView, binder_progress, ^NSNumber *(NSNumber *value) {
-        float tempValue = [value floatValue];
-        tempValue = tempValue / 100.f;
-        return @(tempValue);
-    })
+//    .bindBlockObjReturnObjSet(self.progressView, binder_progress, ^NSNumber *(NSNumber *value) {
+//        float tempValue = [value floatValue];
+//        tempValue = tempValue / 100.f;
+//        return @(tempValue);
+//    })
     ;
+    
+    
+    MGDataBinder *binder2 =  [MGDataBinder binder];
+    NSLog(@"创建bindid:: %@", binder2.bindId);
+    
+    binder2
+    .bindSet(self.slider, binder_value)
+    .bindSet(self.rightLbl, binder_text);
 }
 
 static int _count;

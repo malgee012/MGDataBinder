@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 //@property (nonatomic, strong) <#NSArray#> *<#array#>;
 @property (nonatomic, strong) MGTargetEntityObserver *entityObserver;
 
-@property (nonatomic, strong) NSMutableArray <MGTargetEntityObserver *>*entityObservers;
+@property (nonatomic, strong, nullable) NSMutableArray <MGTargetEntityObserver *>*entityObservers;
 
 
 - (NSString *)hash_id;

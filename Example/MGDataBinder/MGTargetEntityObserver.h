@@ -9,12 +9,14 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+@class MGTargetEntity;
 @interface MGTargetEntityObserver : NSObject
 
 @property (nonatomic, copy, readonly) NSString *bindId;
 @property (nonatomic, copy, readonly) NSString *signId;
 @property (nonatomic, assign, getter=isAddObserver) BOOL addObserver;  // 是否添加KVO监听
+
+- (void)addTargetObserverWithTargetEntity:(MGTargetEntity *)targetEntity;
 
 
 

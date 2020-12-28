@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (void)updateValue:(id)newValue withTargetEntity:(MGTargetEntity *)targetEntity;
+- (NSMutableArray <MGTargetEntity *>*)getTargetModelArrayWithBindId:(NSString *)bindId;
 
 @end
 

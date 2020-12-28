@@ -69,18 +69,24 @@
     }
 
     NSMutableArray <MGTargetEntity *>*targetEntitysArray = self.binderTargetEntitysHashMap[bindId];
-    if (!targetEntitysArray) {
+    if (!targetEntitysArray || !targetEntitysArray.count) {
         return;
     }
     for (MGTargetEntity *targetEntity in targetEntitysArray) {
         
-        MGTargetEntityObserver *observer = targetEntity.observer;
         NSMutableArray <MGTargetEntityObserver *>*observers = ((NSObject *)(targetEntity.target)).entityObservers;
+        if (!observers || !observers.count) continue;
+        
+        for (MGTargetEntityObserver *observer in observers) {
+            if (targetEntity.target && observer && observer.isAddObserver && !targetEntity.isRemoveObserver) {
 
-        if (targetEntity.target && observer && observer.isAddObserver) {
-            [targetEntity.target removeObserver:self forKeyPath:targetEntity.property context:(__bridge void * _Nullable)targetEntity];
+                NSLog(@"🌶🌶释放 %@", targetEntity);
+                if ([targetEntity.bindId isEqualToString:bindId]) {
+                    [targetEntity.target removeObserver:targetEntity.observer forKeyPath:targetEntity.property context:(__bridge void * _Nullable)targetEntity];
+                    targetEntity.removeObserver = YES;
+                }
+            }
         }
-        [observers removeAllObjects];
     }
     
     [targetEntitysArray removeAllObjects];
@@ -95,10 +101,15 @@
     }
 //    [targetEntity.target addObserver:self forKeyPath:targetEntity.property options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:(__bridge void * _Nullable)targetEntity];
     
-    targetEntity.observer.addObserver = YES;
-    [targetEntity.target addObserver:self forKeyPath:targetEntity.property options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:(__bridge void * _Nullable)targetEntity];
+    MGTargetEntityObserver *observer = targetEntity.observer;
+    
+    [observer addTargetObserverWithTargetEntity:targetEntity];
+    
+//    targetEntity.observer.addObserver = YES;
+//    [targetEntity.target addObserver:self forKeyPath:targetEntity.property options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:(__bridge void * _Nullable)targetEntity];
 }
 
+/*
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     MGTargetEntity *targetEntity = (__bridge id)(context);
     if (targetEntity.didChangeValue) {
@@ -137,6 +148,7 @@
     return [value isEqual:anotherValue];
 }
 
+*/
 
 #pragma mark - Private Method
 
@@ -176,17 +188,17 @@
 }
 
 - (void)bindObserverWithTarget:(__kindof NSObject *)target observer:(MGTargetEntityObserver *)observer {
-    MGTargetEntityObserver *oldObserver = target.entityObserver;
-    if (!oldObserver) {
-        target.entityObserver = observer.mutableCopy;
-    }
-    
-//    NSMutableArray *observers = target.entityObservers;
-//    if (!observers) {
-//        observers = [NSMutableArray array];
-//        target.entityObservers = observers;
+//    MGTargetEntityObserver *oldObserver = target.entityObserver;
+//    if (!oldObserver) {
+//        target.entityObserver = observer.mutableCopy;
 //    }
-//    [observers addObject:observer.mutableCopy];
+    
+    NSMutableArray *observers = target.entityObservers;
+    if (!observers) {
+        observers = [NSMutableArray array];
+        target.entityObservers = observers;
+    }
+    [observers addObject:observer.mutableCopy];
 }
 
 - (NSMutableArray <MGTargetEntity *>*)getTargetModelArrayWithBindId:(NSString *)bindId {

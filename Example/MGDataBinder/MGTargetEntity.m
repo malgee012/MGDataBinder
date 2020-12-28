@@ -22,7 +22,7 @@
 @implementation MGTargetEntity
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%@  %@      %@ %@ %@ %@ observers:%@", _bindId, _signId, [self class], ({
+    return [NSString stringWithFormat:@"%@  %@      <%@:%p> %@ %@ %@ observers:%@", _bindId, _signId, [self class], self, ({
         NSString *str = [NSString stringWithFormat:@"%@", _target];
         str = [str componentsSeparatedByString:@";"].firstObject;
         if ([str containsString:@"<UI"]) {
