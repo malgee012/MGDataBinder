@@ -30,6 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)didChangeValue;
 - (void)setValue:(id)value;
+- (void)updateValue:(id)newValue withTargetEntity:(MGTargetEntity *)targetEntity;
 
 @end
 

@@ -28,8 +28,6 @@
 
 - (void)clickButton1 {
     NSLog(@"响应了事件1");
-    
-    [[MGDataBinderManager sharedBinderManager] test];
 }
 
 - (void)clickButton2 {
@@ -54,6 +52,11 @@
     
     
     __weak typeof(self)weakSelf = self;
+    
+
+    
+    
+    
     MGDataBinder *binder = [MGDataBinder new];
     NSLog(@"创建bindid:: %@", binder.bindId);
     
@@ -86,6 +89,7 @@
 //    .bindSet(self.model, @"info")
 //    .bindSet(self.model, @"mutableInfo")
     .bindSet(self.leftLbl, binder_text)
+    .bindSet(self.rightLbl, binder_text)
     .bindEventBlockObjSet(self.slider, binder_value, UIControlEventValueChanged, ^(id obj) {
         if ([obj isKindOfClass:[weakSelf.slider class]]) {
             NSLog(@"UI主动更新回调");
@@ -101,12 +105,20 @@
     ;
     
     
+    
     MGDataBinder *binder2 =  [MGDataBinder binder];
     NSLog(@"创建bindid:: %@", binder2.bindId);
-    
+
     binder2
     .bindSet(self.slider, binder_value)
-    .bindSet(self.rightLbl, binder_text);
+//    .bindSet(self.rightLbl, binder_text)
+    .bindBlockObjReturnObjSet(self.progressView, binder_progress, ^NSNumber *(NSNumber *value) {
+        float tempValue = [value floatValue];
+        tempValue = tempValue / 100.f;
+        return @(tempValue);
+    })
+    ;
+    
 }
 
 static int _count;
@@ -135,12 +147,6 @@ int current = 0;
     }
     
     current = value;
-}
-
-
-- (void)viewWillDisappear:(BOOL)animated {
-    
-    [[MGDataBinderManager sharedBinderManager] test];
 }
 
 - (void)dealloc {

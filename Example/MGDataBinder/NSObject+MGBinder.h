@@ -13,12 +13,10 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface NSObject (MGBinder)
 
-//@property (nonatomic, weak) MGTargetEntity *targetEntity;
-//@property (nonatomic, strong) <#NSArray#> *<#array#>;
-@property (nonatomic, strong) MGTargetEntityObserver *entityObserver;
+@property (nonatomic, weak) MGTargetEntity *targetEntity;
 
+//@property (nonatomic, strong) MGTargetEntityObserver *entityObserver;
 @property (nonatomic, strong, nullable) NSMutableArray <MGTargetEntityObserver *>*entityObservers;
-
 
 - (NSString *)hash_id;
 

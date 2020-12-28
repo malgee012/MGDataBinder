@@ -46,29 +46,8 @@ NSString *const MGPropertyTypeMethod = @"^{objc_method=}";
     objc_property_t property = class_getProperty([target class], propertyName.UTF8String);
     const char *property_attr =  property_copyAttributeValue(property, "T");
     NSString *code = [NSString stringWithFormat:@"%s", property_attr];
-    
-//    char c = property_attr[0];
-//
-//    NSString *str = @(property_getName(property));
-    
-//    NSLog(@";;;;;;;;   %@  %s   %@ ", propertyName, property_attr, code);
-    
-//    const char *attrsChar = property_getAttributes(property);
-//    NSString *attrs = [NSString stringWithFormat:@"%s", attrsChar];
-//    NSUInteger dotLoc = [attrs rangeOfString:@","].location;
-//    NSString *code1 = nil;
-//    NSUInteger loc = 1;
-//    if (dotLoc == NSNotFound) { // 没有,
-//        code1 = [attrs substringFromIndex:loc];
-//    } else {
-//        code1 = [attrs substringWithRange:NSMakeRange(loc, dotLoc - loc)];
-//    }
-//    NSLog(@"... MJcode: %@   %@", code1, attrs);
-    
-    
     MGPropertyType *propertyType = [[MGPropertyType alloc] init];
     propertyType.code = code;
-    
     return propertyType;
 }
 

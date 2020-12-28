@@ -78,10 +78,22 @@
         return;
     }
 
-//    MGTargetEntity *targetEntity = ((NSObject *)target).targetEntity;
-//    [[MGDataBinderManager sharedBinderManager] updateValue:value withTargetEntity:targetEntity];
+    MGTargetEntity *targetEntity = ((NSObject *)target).targetEntity;
+    [targetEntity updateValue:value withTargetEntity:targetEntity];
 
     NSLog(@"-----------------------------UI主动改变后的值：： %@   %@", [target valueForKeyPath:self.property], [[target valueForKeyPath:self.property] class]);
+}
+
+
+- (void)updateValue:(id)newValue withTargetEntity:(MGTargetEntity *)targetEntity {
+    NSMutableArray <MGTargetEntity *>*targetEntitysArray = [[MGDataBinderManager sharedBinderManager] getTargetModelArrayWithBindId:targetEntity.bindId];
+    for (MGTargetEntity *model in targetEntitysArray) {
+        [model setValue:newValue];
+
+        NSLog(@"::: %@ ", model);
+    }
+
+    [targetEntitysArray setValue:@(NO) forKeyPath:@"changeValue"];
 }
 
 - (id)handelActionBlockWithValue:(id)value {

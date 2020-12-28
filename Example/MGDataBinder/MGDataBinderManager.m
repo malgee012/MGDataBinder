@@ -17,7 +17,6 @@
 
 @property(nonatomic, strong) NSMutableDictionary<NSString *, NSMutableArray<MGTargetEntity *>*> *binderTargetEntitysHashMap;
 
-@property (nonatomic, copy) NSString *test_bind_id;
 
 @end
 
@@ -56,13 +55,7 @@
     [self bindTargetEntity:targetEntity];
 }
 
-- (void)test {
-    NSMutableArray <MGTargetEntity *>*targetEntitysArray = self.binderTargetEntitysHashMap[self.test_bind_id];
-    
-    NSLog(@"🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾：：%p %@", targetEntitysArray, targetEntitysArray);
-    
-}
-
+/*
 - (void)unbindWithBindId:(NSString *)bindId {
     if (!bindId) {
         return;
@@ -81,10 +74,10 @@
             if (targetEntity.target && observer && observer.isAddObserver && !targetEntity.isRemoveObserver) {
 
                 NSLog(@"🌶🌶释放 %@", targetEntity);
-                if ([targetEntity.bindId isEqualToString:bindId]) {
+//                if ([targetEntity.bindId isEqualToString:bindId]) {
                     [targetEntity.target removeObserver:targetEntity.observer forKeyPath:targetEntity.property context:(__bridge void * _Nullable)targetEntity];
                     targetEntity.removeObserver = YES;
-                }
+//                }
             }
         }
     }
@@ -92,6 +85,7 @@
     [targetEntitysArray removeAllObjects];
     self.binderTargetEntitysHashMap[bindId] = nil;
 }
+ */
 
 #pragma mark - observe
 
@@ -158,9 +152,6 @@
                                 controlEvent:(UIControlEvents)controlEvent
                                    blockType:(MGBlockType)blockType
                                  actionBlock:(id _Nullable)actionBlock {
-
-    self.test_bind_id = bindId;
-    
     NSMutableArray <MGTargetEntity *>*targetEntitysArray = [self getTargetModelArrayWithBindId:bindId];
     NSString *signId = [self getSignIdWithTarget:target property:property bindId:bindId];
     NSMutableArray *array = [targetEntitysArray valueForKeyPath:@"signId"];
@@ -177,6 +168,7 @@
     targetEntity.actionBlock = actionBlock;
     targetEntity.blockType = blockType;
     targetEntity.controlEvent = controlEvent;
+    ((NSObject *)(targetEntity.target)).targetEntity = targetEntity;
     MGTargetEntityObserver *observer = [MGTargetEntityObserver new];
     [observer setValue:signId forKey:@"signId"];
     [observer setValue:bindId forKey:@"bindId"];
@@ -230,9 +222,6 @@
 //     [targetEntity.target removeObserver:self forKeyPath:targetEntity.property context:(__bridge void * _Nullable)targetEntity];
     
     NSLog(@"****************************************************** dealloc: %@", NSStringFromClass(self.class));
-    
-    
-    
 }
 
 

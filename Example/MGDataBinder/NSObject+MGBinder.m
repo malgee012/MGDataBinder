@@ -80,9 +80,7 @@
 }
 
 - (void)bind_dealloc {
-    
     NSLog(@"dealloc__NSObject: %@", NSStringFromClass(self.class));
-    
     [self bind_dealloc];
 }
 

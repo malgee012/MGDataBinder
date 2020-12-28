@@ -10,6 +10,9 @@
 #import "MGDataBinderManager.h"
 #import "MGTargetEntity.h"
 #import "NSObject+MGBinder.h"
+
+static NSString * const binderTargetEntitysHashMapKey = @"binderTargetEntitysHashMap";
+
 @interface MGTargetEntityObserver ()<NSCopying, NSMutableCopying>
 
 @end
@@ -33,8 +36,6 @@
 }
 
 - (void)addTargetObserverWithTargetEntity:(MGTargetEntity *)targetEntity {
- 
-    // 这里
     NSMutableArray <MGTargetEntityObserver *>*entityObservers = ((NSObject *)(targetEntity.target)).entityObservers;
     targetEntity.observer.addObserver = YES;
     NSArray *signArray = [entityObservers valueForKeyPath:@"signId"];
@@ -43,7 +44,6 @@
     entityObsetver.addObserver = YES;
     
    NSLog(@" %@   %@ ::::::::: %@  ::::::::: %@", targetEntity.target, targetEntity.signId, [entityObservers valueForKeyPath:@"signId"], self);
-    
     
     [targetEntity.target addObserver:self forKeyPath:targetEntity.property options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:(__bridge void * _Nullable)targetEntity];
 }
@@ -65,32 +65,47 @@
         return;
     }
     
-    [self updateValue:newValue withTargetEntity:targetEntity];
-}
-
-- (void)updateValue:(id)newValue withTargetEntity:(MGTargetEntity *)targetEntity {
-    
-    NSMutableArray <MGTargetEntity *>*targetEntitysArray = [[MGDataBinderManager sharedBinderManager] getTargetModelArrayWithBindId:targetEntity.bindId];
-    
-    for (MGTargetEntity *model in targetEntitysArray) {
-    
-        [model setValue:newValue];
-        
-        NSLog(@"::: %@ ", model);
-    }
-    
-    [targetEntitysArray setValue:@(NO) forKeyPath:@"changeValue"];
+    [targetEntity updateValue:newValue withTargetEntity:targetEntity];
 }
 
 - (BOOL)compare:(id)value another:(id)anotherValue {
     return [value isEqual:anotherValue];
 }
 
+
+- (void)unbindWithBindId:(NSString *)bindId {
+    if (!bindId) {
+        return;
+    }
+    NSMutableDictionary<NSString *, NSMutableArray<MGTargetEntity *>*>*binderTargetEntitysHashMap = [[MGDataBinderManager sharedBinderManager] valueForKey:binderTargetEntitysHashMapKey];
+    NSMutableArray <MGTargetEntity *>*targetEntitysArray = binderTargetEntitysHashMap[bindId];
+    if (!targetEntitysArray || !targetEntitysArray.count) {
+        return;
+    }
+    for (MGTargetEntity *targetEntity in targetEntitysArray) {
+        
+        NSMutableArray <MGTargetEntityObserver *>*observers = ((NSObject *)(targetEntity.target)).entityObservers;
+        if (!observers || !observers.count) continue;
+        
+        for (MGTargetEntityObserver *observer in observers) {
+            if (targetEntity.target && observer && observer.isAddObserver && !targetEntity.isRemoveObserver) {
+                NSLog(@"🌶🌶释放 %@", targetEntity);
+                [targetEntity.target removeObserver:targetEntity.observer forKeyPath:targetEntity.property context:(__bridge void * _Nullable)targetEntity];
+                targetEntity.removeObserver = YES;
+            }
+        }
+    }
+    
+    [targetEntitysArray removeAllObjects];
+    binderTargetEntitysHashMap[bindId] = nil;
+}
+
 - (void)dealloc {
  
     
     NSLog(@"****************************************************** dealloc: %@", NSStringFromClass(self.class));
-    [[MGDataBinderManager sharedBinderManager] unbindWithBindId:self.bindId];
+    [self unbindWithBindId:self.bindId];
+    
 }
 
 @end
