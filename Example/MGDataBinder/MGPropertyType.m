@@ -42,7 +42,7 @@ NSString *const MGPropertyTypeMethod = @"^{objc_method=}";
 
 @implementation MGPropertyType
 
-+ (id)getPropertyTypeWithTarget:(NSObject *)target property:(NSString *)propertyName {
++ (id)getPropertyTypeWithTarget:(__kindof NSObject *)target property:(NSString *)propertyName {
     objc_property_t property = class_getProperty([target class], propertyName.UTF8String);
     const char *property_attr =  property_copyAttributeValue(property, "T");
     NSString *code = [NSString stringWithFormat:@"%s", property_attr];
@@ -137,8 +137,8 @@ NSString *const MGPropertyTypeMethod = @"^{objc_method=}";
         }
     }
     
-    NSLog(@"\n");
-    NSLog(@"🔥\n _code: %@ \n _KVCDisabled:%d  \n _idType:%d \n _numberType: %d \n _boolType: %d\n _typeClass: %@ \n _fromFoundation: %d", _code, _KVCDisabled, _idType, _numberType, _boolType, _typeClass, _fromFoundation);
+//    NSLog(@"\n");
+//    NSLog(@"🔥\n _code: %@ \n _KVCDisabled:%d  \n _idType:%d \n _numberType: %d \n _boolType: %d\n _typeClass: %@ \n _fromFoundation: %d", _code, _KVCDisabled, _idType, _numberType, _boolType, _typeClass, _fromFoundation);
 }
 
 + (BOOL)isClassFromFoundation:(Class)c {

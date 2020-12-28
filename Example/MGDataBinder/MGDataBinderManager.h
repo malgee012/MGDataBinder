@@ -19,7 +19,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId controlEvent:(UIControlEvents)controlEvent;
 - (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId controlEvent:(UIControlEvents)controlEvent blockType:(MGBlockType)blockType actionBlock:(nullable id)actionBlock;
 
+- (void)unbindWithBindId:(NSString *)bindId;
+- (void)test;
+
+
 - (void)updateValue:(id)newValue withTargetEntity:(MGTargetEntity *)targetEntity;
+
 @end
 
 NS_ASSUME_NONNULL_END

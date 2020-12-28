@@ -113,4 +113,9 @@
     NSAssert(property, @"property 不能为空");
 }
 
+- (void)dealloc {
+ 
+    NSLog(@"****************************************************** dealloc: %@", NSStringFromClass(self.class));
+}
+
 @end

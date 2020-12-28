@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "MGPropertyType.h"
 NS_ASSUME_NONNULL_BEGIN
-
+@class MGTargetEntityObserver;
 @interface MGTargetEntity : NSObject
 
 @property (nonatomic, copy, readonly) NSString *bindId;
 @property (nonatomic, copy, readonly) NSString *signId;
-@property(nonatomic, weak) id observer;
-@property (nonatomic, strong) id target;
+
+@property (nonatomic, strong) MGTargetEntityObserver *observer;
+@property (nonatomic, weak) id target;
 @property (nonatomic, copy) NSString *property;
 @property (nonatomic, strong) MGPropertyType *propertyType;
 

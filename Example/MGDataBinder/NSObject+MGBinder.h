@@ -8,12 +8,24 @@
 
 #import <Foundation/Foundation.h>
 #import "MGTargetEntity.h"
+#import "MGTargetEntityObserver.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @interface NSObject (MGBinder)
 
-@property (nonatomic, weak) MGTargetEntity *targetEntity;
+//@property (nonatomic, weak) MGTargetEntity *targetEntity;
+//@property (nonatomic, strong) <#NSArray#> *<#array#>;
+@property (nonatomic, strong) MGTargetEntityObserver *entityObserver;
+
+@property (nonatomic, strong) NSMutableArray <MGTargetEntityObserver *>*entityObservers;
+
+
 - (NSString *)hash_id;
+
+@end
+
+
+@interface UIViewController (MGBinder)
 
 @end
 

@@ -26,6 +26,7 @@
 		F30FE8019C9212AD09E4C376 /* Pods_MGDataBinder_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843F5330D78F6D64E95B5DDB /* Pods_MGDataBinder_Example.framework */; };
 		F8617FAB2596C55100FCE782 /* MGPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = F8617FAA2596C55100FCE782 /* MGPropertyType.m */; };
 		F8617FD725983F6C00FCE782 /* MGPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = F8617FD625983F6C00FCE782 /* MGPerson.m */; };
+		F861800D2598EC2800FCE782 /* MGTargetEntityObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = F861800C2598EC2800FCE782 /* MGTargetEntityObserver.m */; };
 		F871F1C0259617BE00605689 /* MGSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F1BF259617BE00605689 /* MGSliderViewController.m */; };
 		F871F1CD259618F300605689 /* MGDataBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F1CC259618F300605689 /* MGDataBinder.m */; };
 		F871F1D72596201500605689 /* MGDataBinderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F1D62596201500605689 /* MGDataBinderManager.m */; };
@@ -82,6 +83,8 @@
 		F8617FAA2596C55100FCE782 /* MGPropertyType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGPropertyType.m; sourceTree = "<group>"; };
 		F8617FD525983F6C00FCE782 /* MGPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGPerson.h; sourceTree = "<group>"; };
 		F8617FD625983F6C00FCE782 /* MGPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGPerson.m; sourceTree = "<group>"; };
+		F861800B2598EC2800FCE782 /* MGTargetEntityObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTargetEntityObserver.h; sourceTree = "<group>"; };
+		F861800C2598EC2800FCE782 /* MGTargetEntityObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTargetEntityObserver.m; sourceTree = "<group>"; };
 		F871F1BE259617BE00605689 /* MGSliderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGSliderViewController.h; sourceTree = "<group>"; };
 		F871F1BF259617BE00605689 /* MGSliderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGSliderViewController.m; sourceTree = "<group>"; };
 		F871F1CB259618F300605689 /* MGDataBinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGDataBinder.h; sourceTree = "<group>"; };
@@ -265,6 +268,8 @@
 				F871F1CC259618F300605689 /* MGDataBinder.m */,
 				F871F1D52596201500605689 /* MGDataBinderManager.h */,
 				F871F1D62596201500605689 /* MGDataBinderManager.m */,
+				F861800B2598EC2800FCE782 /* MGTargetEntityObserver.h */,
+				F861800C2598EC2800FCE782 /* MGTargetEntityObserver.m */,
 				F871F1DA259620E400605689 /* MGTargetEntity.h */,
 				F871F1DB259620E400605689 /* MGTargetEntity.m */,
 				F8617FA92596C55100FCE782 /* MGPropertyType.h */,
@@ -456,6 +461,7 @@
 				F871F226259643D400605689 /* MGBaseModel.m in Sources */,
 				F8617FAB2596C55100FCE782 /* MGPropertyType.m in Sources */,
 				F871F1DC259620E400605689 /* MGTargetEntity.m in Sources */,
+				F861800D2598EC2800FCE782 /* MGTargetEntityObserver.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				F871F220259631DD00605689 /* NSObject+MGBinder.m in Sources */,
 				F871F1D72596201500605689 /* MGDataBinderManager.m in Sources */,

@@ -22,14 +22,14 @@
 @implementation MGTargetEntity
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"🔥 %@ %@ %@ %@", [self class], ({
+    return [NSString stringWithFormat:@"%@  %@      %@ %@ %@ %@ observers:%@", _bindId, _signId, [self class], ({
         NSString *str = [NSString stringWithFormat:@"%@", _target];
         str = [str componentsSeparatedByString:@";"].firstObject;
         if ([str containsString:@"<UI"]) {
             str = [str stringByAppendingString:@">"];
         }
         str;
-    }), _property, [_target valueForKeyPath:_property]];
+    }), _property, [_target valueForKeyPath:_property], ((NSObject *)_target).entityObservers];
 }
 
 - (BOOL)didChangeValue {
@@ -78,8 +78,8 @@
         return;
     }
 
-    MGTargetEntity *targetEntity = ((NSObject *)target).targetEntity;
-    [[MGDataBinderManager sharedBinderManager] updateValue:value withTargetEntity:targetEntity];
+//    MGTargetEntity *targetEntity = ((NSObject *)target).targetEntity;
+//    [[MGDataBinderManager sharedBinderManager] updateValue:value withTargetEntity:targetEntity];
 
     NSLog(@"-----------------------------UI主动改变后的值：： %@   %@", [target valueForKeyPath:self.property], [[target valueForKeyPath:self.property] class]);
 }
@@ -177,7 +177,8 @@
 }
 
 - (void)dealloc {
-    
+ 
+    NSLog(@"****************************************************** dealloc: %@", NSStringFromClass(self.class));
 }
 
 @end

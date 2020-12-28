@@ -10,6 +10,7 @@
 #import "MGDataBinder.h"
 #import "MGBaseModel.h"
 
+#import "MGDataBinderManager.h"
 @interface MGSliderViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *leftLbl;
 @property (weak, nonatomic) IBOutlet UILabel *rightLbl;
@@ -27,6 +28,8 @@
 
 - (void)clickButton1 {
     NSLog(@"响应了事件1");
+    
+    [[MGDataBinderManager sharedBinderManager] test];
 }
 
 - (void)clickButton2 {
@@ -96,7 +99,6 @@
         return @(tempValue);
     })
     ;
-    
 }
 
 static int _count;
@@ -127,9 +129,18 @@ int current = 0;
     current = value;
 }
 
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [[MGDataBinderManager sharedBinderManager] test];
+}
+
 - (void)dealloc {
     
-    
+    for (int i = 0; i < self.view.subviews.count; i++) {
+        
+        NSLog(@"🐱>> %@", self.view.subviews[i]);
+    }
     
     
     NSLog(@"🐱🐱🐱  dealloc: %s", __func__);

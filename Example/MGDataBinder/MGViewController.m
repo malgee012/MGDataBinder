@@ -10,6 +10,10 @@
 #import "MGSliderViewController.h"
 
 #import "MGDataBinderManager.h"
+
+
+
+
 @interface MGViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *displayTableView;
@@ -24,6 +28,14 @@
     [super viewDidLoad];
 	
     [self.view addSubview:self.displayTableView];
+    
+    
+//    NSString *str1 = @"dfsaskjfnasdkfaskfaskfassdfa";
+//
+//    NSString *str2 = str1.mutableCopy;
+//
+//    NSLog(@"%p  %p", str1, str2);
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,7 +72,9 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     
-    NSLog(@"绑定的内容:::: %@", [[MGDataBinderManager sharedBinderManager] valueForKeyPath:@"binderTargetEntitysHashMap"]);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{    
+        NSLog(@"绑定的内容:::: %@", [[MGDataBinderManager sharedBinderManager] valueForKeyPath:@"binderTargetEntitysHashMap"]);
+    });
 }
 
 - (UITableView *)displayTableView {

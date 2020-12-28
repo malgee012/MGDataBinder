@@ -12,9 +12,12 @@
 #import <objc/runtime.h>
 #import "MGPropertyType.h"
 
+#import "MGTargetEntityObserver.h"
 @interface MGDataBinderManager ()
 
 @property(nonatomic, strong) NSMutableDictionary<NSString *, NSMutableArray<MGTargetEntity *>*> *binderTargetEntitysHashMap;
+
+@property (nonatomic, copy) NSString *test_bind_id;
 
 @end
 
@@ -53,12 +56,46 @@
     [self bindTargetEntity:targetEntity];
 }
 
+- (void)test {
+    NSMutableArray <MGTargetEntity *>*targetEntitysArray = self.binderTargetEntitysHashMap[self.test_bind_id];
+    
+    NSLog(@"🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾🚾：：%p %@", targetEntitysArray, targetEntitysArray);
+    
+}
+
+- (void)unbindWithBindId:(NSString *)bindId {
+    if (!bindId) {
+        return;
+    }
+
+    NSMutableArray <MGTargetEntity *>*targetEntitysArray = self.binderTargetEntitysHashMap[bindId];
+    if (!targetEntitysArray) {
+        return;
+    }
+    for (MGTargetEntity *targetEntity in targetEntitysArray) {
+        
+        MGTargetEntityObserver *observer = targetEntity.observer;
+        NSMutableArray <MGTargetEntityObserver *>*observers = ((NSObject *)(targetEntity.target)).entityObservers;
+
+        if (targetEntity.target && observer && observer.isAddObserver) {
+            [targetEntity.target removeObserver:self forKeyPath:targetEntity.property context:(__bridge void * _Nullable)targetEntity];
+        }
+        [observers removeAllObjects];
+    }
+    
+    [targetEntitysArray removeAllObjects];
+    self.binderTargetEntitysHashMap[bindId] = nil;
+}
+
 #pragma mark - observe
 
 - (void)bindTargetEntity:(MGTargetEntity *)targetEntity {
     if (!targetEntity) {
         return;
     }
+//    [targetEntity.target addObserver:self forKeyPath:targetEntity.property options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:(__bridge void * _Nullable)targetEntity];
+    
+    targetEntity.observer.addObserver = YES;
     [targetEntity.target addObserver:self forKeyPath:targetEntity.property options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:(__bridge void * _Nullable)targetEntity];
 }
 
@@ -84,16 +121,16 @@
 
 - (void)updateValue:(id)newValue withTargetEntity:(MGTargetEntity *)targetEntity {
     
-    NSMutableArray <MGTargetEntity *>*modelsArray = [self getTargetModelArrayWithBindId:targetEntity.bindId];
+    NSMutableArray <MGTargetEntity *>*targetEntitysArray = [self getTargetModelArrayWithBindId:targetEntity.bindId];
     
-    for (MGTargetEntity *model in modelsArray) {
+    for (MGTargetEntity *model in targetEntitysArray) {
     
         [model setValue:newValue];
         
         NSLog(@"::: %@ ", model);
     }
     
-    [modelsArray setValue:@(NO) forKeyPath:@"changeValue"];
+    [targetEntitysArray setValue:@(NO) forKeyPath:@"changeValue"];
 }
 
 - (BOOL)compare:(id)value another:(id)anotherValue {
@@ -110,9 +147,11 @@
                                    blockType:(MGBlockType)blockType
                                  actionBlock:(id _Nullable)actionBlock {
 
-    NSMutableArray <MGTargetEntity *>*modelsArray = [self getTargetModelArrayWithBindId:bindId];
+    self.test_bind_id = bindId;
+    
+    NSMutableArray <MGTargetEntity *>*targetEntitysArray = [self getTargetModelArrayWithBindId:bindId];
     NSString *signId = [self getSignIdWithTarget:target property:property bindId:bindId];
-    NSMutableArray *array = [modelsArray valueForKeyPath:@"signId"];
+    NSMutableArray *array = [targetEntitysArray valueForKeyPath:@"signId"];
     if ([array containsObject:signId]) {
         return nil;
     }
@@ -126,22 +165,40 @@
     targetEntity.actionBlock = actionBlock;
     targetEntity.blockType = blockType;
     targetEntity.controlEvent = controlEvent;
-    ((NSObject *)targetEntity.target).targetEntity = targetEntity;
-    [modelsArray addObject:targetEntity];
+    MGTargetEntityObserver *observer = [MGTargetEntityObserver new];
+    [observer setValue:signId forKey:@"signId"];
+    [observer setValue:bindId forKey:@"bindId"];
+    targetEntity.observer = observer;
+    targetEntity.observer.addObserver = NO;
+    [self bindObserverWithTarget:target observer:observer];
+    [targetEntitysArray addObject:targetEntity];
     return targetEntity;
 }
 
-
-- (NSMutableArray <MGTargetEntity *>*)getTargetModelArrayWithBindId:(NSString *)bindId {
-    NSMutableArray <MGTargetEntity *>*modelsArray = self.binderTargetEntitysHashMap[bindId];
-    if (!modelsArray) {
-        modelsArray = [[NSMutableArray array] init];
-        self.binderTargetEntitysHashMap[bindId] = modelsArray;
+- (void)bindObserverWithTarget:(__kindof NSObject *)target observer:(MGTargetEntityObserver *)observer {
+    MGTargetEntityObserver *oldObserver = target.entityObserver;
+    if (!oldObserver) {
+        target.entityObserver = observer.mutableCopy;
     }
-    return modelsArray;
+    
+//    NSMutableArray *observers = target.entityObservers;
+//    if (!observers) {
+//        observers = [NSMutableArray array];
+//        target.entityObservers = observers;
+//    }
+//    [observers addObject:observer.mutableCopy];
 }
 
-- (NSString *)getSignIdWithTarget:(NSObject *)target property:(NSString *)property bindId:(NSString *)bindId {
+- (NSMutableArray <MGTargetEntity *>*)getTargetModelArrayWithBindId:(NSString *)bindId {
+    NSMutableArray <MGTargetEntity *>*targetEntitysArray = self.binderTargetEntitysHashMap[bindId];
+    if (!targetEntitysArray) {
+        targetEntitysArray = [[NSMutableArray array] init];
+        self.binderTargetEntitysHashMap[bindId] = targetEntitysArray;
+    }
+    return targetEntitysArray;
+}
+
+- (NSString *)getSignIdWithTarget:(__kindof NSObject *)target property:(NSString *)property bindId:(NSString *)bindId {
     return [NSString stringWithFormat:@"%@_%@_%@", bindId, target.hash_id, property.hash_id];
 }
 
@@ -159,6 +216,14 @@
     
     // [targetEntity.target addObserver:self forKeyPath:targetEntity.property options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:(__bridge void * _Nullable)targetEntity];
 //     [targetEntity.target removeObserver:self forKeyPath:targetEntity.property context:(__bridge void * _Nullable)targetEntity];
+    
+    NSLog(@"****************************************************** dealloc: %@", NSStringFromClass(self.class));
+    
+    
+    
 }
+
+
+
 
 @end
