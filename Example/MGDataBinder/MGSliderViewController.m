@@ -39,7 +39,6 @@
     
     self.model = [MGBaseModel new];
     self.model.person = [MGPerson new];
-    self.view.backgroundColor = [UIColor whiteColor];
     
     self.leftLbl.text = @"123";
     self.rightLbl.text = @"321";

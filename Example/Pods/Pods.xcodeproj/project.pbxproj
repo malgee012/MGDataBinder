@@ -15,8 +15,20 @@
 		64431987C93F904DF2C35CD31702C687 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		AFEC8C8AEA1C78FD649224B5676715F2 /* Pods-MGDataBinder_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 785F8ED4F7AD7E5CEC49E747624003FC /* Pods-MGDataBinder_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8330074CBEAEF26FC5443841317A71E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		EAEBDB3CA96AC46F4B6FD04A32534D64 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 1132A83C301ACAD66D6CDE2CF7B8FADD /* ReplaceMe.m */; };
 		EE70B3875C763CF28ABEDC5E374406DE /* MGDataBinder-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E91D8A994BAFA45EC3C18F8EB3402A5 /* MGDataBinder-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F86180F6259AF43900FCE782 /* MGDataBinderHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = F86180E9259AF43600FCE782 /* MGDataBinderHelper.h */; };
+		F86180F7259AF43900FCE782 /* MGDataBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = F86180EA259AF43600FCE782 /* MGDataBinder.m */; };
+		F86180F8259AF43900FCE782 /* MGTargetEntityObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = F86180EB259AF43600FCE782 /* MGTargetEntityObserver.h */; };
+		F86180F9259AF43900FCE782 /* MGDataBinderManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F86180EC259AF43600FCE782 /* MGDataBinderManager.h */; };
+		F86180FA259AF43900FCE782 /* MGTargetEntityObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = F86180ED259AF43600FCE782 /* MGTargetEntityObserver.m */; };
+		F86180FB259AF43900FCE782 /* MGPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = F86180EE259AF43600FCE782 /* MGPropertyType.m */; };
+		F86180FC259AF43900FCE782 /* NSObject+MGBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = F86180EF259AF43700FCE782 /* NSObject+MGBinder.m */; };
+		F86180FD259AF43900FCE782 /* NSObject+MGBinder.h in Headers */ = {isa = PBXBuildFile; fileRef = F86180F0259AF43700FCE782 /* NSObject+MGBinder.h */; };
+		F86180FE259AF43900FCE782 /* MGPropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = F86180F1259AF43700FCE782 /* MGPropertyType.h */; };
+		F86180FF259AF43900FCE782 /* MGTargetEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = F86180F2259AF43700FCE782 /* MGTargetEntity.h */; };
+		F8618100259AF43900FCE782 /* MGDataBinder.h in Headers */ = {isa = PBXBuildFile; fileRef = F86180F3259AF43700FCE782 /* MGDataBinder.h */; };
+		F8618101259AF43900FCE782 /* MGTargetEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F86180F4259AF43700FCE782 /* MGTargetEntity.m */; };
+		F8618102259AF43900FCE782 /* MGDataBinderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F86180F5259AF43700FCE782 /* MGDataBinderManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,18 +51,17 @@
 /* Begin PBXFileReference section */
 		0340603C7B0A2833C1AEE52774FD8CE1 /* Pods-MGDataBinder_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MGDataBinder_Example-frameworks.sh"; sourceTree = "<group>"; };
 		07A47B9321A0CF4E7DDE8D65FF81828D /* MGDataBinder-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MGDataBinder-prefix.pch"; sourceTree = "<group>"; };
-		1132A83C301ACAD66D6CDE2CF7B8FADD /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = MGDataBinder/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		1814DFE004019856E1C3CEDA0CFBC450 /* Pods-MGDataBinder_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MGDataBinder_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		2198CBBB880CF6C439819B89886C4474 /* MGDataBinder-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MGDataBinder-Info.plist"; sourceTree = "<group>"; };
 		266CB5C9C5A0501E908649FAE6FCB901 /* Pods-MGDataBinder_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MGDataBinder_Example-dummy.m"; sourceTree = "<group>"; };
-		274E1D7A5165B713827BFF04806FB613 /* MGDataBinder.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MGDataBinder.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		35B74CEB07332C6E6305FF7B0A9FC429 /* Pods_MGDataBinder_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MGDataBinder_Tests.framework; path = "Pods-MGDataBinder_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		274E1D7A5165B713827BFF04806FB613 /* MGDataBinder.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = MGDataBinder.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		35B74CEB07332C6E6305FF7B0A9FC429 /* Pods_MGDataBinder_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MGDataBinder_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3884D7A1D4385E85FCC7F5976E5660AC /* Pods-MGDataBinder_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MGDataBinder_Tests-dummy.m"; sourceTree = "<group>"; };
 		396CC999267DDFB56F38C86CF23692FD /* MGDataBinder.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MGDataBinder.modulemap; sourceTree = "<group>"; };
 		3F1D688296150044F3BF944BAF806097 /* Pods-MGDataBinder_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MGDataBinder_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		42BBB0FA1B960890CE434A1E89FF3E83 /* Pods-MGDataBinder_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MGDataBinder_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5B0E31CB13C08F5DCD6034FCD65FBA5C /* MGDataBinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MGDataBinder.release.xcconfig; sourceTree = "<group>"; };
-		64689D3AD77B0F522E8E7F2814C8FB8E /* Pods_MGDataBinder_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MGDataBinder_Example.framework; path = "Pods-MGDataBinder_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64689D3AD77B0F522E8E7F2814C8FB8E /* Pods_MGDataBinder_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MGDataBinder_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B0FB531C7922740D909DA8880EE6BBD /* MGDataBinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MGDataBinder.debug.xcconfig; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		734FE45BDF360C66B94C6AC3CFBD624B /* Pods-MGDataBinder_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MGDataBinder_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -58,18 +69,31 @@
 		8E91D8A994BAFA45EC3C18F8EB3402A5 /* MGDataBinder-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MGDataBinder-umbrella.h"; sourceTree = "<group>"; };
 		8F03EC2A581A214C85E1FBB786B1D4D9 /* Pods-MGDataBinder_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MGDataBinder_Example-Info.plist"; sourceTree = "<group>"; };
 		983D33E3F75EB3D222A040DE72CE4A6A /* Pods-MGDataBinder_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MGDataBinder_Tests.modulemap"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A133B624A43D011147CDEE4FF278A6D3 /* Pods-MGDataBinder_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MGDataBinder_Tests-Info.plist"; sourceTree = "<group>"; };
 		ACDE4C2F9600FF2EF0DFE64400E1E3FD /* Pods-MGDataBinder_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MGDataBinder_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5F0EAF3750156696934DA5252757183 /* Pods-MGDataBinder_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MGDataBinder_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		B788FEBC00F2A92D507FCAD26260B7AD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		B788FEBC00F2A92D507FCAD26260B7AD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B807F06AA49AAB05930C01B0A3E54386 /* MGDataBinder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MGDataBinder-dummy.m"; sourceTree = "<group>"; };
-		D65659B8DB43F41D2B503D93A31627CC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		D65659B8DB43F41D2B503D93A31627CC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D961051D22E3033DC0A7E1085D76E7BC /* Pods-MGDataBinder_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MGDataBinder_Example.modulemap"; sourceTree = "<group>"; };
 		DFF15158C3EA2EC7EE7182B45696AF49 /* Pods-MGDataBinder_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MGDataBinder_Tests-umbrella.h"; sourceTree = "<group>"; };
 		E6E383A5880BA561B22410660E223236 /* Pods-MGDataBinder_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MGDataBinder_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		EA921DD0D3C9DC13F3DD4A39C3916DA3 /* MGDataBinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MGDataBinder.framework; path = MGDataBinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA921DD0D3C9DC13F3DD4A39C3916DA3 /* MGDataBinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MGDataBinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28AE404C0078F77F2F87A5402F69183 /* Pods-MGDataBinder_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MGDataBinder_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F86180E9259AF43600FCE782 /* MGDataBinderHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGDataBinderHelper.h; path = MGDataBinder/Classes/MGDataBinderHelper.h; sourceTree = "<group>"; };
+		F86180EA259AF43600FCE782 /* MGDataBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGDataBinder.m; path = MGDataBinder/Classes/MGDataBinder.m; sourceTree = "<group>"; };
+		F86180EB259AF43600FCE782 /* MGTargetEntityObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGTargetEntityObserver.h; path = MGDataBinder/Classes/MGTargetEntityObserver.h; sourceTree = "<group>"; };
+		F86180EC259AF43600FCE782 /* MGDataBinderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGDataBinderManager.h; path = MGDataBinder/Classes/MGDataBinderManager.h; sourceTree = "<group>"; };
+		F86180ED259AF43600FCE782 /* MGTargetEntityObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGTargetEntityObserver.m; path = MGDataBinder/Classes/MGTargetEntityObserver.m; sourceTree = "<group>"; };
+		F86180EE259AF43600FCE782 /* MGPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGPropertyType.m; path = MGDataBinder/Classes/MGPropertyType.m; sourceTree = "<group>"; };
+		F86180EF259AF43700FCE782 /* NSObject+MGBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MGBinder.m"; path = "MGDataBinder/Classes/NSObject+MGBinder.m"; sourceTree = "<group>"; };
+		F86180F0259AF43700FCE782 /* NSObject+MGBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+MGBinder.h"; path = "MGDataBinder/Classes/NSObject+MGBinder.h"; sourceTree = "<group>"; };
+		F86180F1259AF43700FCE782 /* MGPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGPropertyType.h; path = MGDataBinder/Classes/MGPropertyType.h; sourceTree = "<group>"; };
+		F86180F2259AF43700FCE782 /* MGTargetEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGTargetEntity.h; path = MGDataBinder/Classes/MGTargetEntity.h; sourceTree = "<group>"; };
+		F86180F3259AF43700FCE782 /* MGDataBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGDataBinder.h; path = MGDataBinder/Classes/MGDataBinder.h; sourceTree = "<group>"; };
+		F86180F4259AF43700FCE782 /* MGTargetEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGTargetEntity.m; path = MGDataBinder/Classes/MGTargetEntity.m; sourceTree = "<group>"; };
+		F86180F5259AF43700FCE782 /* MGDataBinderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGDataBinderManager.m; path = MGDataBinder/Classes/MGDataBinderManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +183,19 @@
 		898A8534B14366435F104B5A221A09A7 /* MGDataBinder */ = {
 			isa = PBXGroup;
 			children = (
-				1132A83C301ACAD66D6CDE2CF7B8FADD /* ReplaceMe.m */,
+				F86180F3259AF43700FCE782 /* MGDataBinder.h */,
+				F86180EA259AF43600FCE782 /* MGDataBinder.m */,
+				F86180E9259AF43600FCE782 /* MGDataBinderHelper.h */,
+				F86180EC259AF43600FCE782 /* MGDataBinderManager.h */,
+				F86180F5259AF43700FCE782 /* MGDataBinderManager.m */,
+				F86180F1259AF43700FCE782 /* MGPropertyType.h */,
+				F86180EE259AF43600FCE782 /* MGPropertyType.m */,
+				F86180F2259AF43700FCE782 /* MGTargetEntity.h */,
+				F86180F4259AF43700FCE782 /* MGTargetEntity.m */,
+				F86180EB259AF43600FCE782 /* MGTargetEntityObserver.h */,
+				F86180ED259AF43600FCE782 /* MGTargetEntityObserver.m */,
+				F86180F0259AF43700FCE782 /* NSObject+MGBinder.h */,
+				F86180EF259AF43700FCE782 /* NSObject+MGBinder.m */,
 				CBE78D51E8165D810C3CD157B97CD068 /* Pod */,
 				52CF4F21DB508F05A3DF88BA43CFCA10 /* Support Files */,
 			);
@@ -238,7 +274,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F86180F9259AF43900FCE782 /* MGDataBinderManager.h in Headers */,
+				F86180FF259AF43900FCE782 /* MGTargetEntity.h in Headers */,
+				F86180F6259AF43900FCE782 /* MGDataBinderHelper.h in Headers */,
+				F86180FD259AF43900FCE782 /* NSObject+MGBinder.h in Headers */,
+				F86180F8259AF43900FCE782 /* MGTargetEntityObserver.h in Headers */,
 				EE70B3875C763CF28ABEDC5E374406DE /* MGDataBinder-umbrella.h in Headers */,
+				F8618100259AF43900FCE782 /* MGDataBinder.h in Headers */,
+				F86180FE259AF43900FCE782 /* MGPropertyType.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,8 +418,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F86180FB259AF43900FCE782 /* MGPropertyType.m in Sources */,
 				39CC5A70BDE1B5FDE5AEFCFD3FD6F266 /* MGDataBinder-dummy.m in Sources */,
-				EAEBDB3CA96AC46F4B6FD04A32534D64 /* ReplaceMe.m in Sources */,
+				F8618101259AF43900FCE782 /* MGTargetEntity.m in Sources */,
+				F86180F7259AF43900FCE782 /* MGDataBinder.m in Sources */,
+				F8618102259AF43900FCE782 /* MGDataBinderManager.m in Sources */,
+				F86180FA259AF43900FCE782 /* MGTargetEntityObserver.m in Sources */,
+				F86180FC259AF43900FCE782 /* NSObject+MGBinder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,8 +733,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

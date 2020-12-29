@@ -27,6 +27,8 @@
 		F8617FAB2596C55100FCE782 /* MGPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = F8617FAA2596C55100FCE782 /* MGPropertyType.m */; };
 		F8617FD725983F6C00FCE782 /* MGPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = F8617FD625983F6C00FCE782 /* MGPerson.m */; };
 		F861800D2598EC2800FCE782 /* MGTargetEntityObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = F861800C2598EC2800FCE782 /* MGTargetEntityObserver.m */; };
+		F86180DB259AD5D300FCE782 /* MGTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F86180D9259AD5D100FCE782 /* MGTextFieldViewController.m */; };
+		F86180E6259AD6D000FCE782 /* MGTextFieldViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86180E5259AD6D000FCE782 /* MGTextFieldViewController.storyboard */; };
 		F871F1C0259617BE00605689 /* MGSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F1BF259617BE00605689 /* MGSliderViewController.m */; };
 		F871F1CD259618F300605689 /* MGDataBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F1CC259618F300605689 /* MGDataBinder.m */; };
 		F871F1D72596201500605689 /* MGDataBinderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F1D62596201500605689 /* MGDataBinderManager.m */; };
@@ -77,7 +79,7 @@
 		719DFB4F65B4D09A4B96A656 /* Pods-MGDataBinder_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGDataBinder_Tests.release.xcconfig"; path = "Target Support Files/Pods-MGDataBinder_Tests/Pods-MGDataBinder_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		843F5330D78F6D64E95B5DDB /* Pods_MGDataBinder_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MGDataBinder_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A591C0921B56D156D0326A8B /* MGDataBinder.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MGDataBinder.podspec; path = ../MGDataBinder.podspec; sourceTree = "<group>"; };
+		A591C0921B56D156D0326A8B /* MGDataBinder.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MGDataBinder.podspec; path = ../MGDataBinder.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C433DB6F15EDF60EC1697303 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F8617FA92596C55100FCE782 /* MGPropertyType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGPropertyType.h; sourceTree = "<group>"; };
 		F8617FAA2596C55100FCE782 /* MGPropertyType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGPropertyType.m; sourceTree = "<group>"; };
@@ -85,6 +87,9 @@
 		F8617FD625983F6C00FCE782 /* MGPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGPerson.m; sourceTree = "<group>"; };
 		F861800B2598EC2800FCE782 /* MGTargetEntityObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTargetEntityObserver.h; sourceTree = "<group>"; };
 		F861800C2598EC2800FCE782 /* MGTargetEntityObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTargetEntityObserver.m; sourceTree = "<group>"; };
+		F86180D8259AD5D100FCE782 /* MGTextFieldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTextFieldViewController.h; sourceTree = "<group>"; };
+		F86180D9259AD5D100FCE782 /* MGTextFieldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTextFieldViewController.m; sourceTree = "<group>"; };
+		F86180E5259AD6D000FCE782 /* MGTextFieldViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MGTextFieldViewController.storyboard; sourceTree = "<group>"; };
 		F871F1BE259617BE00605689 /* MGSliderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGSliderViewController.h; sourceTree = "<group>"; };
 		F871F1BF259617BE00605689 /* MGSliderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGSliderViewController.m; sourceTree = "<group>"; };
 		F871F1CB259618F300605689 /* MGDataBinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGDataBinder.h; sourceTree = "<group>"; };
@@ -234,6 +239,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F86180D7259AD56900FCE782 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				F86180D8259AD5D100FCE782 /* MGTextFieldViewController.h */,
+				F86180D9259AD5D100FCE782 /* MGTextFieldViewController.m */,
+				F86180E5259AD6D000FCE782 /* MGTextFieldViewController.storyboard */,
+			);
+			name = UITextField;
+			sourceTree = "<group>";
+		};
 		F871F1BA2595E92000605689 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +260,7 @@
 				F871F225259643D400605689 /* MGBaseModel.m */,
 				F8617FD525983F6C00FCE782 /* MGPerson.h */,
 				F8617FD625983F6C00FCE782 /* MGPerson.m */,
+				F86180D7259AD56900FCE782 /* UITextField */,
 				F871F1BD2596179400605689 /* UISlider */,
 			);
 			name = "New Group";
@@ -367,6 +383,7 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				F871F1E02596282200605689 /* MGSliderViewController.storyboard in Resources */,
+				F86180E6259AD6D000FCE782 /* MGTextFieldViewController.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -463,6 +480,7 @@
 				F871F1DC259620E400605689 /* MGTargetEntity.m in Sources */,
 				F861800D2598EC2800FCE782 /* MGTargetEntityObserver.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				F86180DB259AD5D300FCE782 /* MGTextFieldViewController.m in Sources */,
 				F871F220259631DD00605689 /* NSObject+MGBinder.m in Sources */,
 				F871F1D72596201500605689 /* MGDataBinderManager.m in Sources */,
 				F871F211259629A000605689 /* MGBaseViewController.m in Sources */,

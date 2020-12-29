@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Text Field View Controller-->
+        <scene sceneID="QAw-9n-nBa">
+            <objects>
+                <viewController storyboardIdentifier="MGTextFieldViewController" id="3en-KR-U7P" customClass="MGTextFieldViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6oe-ip-BUc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvk-bm-kOL">
+                                <rect key="frame" x="39" y="194" width="337" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="dM7-Y6-Sat"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t7B-Lw-q5o">
+                                <rect key="frame" x="39" y="258" width="337" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Dds-ie-gCi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文本：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8Q-Kf-7n6">
+                                <rect key="frame" x="39" y="159" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Kw8-ba-pBx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kw8-ba-pBx" firstAttribute="trailing" secondItem="cvk-bm-kOL" secondAttribute="trailing" constant="38" id="RKt-wI-oUA"/>
+                            <constraint firstItem="cvk-bm-kOL" firstAttribute="top" secondItem="Kw8-ba-pBx" secondAttribute="top" constant="150" id="c9Y-m3-4A1"/>
+                            <constraint firstItem="Kw8-ba-pBx" firstAttribute="trailing" secondItem="t7B-Lw-q5o" secondAttribute="trailing" constant="38" id="dqx-Zw-NMb"/>
+                            <constraint firstItem="t7B-Lw-q5o" firstAttribute="top" secondItem="cvk-bm-kOL" secondAttribute="bottom" constant="30" id="fto-Wv-EWg"/>
+                            <constraint firstItem="cvk-bm-kOL" firstAttribute="top" secondItem="b8Q-Kf-7n6" secondAttribute="bottom" constant="14" id="mHH-Wr-2f9"/>
+                            <constraint firstItem="t7B-Lw-q5o" firstAttribute="leading" secondItem="Kw8-ba-pBx" secondAttribute="leading" constant="39" id="qkx-JP-4v5"/>
+                            <constraint firstItem="cvk-bm-kOL" firstAttribute="leading" secondItem="Kw8-ba-pBx" secondAttribute="leading" constant="39" id="wTh-8p-hc3"/>
+                            <constraint firstItem="b8Q-Kf-7n6" firstAttribute="leading" secondItem="Kw8-ba-pBx" secondAttribute="leading" constant="39" id="y0d-RU-hLn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField1" destination="cvk-bm-kOL" id="8Hv-Lm-uMF"/>
+                        <outlet property="textField2" destination="t7B-Lw-q5o" id="Ova-F4-Wa0"/>
+                        <outlet property="textLbl" destination="b8Q-Kf-7n6" id="ETL-6g-Kac"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iRM-Rd-2eK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="163.768115942029" y="-204.24107142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

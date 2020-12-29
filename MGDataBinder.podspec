@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MGDataBinder'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of MGDataBinder.'
+  s.version          = '1.0.0'
+  s.summary          = 'A lightweight data binding that uses KVO to listen for changes in data and KVC to modify data.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

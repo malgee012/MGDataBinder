@@ -7,7 +7,9 @@
 //
 
 #import "MGViewController.h"
+
 #import "MGSliderViewController.h"
+#import "MGTextFieldViewController.h"
 
 #import "MGDataBinderManager.h"
 
@@ -17,6 +19,7 @@
 @interface MGViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *displayTableView;
+@property (nonatomic, assign) NSInteger count;
 
 
 @end
@@ -27,6 +30,7 @@
 {
     [super viewDidLoad];
 	
+    _count = 10;
     [self.view addSubview:self.displayTableView];
     
     
@@ -38,6 +42,17 @@
     
 }
 
+- (void)injected{
+    
+    NSLog(@"I've been reinjected: %@", self);
+    NSLog(@"这里调用修改页面布局 或者属性设置的代码");
+    
+    _count = 15;
+    [self.displayTableView reloadData];
+    
+    self.displayTableView.backgroundColor = [UIColor orangeColor];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -45,7 +60,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return _count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -53,6 +68,8 @@
     
     if (indexPath.row == 0) {
         cell.textLabel.text = @"Slider改变";
+    } else if (indexPath.row == 1) {
+        cell.textLabel.text = @"TextField改变";
     } else {
         cell.textLabel.text = [NSString stringWithFormat:@"其它_%zd", indexPath.row];
     }
@@ -66,6 +83,9 @@
     if (indexPath.row == 0) {
         MGSliderViewController *SlideVC = [MGSliderViewController loadVCFromStoryboard];
         [self.navigationController pushViewController:SlideVC animated:YES];
+    } else if (indexPath.row == 1) {
+        MGTextFieldViewController *textFieldVC = [MGTextFieldViewController loadVCFromStoryboard];
+        [self.navigationController pushViewController:textFieldVC animated:YES];
     }
 }
 
