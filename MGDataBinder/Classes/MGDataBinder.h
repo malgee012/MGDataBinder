@@ -16,7 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *bindId;
 + (MGDataBinder *)binder;
 
-
 #define mark - 绑定
 
 @property (nonatomic, copy, readonly) MGBind bindSet;
