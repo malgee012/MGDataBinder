@@ -5,69 +5,69 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.000503">
+      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.000492">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="01: import_from_git" time="12.251038">
+      <testcase classname="fastlane.lanes" name="01: import_from_git" time="6.609085">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="02: default_platform" time="0.000645">
+      <testcase classname="fastlane.lanes" name="02: default_platform" time="0.000358">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="03: Switch to ios mg_update_lib lane" time="0.000662">
+      <testcase classname="fastlane.lanes" name="03: Switch to ios mg_update_lib lane" time="0.00039">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="04: pod_lib_lint" time="28.043355">
+      <testcase classname="fastlane.lanes" name="04: pod_lib_lint" time="20.968302">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="05: git_add" time="0.045997">
+      <testcase classname="fastlane.lanes" name="05: git_add" time="0.033121">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="06: git_commit" time="0.045853">
+      <testcase classname="fastlane.lanes" name="06: git_commit" time="0.059074">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="07: push_to_git_remote" time="13.459079">
+      <testcase classname="fastlane.lanes" name="07: push_to_git_remote" time="10.848373">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="08: git_tag_exists" time="0.007079">
+      <testcase classname="fastlane.lanes" name="08: git_tag_exists" time="0.017241">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="09: remove_git_tag" time="8.118341">
+      <testcase classname="fastlane.lanes" name="09: remove_git_tag" time="8.175384">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="10: add_git_tag" time="0.018654">
+      <testcase classname="fastlane.lanes" name="10: add_git_tag" time="0.023117">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="11: push_git_tags" time="14.185506">
+      <testcase classname="fastlane.lanes" name="11: push_git_tags" time="8.024666">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="12: pod_push" time="5.730545">
+      <testcase classname="fastlane.lanes" name="12: pod_push" time="66.677312">
         
-          <failure message="/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/actions/actions_helper.rb:67:in `execute_action'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/runner.rb:255:in `block in execute_action'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/runner.rb:229:in `chdir'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/runner.rb:229:in `execute_action'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/runner.rb:157:in `trigger_action_by_name'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/fast_file.rb:159:in `method_missing'&#10;../../../../../../var/folders/y1/l1wk78_17zj2m5mrp2q9lrgr0000gn/T/fl_clone20201231-45744-jjf5b1/MGActionLanes.git/fastlane/ios_fastfile.rb:41:in `block (2 levels) in parsing_binding'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/runner.rb:204:in `try_switch_to_lane'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/runner.rb:146:in `trigger_action_by_name'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/fast_file.rb:159:in `method_missing'&#10;Fastfile:36:in `block (2 levels) in parsing_binding'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/lane_manager.rb:47:in `cruise_lane'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/commands_generator.rb:108:in `block (2 levels) in run'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:178:in `call'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:153:in `run'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/commander-fastlane-4.4.6/lib/commander/runner.rb:476:in `run_active_command'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:76:in `run!'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/commander-fastlane-4.4.6/lib/commander/delegates.rb:15:in `run!'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/commands_generator.rb:352:in `run'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/commands_generator.rb:41:in `start'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/cli_tools_distributor.rb:119:in `take_off'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/bin/fastlane:23:in `&lt;top (required)&gt;'&#10;/usr/local/bin/fastlane:23:in `load'&#10;/usr/local/bin/fastlane:23:in `&lt;main&gt;'&#10;/usr/local/bin/ruby_executable_hooks:15:in `eval'&#10;/usr/local/bin/ruby_executable_hooks:15:in `&lt;main&gt;'&#10;&#10;Exit status of command 'pod trunk push 'MGDataBinder.podspec' --allow-warnings --use-libraries' was 1 instead of 0.&#10;Cloning spec repo `trunk` from `https://cdn.cocoapods.org/`&#10;[!] Unable to add a source with url `https://cdn.cocoapods.org/` named `trunk`.&#10;You can try adding it manually in `/Users/open/.cocoapods/repos` or via `pod repo add`.&#10;" />
+          <failure message="/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/actions/actions_helper.rb:67:in `execute_action'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/runner.rb:255:in `block in execute_action'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/runner.rb:229:in `chdir'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/runner.rb:229:in `execute_action'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/runner.rb:157:in `trigger_action_by_name'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/fast_file.rb:159:in `method_missing'&#10;../../../../../../var/folders/y1/l1wk78_17zj2m5mrp2q9lrgr0000gn/T/fl_clone20201231-47252-10rvge4/MGActionLanes.git/fastlane/ios_fastfile.rb:41:in `block (2 levels) in parsing_binding'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/runner.rb:204:in `try_switch_to_lane'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/runner.rb:146:in `trigger_action_by_name'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/fast_file.rb:159:in `method_missing'&#10;Fastfile:36:in `block (2 levels) in parsing_binding'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/lane_manager.rb:47:in `cruise_lane'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/commands_generator.rb:108:in `block (2 levels) in run'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:178:in `call'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:153:in `run'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/commander-fastlane-4.4.6/lib/commander/runner.rb:476:in `run_active_command'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:76:in `run!'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/commander-fastlane-4.4.6/lib/commander/delegates.rb:15:in `run!'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/commands_generator.rb:352:in `run'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/commands_generator.rb:41:in `start'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/fastlane/lib/fastlane/cli_tools_distributor.rb:119:in `take_off'&#10;/usr/local/lib/ruby/gems/2.7.0/gems/fastlane-2.170.0/bin/fastlane:23:in `&lt;top (required)&gt;'&#10;/usr/local/bin/fastlane:23:in `load'&#10;/usr/local/bin/fastlane:23:in `&lt;main&gt;'&#10;/usr/local/bin/ruby_executable_hooks:15:in `eval'&#10;/usr/local/bin/ruby_executable_hooks:15:in `&lt;main&gt;'&#10;&#10;Exit status of command 'pod trunk push 'MGDataBinder.podspec' --allow-warnings --use-libraries' was 1 instead of 0.&#10;[!] CDN: trunk URL couldn't be downloaded: https://cdn.cocoapods.org/CocoaPods-version.yml Response: SSL peer certificate or SSH remote key was not OK&#10;" />
         
       </testcase>
     
