@@ -13,6 +13,12 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
+####################################################
+
+# eg:  fastlane MGLibs lib:MGDataBinder tag:1.0.0 message:使用fastlane更新
+
+####################################################
+
 import_from_git(
 	url: 'https://github.com/Maling1255/MGActionLanes.git', 
 	branch: 'main', 
