@@ -39,16 +39,44 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEF-ov-ajT">
+                                <rect key="frame" x="39" y="341" width="337" height="36"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.4941176471" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="y78-wP-uHC"/>
+                                </constraints>
+                                <state key="normal" title="还原默认 &gt; 文本:12306"/>
+                                <connections>
+                                    <action selector="clickbutton1:" destination="3en-KR-U7P" eventType="touchUpInside" id="Lvh-71-yFG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ow-Nc-EKz">
+                                <rect key="frame" x="39" y="396" width="337" height="36"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.4941176471" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="ui0-HH-xat"/>
+                                </constraints>
+                                <state key="normal" title="还原默认 &gt; 文本12306"/>
+                                <connections>
+                                    <action selector="clickbutton2:" destination="3en-KR-U7P" eventType="touchUpInside" id="A73-BR-ywX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kw8-ba-pBx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="EEF-ov-ajT" firstAttribute="top" secondItem="t7B-Lw-q5o" secondAttribute="bottom" constant="49" id="0uT-nA-9GE"/>
+                            <constraint firstItem="Kw8-ba-pBx" firstAttribute="trailing" secondItem="EEF-ov-ajT" secondAttribute="trailing" constant="38" id="46L-Rz-loO"/>
+                            <constraint firstItem="5Ow-Nc-EKz" firstAttribute="top" secondItem="EEF-ov-ajT" secondAttribute="bottom" constant="19" id="BxR-zk-Coe"/>
                             <constraint firstItem="Kw8-ba-pBx" firstAttribute="trailing" secondItem="cvk-bm-kOL" secondAttribute="trailing" constant="38" id="RKt-wI-oUA"/>
                             <constraint firstItem="cvk-bm-kOL" firstAttribute="top" secondItem="Kw8-ba-pBx" secondAttribute="top" constant="150" id="c9Y-m3-4A1"/>
+                            <constraint firstItem="EEF-ov-ajT" firstAttribute="leading" secondItem="Kw8-ba-pBx" secondAttribute="leading" constant="39" id="dGZ-YJ-rdO"/>
                             <constraint firstItem="Kw8-ba-pBx" firstAttribute="trailing" secondItem="t7B-Lw-q5o" secondAttribute="trailing" constant="38" id="dqx-Zw-NMb"/>
                             <constraint firstItem="t7B-Lw-q5o" firstAttribute="top" secondItem="cvk-bm-kOL" secondAttribute="bottom" constant="30" id="fto-Wv-EWg"/>
                             <constraint firstItem="cvk-bm-kOL" firstAttribute="top" secondItem="b8Q-Kf-7n6" secondAttribute="bottom" constant="14" id="mHH-Wr-2f9"/>
                             <constraint firstItem="t7B-Lw-q5o" firstAttribute="leading" secondItem="Kw8-ba-pBx" secondAttribute="leading" constant="39" id="qkx-JP-4v5"/>
+                            <constraint firstItem="5Ow-Nc-EKz" firstAttribute="leading" secondItem="Kw8-ba-pBx" secondAttribute="leading" constant="39" id="rcf-F1-vaS"/>
+                            <constraint firstItem="Kw8-ba-pBx" firstAttribute="trailing" secondItem="5Ow-Nc-EKz" secondAttribute="trailing" constant="38" id="uUv-00-MMh"/>
                             <constraint firstItem="cvk-bm-kOL" firstAttribute="leading" secondItem="Kw8-ba-pBx" secondAttribute="leading" constant="39" id="wTh-8p-hc3"/>
                             <constraint firstItem="b8Q-Kf-7n6" firstAttribute="leading" secondItem="Kw8-ba-pBx" secondAttribute="leading" constant="39" id="y0d-RU-hLn"/>
                         </constraints>

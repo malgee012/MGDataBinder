@@ -1,5 +1,5 @@
 PODS:
-  - MGDataBinder (0.1.0)
+  - MGDataBinder (1.0.0)
 
 DEPENDENCIES:
   - MGDataBinder (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MGDataBinder: 6e241120abe4307acd685fd5f3d671b2f1884160
+  MGDataBinder: a76cb619b111eacb15a3ae09f583b4831d5d7f7b
 
 PODFILE CHECKSUM: d895c61f671be094ffe1ce1834e0b8d30f2750b4
 

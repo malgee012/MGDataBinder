@@ -8,92 +8,92 @@
 
 /* Begin PBXBuildFile section */
 		0BB1C729AA4AAB747EDB7D2560CA876B /* Pods-MGDataBinder_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3884D7A1D4385E85FCC7F5976E5660AC /* Pods-MGDataBinder_Tests-dummy.m */; };
+		226AF0B84D490DD908848DEE3F5AAB06 /* MGDataBinderHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C6B2B1E4806E3C2E8D6EB0C5173F60 /* MGDataBinderHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24AF8E52E90FB8E38472AA3D9F351092 /* MGPropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D9BE7464E5544A3F3C57CACD96838BC /* MGPropertyType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25BF059DEA3D9AAD5E35A53836EC0D37 /* MGTargetEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B80C3B3847F3AA21DD8C3142CAC7A /* MGTargetEntity.m */; };
 		28DC367363E9204856651281E088997F /* Pods-MGDataBinder_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 266CB5C9C5A0501E908649FAE6FCB901 /* Pods-MGDataBinder_Example-dummy.m */; };
-		39CC5A70BDE1B5FDE5AEFCFD3FD6F266 /* MGDataBinder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B807F06AA49AAB05930C01B0A3E54386 /* MGDataBinder-dummy.m */; };
+		2D5D1E181A7E262BC25F1EBE309488FD /* MGTargetEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = 625C1C7F065DC7FB33C5D2469757F8DC /* MGTargetEntity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39E4BD05669F78654E2CA554F94322DF /* MGDataBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DFF77ADC99522853E488F4B4389119 /* MGDataBinder.m */; };
 		41A2AC5DB8DA879C5DE2D783B402D189 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		45A3467F4B045C948E691AA1C4467F5D /* Pods-MGDataBinder_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DFF15158C3EA2EC7EE7182B45696AF49 /* Pods-MGDataBinder_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		64431987C93F904DF2C35CD31702C687 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		5E5D2B02656C774A805028D3A588F5C5 /* NSObject+MGBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB860D028C5923E0709208ECB84E54 /* NSObject+MGBinder.m */; };
+		69AA1B9236720163AB437EA1846BB5D8 /* MGDataBinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 895C31CD31F649E6ECB15941CFDCB59C /* MGDataBinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D93A76482D593F3BE419F6CB16982E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		883ECA9D64EA17FC78AD3A52C4089105 /* NSObject+MGBinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FFA24B2305DCEA8FC00393CE759ED5D /* NSObject+MGBinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FF09C52C573A94425310769CC182372 /* MGDataBinder-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 991E24922254EA848BCC7EB21C3F838D /* MGDataBinder-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE74DBA505E14F2E9C7D4D80EA30A316 /* MGDataBinderManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D9DB143EF130E425C874B40DB977072 /* MGDataBinderManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AFEC8C8AEA1C78FD649224B5676715F2 /* Pods-MGDataBinder_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 785F8ED4F7AD7E5CEC49E747624003FC /* Pods-MGDataBinder_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA4F8079366197C090905D3EA1D6518F /* MGDataBinderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3E6154616F6077EBA196BDF0B96113 /* MGDataBinderManager.m */; };
+		BC395848CED945C8AE846A91EF5C66AC /* MGPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 830CDFFFE932982D7A20A5F72871460D /* MGPropertyType.m */; };
 		C8330074CBEAEF26FC5443841317A71E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		EE70B3875C763CF28ABEDC5E374406DE /* MGDataBinder-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E91D8A994BAFA45EC3C18F8EB3402A5 /* MGDataBinder-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F86180F6259AF43900FCE782 /* MGDataBinderHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = F86180E9259AF43600FCE782 /* MGDataBinderHelper.h */; };
-		F86180F7259AF43900FCE782 /* MGDataBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = F86180EA259AF43600FCE782 /* MGDataBinder.m */; };
-		F86180F8259AF43900FCE782 /* MGTargetEntityObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = F86180EB259AF43600FCE782 /* MGTargetEntityObserver.h */; };
-		F86180F9259AF43900FCE782 /* MGDataBinderManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F86180EC259AF43600FCE782 /* MGDataBinderManager.h */; };
-		F86180FA259AF43900FCE782 /* MGTargetEntityObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = F86180ED259AF43600FCE782 /* MGTargetEntityObserver.m */; };
-		F86180FB259AF43900FCE782 /* MGPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = F86180EE259AF43600FCE782 /* MGPropertyType.m */; };
-		F86180FC259AF43900FCE782 /* NSObject+MGBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = F86180EF259AF43700FCE782 /* NSObject+MGBinder.m */; };
-		F86180FD259AF43900FCE782 /* NSObject+MGBinder.h in Headers */ = {isa = PBXBuildFile; fileRef = F86180F0259AF43700FCE782 /* NSObject+MGBinder.h */; };
-		F86180FE259AF43900FCE782 /* MGPropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = F86180F1259AF43700FCE782 /* MGPropertyType.h */; };
-		F86180FF259AF43900FCE782 /* MGTargetEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = F86180F2259AF43700FCE782 /* MGTargetEntity.h */; };
-		F8618100259AF43900FCE782 /* MGDataBinder.h in Headers */ = {isa = PBXBuildFile; fileRef = F86180F3259AF43700FCE782 /* MGDataBinder.h */; };
-		F8618101259AF43900FCE782 /* MGTargetEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F86180F4259AF43700FCE782 /* MGTargetEntity.m */; };
-		F8618102259AF43900FCE782 /* MGDataBinderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F86180F5259AF43700FCE782 /* MGDataBinderManager.m */; };
+		D3BF6B6165F14ECD5546EE5AAC12966B /* MGTargetEntityObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = D5CF8D2BC1B5A666B5C1AA1238CE84CB /* MGTargetEntityObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF674B9318E0B9800F2DB1D0095A6570 /* MGTargetEntityObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4C21D523DD2E8C4360E437EE3251C6 /* MGTargetEntityObserver.m */; };
+		E01490DED08215537E7A08AE1C7F4A42 /* MGDataBinder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FFEBA8061B79A5756E3E2C1D8B09199F /* MGDataBinder-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0D5ED8B6B47E288FF9551B5A5CFD2499 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6A45A33E5E003574D63DEEF5C27949CB;
-			remoteInfo = "Pods-MGDataBinder_Example";
-		};
-		4C85E10EEAE4B486D8B84E711F7ACCFA /* PBXContainerItemProxy */ = {
+		2C00201F9F80401D1C237BE5A4B79643 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A36C19DBFA34137E104C9FC0606A53E1;
 			remoteInfo = MGDataBinder;
 		};
+		F67741AB66B9951620FCB62BA6AF9019 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A45A33E5E003574D63DEEF5C27949CB;
+			remoteInfo = "Pods-MGDataBinder_Example";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0340603C7B0A2833C1AEE52774FD8CE1 /* Pods-MGDataBinder_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MGDataBinder_Example-frameworks.sh"; sourceTree = "<group>"; };
-		07A47B9321A0CF4E7DDE8D65FF81828D /* MGDataBinder-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MGDataBinder-prefix.pch"; sourceTree = "<group>"; };
+		121B80C3B3847F3AA21DD8C3142CAC7A /* MGTargetEntity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGTargetEntity.m; path = MGDataBinder/Classes/MGTargetEntity.m; sourceTree = "<group>"; };
 		1814DFE004019856E1C3CEDA0CFBC450 /* Pods-MGDataBinder_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MGDataBinder_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		2198CBBB880CF6C439819B89886C4474 /* MGDataBinder-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MGDataBinder-Info.plist"; sourceTree = "<group>"; };
+		1D8DE8BA03B5660544DF963FAB8081B0 /* MGDataBinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MGDataBinder.debug.xcconfig; sourceTree = "<group>"; };
 		266CB5C9C5A0501E908649FAE6FCB901 /* Pods-MGDataBinder_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MGDataBinder_Example-dummy.m"; sourceTree = "<group>"; };
-		274E1D7A5165B713827BFF04806FB613 /* MGDataBinder.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = MGDataBinder.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		35B74CEB07332C6E6305FF7B0A9FC429 /* Pods_MGDataBinder_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MGDataBinder_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35B74CEB07332C6E6305FF7B0A9FC429 /* Pods_MGDataBinder_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MGDataBinder_Tests.framework; path = "Pods-MGDataBinder_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3884D7A1D4385E85FCC7F5976E5660AC /* Pods-MGDataBinder_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MGDataBinder_Tests-dummy.m"; sourceTree = "<group>"; };
-		396CC999267DDFB56F38C86CF23692FD /* MGDataBinder.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MGDataBinder.modulemap; sourceTree = "<group>"; };
+		3A5B128C7C94076F78E07E4C16CA9B19 /* MGDataBinder.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MGDataBinder.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3F1D688296150044F3BF944BAF806097 /* Pods-MGDataBinder_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MGDataBinder_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3FFA24B2305DCEA8FC00393CE759ED5D /* NSObject+MGBinder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MGBinder.h"; path = "MGDataBinder/Classes/NSObject+MGBinder.h"; sourceTree = "<group>"; };
 		42BBB0FA1B960890CE434A1E89FF3E83 /* Pods-MGDataBinder_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MGDataBinder_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		5B0E31CB13C08F5DCD6034FCD65FBA5C /* MGDataBinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MGDataBinder.release.xcconfig; sourceTree = "<group>"; };
-		64689D3AD77B0F522E8E7F2814C8FB8E /* Pods_MGDataBinder_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MGDataBinder_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B0FB531C7922740D909DA8880EE6BBD /* MGDataBinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MGDataBinder.debug.xcconfig; sourceTree = "<group>"; };
+		42EB860D028C5923E0709208ECB84E54 /* NSObject+MGBinder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MGBinder.m"; path = "MGDataBinder/Classes/NSObject+MGBinder.m"; sourceTree = "<group>"; };
+		625C1C7F065DC7FB33C5D2469757F8DC /* MGTargetEntity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGTargetEntity.h; path = MGDataBinder/Classes/MGTargetEntity.h; sourceTree = "<group>"; };
+		635AC8EAC2A1899C14B3B9AFBD959F09 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		63C6B2B1E4806E3C2E8D6EB0C5173F60 /* MGDataBinderHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGDataBinderHelper.h; path = MGDataBinder/Classes/MGDataBinderHelper.h; sourceTree = "<group>"; };
+		6437114D43D37E8BDB81CAB8DD371B38 /* MGDataBinder-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MGDataBinder-Info.plist"; sourceTree = "<group>"; };
+		64689D3AD77B0F522E8E7F2814C8FB8E /* Pods_MGDataBinder_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MGDataBinder_Example.framework; path = "Pods-MGDataBinder_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		734FE45BDF360C66B94C6AC3CFBD624B /* Pods-MGDataBinder_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MGDataBinder_Example.release.xcconfig"; sourceTree = "<group>"; };
+		73A4DB7B34FE0E81A7F04D34CBC9025F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		785F8ED4F7AD7E5CEC49E747624003FC /* Pods-MGDataBinder_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MGDataBinder_Example-umbrella.h"; sourceTree = "<group>"; };
-		8E91D8A994BAFA45EC3C18F8EB3402A5 /* MGDataBinder-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MGDataBinder-umbrella.h"; sourceTree = "<group>"; };
+		78D898E63BF8B8128621455042A64C26 /* MGDataBinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MGDataBinder.release.xcconfig; sourceTree = "<group>"; };
+		7D9BE7464E5544A3F3C57CACD96838BC /* MGPropertyType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGPropertyType.h; path = MGDataBinder/Classes/MGPropertyType.h; sourceTree = "<group>"; };
+		830CDFFFE932982D7A20A5F72871460D /* MGPropertyType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGPropertyType.m; path = MGDataBinder/Classes/MGPropertyType.m; sourceTree = "<group>"; };
+		895C31CD31F649E6ECB15941CFDCB59C /* MGDataBinder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGDataBinder.h; path = MGDataBinder/Classes/MGDataBinder.h; sourceTree = "<group>"; };
 		8F03EC2A581A214C85E1FBB786B1D4D9 /* Pods-MGDataBinder_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MGDataBinder_Example-Info.plist"; sourceTree = "<group>"; };
 		983D33E3F75EB3D222A040DE72CE4A6A /* Pods-MGDataBinder_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MGDataBinder_Tests.modulemap"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		991E24922254EA848BCC7EB21C3F838D /* MGDataBinder-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MGDataBinder-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D9DB143EF130E425C874B40DB977072 /* MGDataBinderManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGDataBinderManager.h; path = MGDataBinder/Classes/MGDataBinderManager.h; sourceTree = "<group>"; };
 		A133B624A43D011147CDEE4FF278A6D3 /* Pods-MGDataBinder_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MGDataBinder_Tests-Info.plist"; sourceTree = "<group>"; };
 		ACDE4C2F9600FF2EF0DFE64400E1E3FD /* Pods-MGDataBinder_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MGDataBinder_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5F0EAF3750156696934DA5252757183 /* Pods-MGDataBinder_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MGDataBinder_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		B788FEBC00F2A92D507FCAD26260B7AD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		B807F06AA49AAB05930C01B0A3E54386 /* MGDataBinder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MGDataBinder-dummy.m"; sourceTree = "<group>"; };
-		D65659B8DB43F41D2B503D93A31627CC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BB2F988B98CB2E6E3239059661084259 /* MGDataBinder.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MGDataBinder.modulemap; sourceTree = "<group>"; };
+		CE4C21D523DD2E8C4360E437EE3251C6 /* MGTargetEntityObserver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGTargetEntityObserver.m; path = MGDataBinder/Classes/MGTargetEntityObserver.m; sourceTree = "<group>"; };
+		CF3E6154616F6077EBA196BDF0B96113 /* MGDataBinderManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGDataBinderManager.m; path = MGDataBinder/Classes/MGDataBinderManager.m; sourceTree = "<group>"; };
+		D5CF8D2BC1B5A666B5C1AA1238CE84CB /* MGTargetEntityObserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGTargetEntityObserver.h; path = MGDataBinder/Classes/MGTargetEntityObserver.h; sourceTree = "<group>"; };
 		D961051D22E3033DC0A7E1085D76E7BC /* Pods-MGDataBinder_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MGDataBinder_Example.modulemap"; sourceTree = "<group>"; };
+		DF2E39771FC8EB448E3AB6407E2178E6 /* MGDataBinder-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MGDataBinder-prefix.pch"; sourceTree = "<group>"; };
 		DFF15158C3EA2EC7EE7182B45696AF49 /* Pods-MGDataBinder_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MGDataBinder_Tests-umbrella.h"; sourceTree = "<group>"; };
+		E1DFF77ADC99522853E488F4B4389119 /* MGDataBinder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGDataBinder.m; path = MGDataBinder/Classes/MGDataBinder.m; sourceTree = "<group>"; };
 		E6E383A5880BA561B22410660E223236 /* Pods-MGDataBinder_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MGDataBinder_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		EA921DD0D3C9DC13F3DD4A39C3916DA3 /* MGDataBinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MGDataBinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA921DD0D3C9DC13F3DD4A39C3916DA3 /* MGDataBinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MGDataBinder.framework; path = MGDataBinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28AE404C0078F77F2F87A5402F69183 /* Pods-MGDataBinder_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MGDataBinder_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F86180E9259AF43600FCE782 /* MGDataBinderHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGDataBinderHelper.h; path = MGDataBinder/Classes/MGDataBinderHelper.h; sourceTree = "<group>"; };
-		F86180EA259AF43600FCE782 /* MGDataBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGDataBinder.m; path = MGDataBinder/Classes/MGDataBinder.m; sourceTree = "<group>"; };
-		F86180EB259AF43600FCE782 /* MGTargetEntityObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGTargetEntityObserver.h; path = MGDataBinder/Classes/MGTargetEntityObserver.h; sourceTree = "<group>"; };
-		F86180EC259AF43600FCE782 /* MGDataBinderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGDataBinderManager.h; path = MGDataBinder/Classes/MGDataBinderManager.h; sourceTree = "<group>"; };
-		F86180ED259AF43600FCE782 /* MGTargetEntityObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGTargetEntityObserver.m; path = MGDataBinder/Classes/MGTargetEntityObserver.m; sourceTree = "<group>"; };
-		F86180EE259AF43600FCE782 /* MGPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGPropertyType.m; path = MGDataBinder/Classes/MGPropertyType.m; sourceTree = "<group>"; };
-		F86180EF259AF43700FCE782 /* NSObject+MGBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MGBinder.m"; path = "MGDataBinder/Classes/NSObject+MGBinder.m"; sourceTree = "<group>"; };
-		F86180F0259AF43700FCE782 /* NSObject+MGBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+MGBinder.h"; path = "MGDataBinder/Classes/NSObject+MGBinder.h"; sourceTree = "<group>"; };
-		F86180F1259AF43700FCE782 /* MGPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGPropertyType.h; path = MGDataBinder/Classes/MGPropertyType.h; sourceTree = "<group>"; };
-		F86180F2259AF43700FCE782 /* MGTargetEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGTargetEntity.h; path = MGDataBinder/Classes/MGTargetEntity.h; sourceTree = "<group>"; };
-		F86180F3259AF43700FCE782 /* MGDataBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGDataBinder.h; path = MGDataBinder/Classes/MGDataBinder.h; sourceTree = "<group>"; };
-		F86180F4259AF43700FCE782 /* MGTargetEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGTargetEntity.m; path = MGDataBinder/Classes/MGTargetEntity.m; sourceTree = "<group>"; };
-		F86180F5259AF43700FCE782 /* MGDataBinderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGDataBinderManager.m; path = MGDataBinder/Classes/MGDataBinderManager.m; sourceTree = "<group>"; };
+		FFEBA8061B79A5756E3E2C1D8B09199F /* MGDataBinder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MGDataBinder-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,14 +105,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6B3C5018CDE3ABA893F5BD6328899223 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				64431987C93F904DF2C35CD31702C687 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A7262BAA6375AEBA18C4A03A0F8D6B59 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -121,17 +113,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D06BDBDABC8E6670DF6AA35E9B742814 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D93A76482D593F3BE419F6CB16982E5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B3596E656770EC122A93D62CD6A30CA /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				898A8534B14366435F104B5A221A09A7 /* MGDataBinder */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		26BEA1FD81A97BB51022006D19F8DEA5 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,21 +149,6 @@
 			path = "Target Support Files/Pods-MGDataBinder_Tests";
 			sourceTree = "<group>";
 		};
-		52CF4F21DB508F05A3DF88BA43CFCA10 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				396CC999267DDFB56F38C86CF23692FD /* MGDataBinder.modulemap */,
-				B807F06AA49AAB05930C01B0A3E54386 /* MGDataBinder-dummy.m */,
-				2198CBBB880CF6C439819B89886C4474 /* MGDataBinder-Info.plist */,
-				07A47B9321A0CF4E7DDE8D65FF81828D /* MGDataBinder-prefix.pch */,
-				8E91D8A994BAFA45EC3C18F8EB3402A5 /* MGDataBinder-umbrella.h */,
-				6B0FB531C7922740D909DA8880EE6BBD /* MGDataBinder.debug.xcconfig */,
-				5B0E31CB13C08F5DCD6034FCD65FBA5C /* MGDataBinder.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/MGDataBinder";
-			sourceTree = "<group>";
-		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,35 +157,58 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		898A8534B14366435F104B5A221A09A7 /* MGDataBinder */ = {
+		65F41C6A4DF1645D0FECD6E93CAA16C2 /* MGDataBinder */ = {
 			isa = PBXGroup;
 			children = (
-				F86180F3259AF43700FCE782 /* MGDataBinder.h */,
-				F86180EA259AF43600FCE782 /* MGDataBinder.m */,
-				F86180E9259AF43600FCE782 /* MGDataBinderHelper.h */,
-				F86180EC259AF43600FCE782 /* MGDataBinderManager.h */,
-				F86180F5259AF43700FCE782 /* MGDataBinderManager.m */,
-				F86180F1259AF43700FCE782 /* MGPropertyType.h */,
-				F86180EE259AF43600FCE782 /* MGPropertyType.m */,
-				F86180F2259AF43700FCE782 /* MGTargetEntity.h */,
-				F86180F4259AF43700FCE782 /* MGTargetEntity.m */,
-				F86180EB259AF43600FCE782 /* MGTargetEntityObserver.h */,
-				F86180ED259AF43600FCE782 /* MGTargetEntityObserver.m */,
-				F86180F0259AF43700FCE782 /* NSObject+MGBinder.h */,
-				F86180EF259AF43700FCE782 /* NSObject+MGBinder.m */,
-				CBE78D51E8165D810C3CD157B97CD068 /* Pod */,
-				52CF4F21DB508F05A3DF88BA43CFCA10 /* Support Files */,
+				895C31CD31F649E6ECB15941CFDCB59C /* MGDataBinder.h */,
+				E1DFF77ADC99522853E488F4B4389119 /* MGDataBinder.m */,
+				63C6B2B1E4806E3C2E8D6EB0C5173F60 /* MGDataBinderHelper.h */,
+				9D9DB143EF130E425C874B40DB977072 /* MGDataBinderManager.h */,
+				CF3E6154616F6077EBA196BDF0B96113 /* MGDataBinderManager.m */,
+				7D9BE7464E5544A3F3C57CACD96838BC /* MGPropertyType.h */,
+				830CDFFFE932982D7A20A5F72871460D /* MGPropertyType.m */,
+				625C1C7F065DC7FB33C5D2469757F8DC /* MGTargetEntity.h */,
+				121B80C3B3847F3AA21DD8C3142CAC7A /* MGTargetEntity.m */,
+				D5CF8D2BC1B5A666B5C1AA1238CE84CB /* MGTargetEntityObserver.h */,
+				CE4C21D523DD2E8C4360E437EE3251C6 /* MGTargetEntityObserver.m */,
+				3FFA24B2305DCEA8FC00393CE759ED5D /* NSObject+MGBinder.h */,
+				42EB860D028C5923E0709208ECB84E54 /* NSObject+MGBinder.m */,
+				B1CE468ACB31FC94E4637B8EAEC37AA6 /* Pod */,
+				685BB6D1397513E281C3907619583565 /* Support Files */,
 			);
 			name = MGDataBinder;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		CBE78D51E8165D810C3CD157B97CD068 /* Pod */ = {
+		685BB6D1397513E281C3907619583565 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B788FEBC00F2A92D507FCAD26260B7AD /* LICENSE */,
-				274E1D7A5165B713827BFF04806FB613 /* MGDataBinder.podspec */,
-				D65659B8DB43F41D2B503D93A31627CC /* README.md */,
+				BB2F988B98CB2E6E3239059661084259 /* MGDataBinder.modulemap */,
+				FFEBA8061B79A5756E3E2C1D8B09199F /* MGDataBinder-dummy.m */,
+				6437114D43D37E8BDB81CAB8DD371B38 /* MGDataBinder-Info.plist */,
+				DF2E39771FC8EB448E3AB6407E2178E6 /* MGDataBinder-prefix.pch */,
+				991E24922254EA848BCC7EB21C3F838D /* MGDataBinder-umbrella.h */,
+				1D8DE8BA03B5660544DF963FAB8081B0 /* MGDataBinder.debug.xcconfig */,
+				78D898E63BF8B8128621455042A64C26 /* MGDataBinder.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/MGDataBinder";
+			sourceTree = "<group>";
+		};
+		7168BBA27D00EBB41C517F6DB4A9B2E8 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65F41C6A4DF1645D0FECD6E93CAA16C2 /* MGDataBinder */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		B1CE468ACB31FC94E4637B8EAEC37AA6 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				73A4DB7B34FE0E81A7F04D34CBC9025F /* LICENSE */,
+				3A5B128C7C94076F78E07E4C16CA9B19 /* MGDataBinder.podspec */,
+				635AC8EAC2A1899C14B3B9AFBD959F09 /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -217,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				0B3596E656770EC122A93D62CD6A30CA /* Development Pods */,
+				7168BBA27D00EBB41C517F6DB4A9B2E8 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				EF8997CC1E30B1EE9AC0CFDDDF344C25 /* Products */,
 				26BEA1FD81A97BB51022006D19F8DEA5 /* Targets Support Files */,
@@ -270,26 +270,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E4BACF628139B9F0A1E53DAD52BF8CE /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F86180F9259AF43900FCE782 /* MGDataBinderManager.h in Headers */,
-				F86180FF259AF43900FCE782 /* MGTargetEntity.h in Headers */,
-				F86180F6259AF43900FCE782 /* MGDataBinderHelper.h in Headers */,
-				F86180FD259AF43900FCE782 /* NSObject+MGBinder.h in Headers */,
-				F86180F8259AF43900FCE782 /* MGTargetEntityObserver.h in Headers */,
-				EE70B3875C763CF28ABEDC5E374406DE /* MGDataBinder-umbrella.h in Headers */,
-				F8618100259AF43900FCE782 /* MGDataBinder.h in Headers */,
-				F86180FE259AF43900FCE782 /* MGPropertyType.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6E83D48766E9CBCE566C1735973046E4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				45A3467F4B045C948E691AA1C4467F5D /* Pods-MGDataBinder_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83292EAB9908D6C8CE5D57F553CA86BB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FF09C52C573A94425310769CC182372 /* MGDataBinder-umbrella.h in Headers */,
+				69AA1B9236720163AB437EA1846BB5D8 /* MGDataBinder.h in Headers */,
+				226AF0B84D490DD908848DEE3F5AAB06 /* MGDataBinderHelper.h in Headers */,
+				AE74DBA505E14F2E9C7D4D80EA30A316 /* MGDataBinderManager.h in Headers */,
+				24AF8E52E90FB8E38472AA3D9F351092 /* MGPropertyType.h in Headers */,
+				2D5D1E181A7E262BC25F1EBE309488FD /* MGTargetEntity.h in Headers */,
+				D3BF6B6165F14ECD5546EE5AAC12966B /* MGTargetEntityObserver.h in Headers */,
+				883ECA9D64EA17FC78AD3A52C4089105 /* NSObject+MGBinder.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +308,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				48DDCF5A7C687061790D058EBB8849DD /* PBXTargetDependency */,
+				2AC9BD6E104C6436F9CBCFFDD679A609 /* PBXTargetDependency */,
 			);
 			name = "Pods-MGDataBinder_Example";
 			productName = "Pods-MGDataBinder_Example";
@@ -317,12 +317,12 @@
 		};
 		A36C19DBFA34137E104C9FC0606A53E1 /* MGDataBinder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50C0F6280F32C468D4FF913E4C865D7F /* Build configuration list for PBXNativeTarget "MGDataBinder" */;
+			buildConfigurationList = 03D3E93981A9F3B53F466B0E0FC66B2B /* Build configuration list for PBXNativeTarget "MGDataBinder" */;
 			buildPhases = (
-				5E4BACF628139B9F0A1E53DAD52BF8CE /* Headers */,
-				D162B9F083ADC06EFFA43430EC154DCA /* Sources */,
-				6B3C5018CDE3ABA893F5BD6328899223 /* Frameworks */,
-				746E390793442904D3DCF7DA7643A120 /* Resources */,
+				83292EAB9908D6C8CE5D57F553CA86BB /* Headers */,
+				D8358DFC11C21BDE81751D0D60461390 /* Sources */,
+				D06BDBDABC8E6670DF6AA35E9B742814 /* Frameworks */,
+				606E74A6AE1E6B93F3A4C44725D148CE /* Resources */,
 			);
 			buildRules = (
 			);
@@ -345,7 +345,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				2479DE774E3683BA5B9F7E611DB6E700 /* PBXTargetDependency */,
+				F89DAAB730CDFAD6D68EFDDCB24A3E22 /* PBXTargetDependency */,
 			);
 			name = "Pods-MGDataBinder_Tests";
 			productName = "Pods-MGDataBinder_Tests";
@@ -389,7 +389,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		746E390793442904D3DCF7DA7643A120 /* Resources */ = {
+		606E74A6AE1E6B93F3A4C44725D148CE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -414,20 +414,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D162B9F083ADC06EFFA43430EC154DCA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F86180FB259AF43900FCE782 /* MGPropertyType.m in Sources */,
-				39CC5A70BDE1B5FDE5AEFCFD3FD6F266 /* MGDataBinder-dummy.m in Sources */,
-				F8618101259AF43900FCE782 /* MGTargetEntity.m in Sources */,
-				F86180F7259AF43900FCE782 /* MGDataBinder.m in Sources */,
-				F8618102259AF43900FCE782 /* MGDataBinderManager.m in Sources */,
-				F86180FA259AF43900FCE782 /* MGTargetEntityObserver.m in Sources */,
-				F86180FC259AF43900FCE782 /* NSObject+MGBinder.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D162F8325E8F8FD33AC63FAECC1CE235 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -436,20 +422,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8358DFC11C21BDE81751D0D60461390 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E01490DED08215537E7A08AE1C7F4A42 /* MGDataBinder-dummy.m in Sources */,
+				39E4BD05669F78654E2CA554F94322DF /* MGDataBinder.m in Sources */,
+				BA4F8079366197C090905D3EA1D6518F /* MGDataBinderManager.m in Sources */,
+				BC395848CED945C8AE846A91EF5C66AC /* MGPropertyType.m in Sources */,
+				25BF059DEA3D9AAD5E35A53836EC0D37 /* MGTargetEntity.m in Sources */,
+				DF674B9318E0B9800F2DB1D0095A6570 /* MGTargetEntityObserver.m in Sources */,
+				5E5D2B02656C774A805028D3A588F5C5 /* NSObject+MGBinder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2479DE774E3683BA5B9F7E611DB6E700 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-MGDataBinder_Example";
-			target = 6A45A33E5E003574D63DEEF5C27949CB /* Pods-MGDataBinder_Example */;
-			targetProxy = 0D5ED8B6B47E288FF9551B5A5CFD2499 /* PBXContainerItemProxy */;
-		};
-		48DDCF5A7C687061790D058EBB8849DD /* PBXTargetDependency */ = {
+		2AC9BD6E104C6436F9CBCFFDD679A609 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MGDataBinder;
 			target = A36C19DBFA34137E104C9FC0606A53E1 /* MGDataBinder */;
-			targetProxy = 4C85E10EEAE4B486D8B84E711F7ACCFA /* PBXContainerItemProxy */;
+			targetProxy = 2C00201F9F80401D1C237BE5A4B79643 /* PBXContainerItemProxy */;
+		};
+		F89DAAB730CDFAD6D68EFDDCB24A3E22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MGDataBinder_Example";
+			target = 6A45A33E5E003574D63DEEF5C27949CB /* Pods-MGDataBinder_Example */;
+			targetProxy = F67741AB66B9951620FCB62BA6AF9019 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -520,36 +520,6 @@
 			};
 			name = Debug;
 		};
-		2A36BE4BDE7C80CE70864E6E86695D7F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B0FB531C7922740D909DA8880EE6BBD /* MGDataBinder.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MGDataBinder/MGDataBinder-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MGDataBinder/MGDataBinder-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MGDataBinder/MGDataBinder.modulemap";
-				PRODUCT_MODULE_NAME = MGDataBinder;
-				PRODUCT_NAME = MGDataBinder;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		55967C3B2B57D8BE8CFAFC0496651F7E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 734FE45BDF360C66B94C6AC3CFBD624B /* Pods-MGDataBinder_Example.release.xcconfig */;
@@ -576,37 +546,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5F340F4E6E9F7CA1D669853919267090 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B0E31CB13C08F5DCD6034FCD65FBA5C /* MGDataBinder.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MGDataBinder/MGDataBinder-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MGDataBinder/MGDataBinder-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MGDataBinder/MGDataBinder.modulemap";
-				PRODUCT_MODULE_NAME = MGDataBinder;
-				PRODUCT_NAME = MGDataBinder;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -645,6 +584,37 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		6E6DF87F44170212C5303D367B5355D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78D898E63BF8B8128621455042A64C26 /* MGDataBinder.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MGDataBinder/MGDataBinder-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MGDataBinder/MGDataBinder-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MGDataBinder/MGDataBinder.modulemap";
+				PRODUCT_MODULE_NAME = MGDataBinder;
+				PRODUCT_NAME = MGDataBinder;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		87C19155EC6DD77AA2569AE2A25F5226 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -733,11 +703,42 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
+		};
+		EBB0227A6FDAAC62C34178552F86E61A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D8DE8BA03B5660544DF963FAB8081B0 /* MGDataBinder.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MGDataBinder/MGDataBinder-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MGDataBinder/MGDataBinder-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MGDataBinder/MGDataBinder.modulemap";
+				PRODUCT_MODULE_NAME = MGDataBinder;
+				PRODUCT_NAME = MGDataBinder;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		F674E5327D106449800BAC0CFBAFE26B /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -775,20 +776,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		03D3E93981A9F3B53F466B0E0FC66B2B /* Build configuration list for PBXNativeTarget "MGDataBinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBB0227A6FDAAC62C34178552F86E61A /* Debug */,
+				6E6DF87F44170212C5303D367B5355D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
 				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		50C0F6280F32C468D4FF913E4C865D7F /* Build configuration list for PBXNativeTarget "MGDataBinder" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2A36BE4BDE7C80CE70864E6E86695D7F /* Debug */,
-				5F340F4E6E9F7CA1D669853919267090 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

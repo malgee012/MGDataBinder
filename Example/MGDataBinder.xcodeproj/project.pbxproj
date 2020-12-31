@@ -24,19 +24,13 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		F30FE8019C9212AD09E4C376 /* Pods_MGDataBinder_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843F5330D78F6D64E95B5DDB /* Pods_MGDataBinder_Example.framework */; };
-		F8617FAB2596C55100FCE782 /* MGPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = F8617FAA2596C55100FCE782 /* MGPropertyType.m */; };
 		F8617FD725983F6C00FCE782 /* MGPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = F8617FD625983F6C00FCE782 /* MGPerson.m */; };
-		F861800D2598EC2800FCE782 /* MGTargetEntityObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = F861800C2598EC2800FCE782 /* MGTargetEntityObserver.m */; };
 		F86180DB259AD5D300FCE782 /* MGTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F86180D9259AD5D100FCE782 /* MGTextFieldViewController.m */; };
 		F86180E6259AD6D000FCE782 /* MGTextFieldViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86180E5259AD6D000FCE782 /* MGTextFieldViewController.storyboard */; };
 		F871F1C0259617BE00605689 /* MGSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F1BF259617BE00605689 /* MGSliderViewController.m */; };
-		F871F1CD259618F300605689 /* MGDataBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F1CC259618F300605689 /* MGDataBinder.m */; };
-		F871F1D72596201500605689 /* MGDataBinderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F1D62596201500605689 /* MGDataBinderManager.m */; };
-		F871F1DC259620E400605689 /* MGTargetEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F1DB259620E400605689 /* MGTargetEntity.m */; };
 		F871F1E02596282200605689 /* MGSliderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F871F1DF2596282200605689 /* MGSliderViewController.storyboard */; };
 		F871F211259629A000605689 /* MGBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F210259629A000605689 /* MGBaseViewController.m */; };
 		F871F21B259629F100605689 /* MGBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F21A259629F100605689 /* MGBaseView.m */; };
-		F871F220259631DD00605689 /* NSObject+MGBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F21F259631DD00605689 /* NSObject+MGBinder.m */; };
 		F871F226259643D400605689 /* MGBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F225259643D400605689 /* MGBaseModel.m */; };
 /* End PBXBuildFile section */
 
@@ -81,31 +75,31 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A591C0921B56D156D0326A8B /* MGDataBinder.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MGDataBinder.podspec; path = ../MGDataBinder.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C433DB6F15EDF60EC1697303 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		F8617FA92596C55100FCE782 /* MGPropertyType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGPropertyType.h; sourceTree = "<group>"; };
-		F8617FAA2596C55100FCE782 /* MGPropertyType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGPropertyType.m; sourceTree = "<group>"; };
 		F8617FD525983F6C00FCE782 /* MGPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGPerson.h; sourceTree = "<group>"; };
 		F8617FD625983F6C00FCE782 /* MGPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGPerson.m; sourceTree = "<group>"; };
-		F861800B2598EC2800FCE782 /* MGTargetEntityObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTargetEntityObserver.h; sourceTree = "<group>"; };
-		F861800C2598EC2800FCE782 /* MGTargetEntityObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTargetEntityObserver.m; sourceTree = "<group>"; };
 		F86180D8259AD5D100FCE782 /* MGTextFieldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTextFieldViewController.h; sourceTree = "<group>"; };
 		F86180D9259AD5D100FCE782 /* MGTextFieldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTextFieldViewController.m; sourceTree = "<group>"; };
 		F86180E5259AD6D000FCE782 /* MGTextFieldViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MGTextFieldViewController.storyboard; sourceTree = "<group>"; };
+		F8618116259B077900FCE782 /* MGDataBinderManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MGDataBinderManager.m; path = ../../MGDataBinder/Classes/MGDataBinderManager.m; sourceTree = "<group>"; };
+		F8618117259B077900FCE782 /* NSObject+MGBinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSObject+MGBinder.h"; path = "../../MGDataBinder/Classes/NSObject+MGBinder.h"; sourceTree = "<group>"; };
+		F8618118259B077900FCE782 /* NSObject+MGBinder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MGBinder.m"; path = "../../MGDataBinder/Classes/NSObject+MGBinder.m"; sourceTree = "<group>"; };
+		F8618119259B077900FCE782 /* MGTargetEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MGTargetEntity.m; path = ../../MGDataBinder/Classes/MGTargetEntity.m; sourceTree = "<group>"; };
+		F861811A259B077900FCE782 /* MGTargetEntityObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MGTargetEntityObserver.h; path = ../../MGDataBinder/Classes/MGTargetEntityObserver.h; sourceTree = "<group>"; };
+		F861811B259B077900FCE782 /* MGDataBinderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MGDataBinderManager.h; path = ../../MGDataBinder/Classes/MGDataBinderManager.h; sourceTree = "<group>"; };
+		F861811C259B077900FCE782 /* MGTargetEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MGTargetEntity.h; path = ../../MGDataBinder/Classes/MGTargetEntity.h; sourceTree = "<group>"; };
+		F861811D259B077A00FCE782 /* MGDataBinder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MGDataBinder.m; path = ../../MGDataBinder/Classes/MGDataBinder.m; sourceTree = "<group>"; };
+		F861811E259B077A00FCE782 /* MGPropertyType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MGPropertyType.h; path = ../../MGDataBinder/Classes/MGPropertyType.h; sourceTree = "<group>"; };
+		F861811F259B077A00FCE782 /* MGDataBinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MGDataBinder.h; path = ../../MGDataBinder/Classes/MGDataBinder.h; sourceTree = "<group>"; };
+		F8618120259B077A00FCE782 /* MGPropertyType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MGPropertyType.m; path = ../../MGDataBinder/Classes/MGPropertyType.m; sourceTree = "<group>"; };
+		F8618121259B077A00FCE782 /* MGDataBinderHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MGDataBinderHelper.h; path = ../../MGDataBinder/Classes/MGDataBinderHelper.h; sourceTree = "<group>"; };
+		F8618122259B077A00FCE782 /* MGTargetEntityObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MGTargetEntityObserver.m; path = ../../MGDataBinder/Classes/MGTargetEntityObserver.m; sourceTree = "<group>"; };
 		F871F1BE259617BE00605689 /* MGSliderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGSliderViewController.h; sourceTree = "<group>"; };
 		F871F1BF259617BE00605689 /* MGSliderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGSliderViewController.m; sourceTree = "<group>"; };
-		F871F1CB259618F300605689 /* MGDataBinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGDataBinder.h; sourceTree = "<group>"; };
-		F871F1CC259618F300605689 /* MGDataBinder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGDataBinder.m; sourceTree = "<group>"; };
-		F871F1D2259619CF00605689 /* MGDataBinderHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGDataBinderHelper.h; sourceTree = "<group>"; };
-		F871F1D52596201500605689 /* MGDataBinderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGDataBinderManager.h; sourceTree = "<group>"; };
-		F871F1D62596201500605689 /* MGDataBinderManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGDataBinderManager.m; sourceTree = "<group>"; };
-		F871F1DA259620E400605689 /* MGTargetEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTargetEntity.h; sourceTree = "<group>"; };
-		F871F1DB259620E400605689 /* MGTargetEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTargetEntity.m; sourceTree = "<group>"; };
 		F871F1DF2596282200605689 /* MGSliderViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MGSliderViewController.storyboard; sourceTree = "<group>"; };
 		F871F20F259629A000605689 /* MGBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGBaseViewController.h; sourceTree = "<group>"; };
 		F871F210259629A000605689 /* MGBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGBaseViewController.m; sourceTree = "<group>"; };
 		F871F219259629F100605689 /* MGBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGBaseView.h; sourceTree = "<group>"; };
 		F871F21A259629F100605689 /* MGBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGBaseView.m; sourceTree = "<group>"; };
-		F871F21E259631DD00605689 /* NSObject+MGBinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MGBinder.h"; sourceTree = "<group>"; };
-		F871F21F259631DD00605689 /* NSObject+MGBinder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MGBinder.m"; sourceTree = "<group>"; };
 		F871F224259643D400605689 /* MGBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGBaseModel.h; sourceTree = "<group>"; };
 		F871F225259643D400605689 /* MGBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGBaseModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -279,19 +273,19 @@
 		F871F1CA2596189C00605689 /* MGBinderLibs */ = {
 			isa = PBXGroup;
 			children = (
-				F871F1D2259619CF00605689 /* MGDataBinderHelper.h */,
-				F871F1CB259618F300605689 /* MGDataBinder.h */,
-				F871F1CC259618F300605689 /* MGDataBinder.m */,
-				F871F1D52596201500605689 /* MGDataBinderManager.h */,
-				F871F1D62596201500605689 /* MGDataBinderManager.m */,
-				F861800B2598EC2800FCE782 /* MGTargetEntityObserver.h */,
-				F861800C2598EC2800FCE782 /* MGTargetEntityObserver.m */,
-				F871F1DA259620E400605689 /* MGTargetEntity.h */,
-				F871F1DB259620E400605689 /* MGTargetEntity.m */,
-				F8617FA92596C55100FCE782 /* MGPropertyType.h */,
-				F8617FAA2596C55100FCE782 /* MGPropertyType.m */,
-				F871F21E259631DD00605689 /* NSObject+MGBinder.h */,
-				F871F21F259631DD00605689 /* NSObject+MGBinder.m */,
+				F8618121259B077A00FCE782 /* MGDataBinderHelper.h */,
+				F861811F259B077A00FCE782 /* MGDataBinder.h */,
+				F861811D259B077A00FCE782 /* MGDataBinder.m */,
+				F861811B259B077900FCE782 /* MGDataBinderManager.h */,
+				F8618116259B077900FCE782 /* MGDataBinderManager.m */,
+				F861811E259B077A00FCE782 /* MGPropertyType.h */,
+				F8618120259B077A00FCE782 /* MGPropertyType.m */,
+				F861811C259B077900FCE782 /* MGTargetEntity.h */,
+				F8618119259B077900FCE782 /* MGTargetEntity.m */,
+				F861811A259B077900FCE782 /* MGTargetEntityObserver.h */,
+				F8618122259B077A00FCE782 /* MGTargetEntityObserver.m */,
+				F8618117259B077900FCE782 /* NSObject+MGBinder.h */,
+				F8618118259B077900FCE782 /* NSObject+MGBinder.m */,
 			);
 			name = MGBinderLibs;
 			sourceTree = "<group>";
@@ -471,18 +465,12 @@
 			files = (
 				6003F59E195388D20070C39A /* MGAppDelegate.m in Sources */,
 				F871F1C0259617BE00605689 /* MGSliderViewController.m in Sources */,
-				F871F1CD259618F300605689 /* MGDataBinder.m in Sources */,
 				F871F21B259629F100605689 /* MGBaseView.m in Sources */,
 				6003F5A7195388D20070C39A /* MGViewController.m in Sources */,
 				F8617FD725983F6C00FCE782 /* MGPerson.m in Sources */,
 				F871F226259643D400605689 /* MGBaseModel.m in Sources */,
-				F8617FAB2596C55100FCE782 /* MGPropertyType.m in Sources */,
-				F871F1DC259620E400605689 /* MGTargetEntity.m in Sources */,
-				F861800D2598EC2800FCE782 /* MGTargetEntityObserver.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				F86180DB259AD5D300FCE782 /* MGTextFieldViewController.m in Sources */,
-				F871F220259631DD00605689 /* NSObject+MGBinder.m in Sources */,
-				F871F1D72596201500605689 /* MGDataBinderManager.m in Sources */,
 				F871F211259629A000605689 /* MGBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

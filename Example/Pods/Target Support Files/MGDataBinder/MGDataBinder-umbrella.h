@@ -10,6 +10,13 @@
 #endif
 #endif
 
+#import "MGDataBinder.h"
+#import "MGDataBinderHelper.h"
+#import "MGDataBinderManager.h"
+#import "MGPropertyType.h"
+#import "MGTargetEntity.h"
+#import "MGTargetEntityObserver.h"
+#import "NSObject+MGBinder.h"
 
 FOUNDATION_EXPORT double MGDataBinderVersionNumber;
 FOUNDATION_EXPORT const unsigned char MGDataBinderVersionString[];

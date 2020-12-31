@@ -72,8 +72,7 @@
 }
 
 - (void)binderActionEvent:(id)target {
-    target = [self handelActionBlockWithValue:target];
-    id value = [target valueForKeyPath:self.property];
+    id value = [self handelActionBlockWithValue:[target valueForKeyPath:self.property]];
     if (!value) {
         return;
     }
