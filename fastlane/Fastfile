@@ -28,7 +28,7 @@ import_from_git(
 default_platform(:ios)
 
 platform :ios do
-  desc "Description of what the lane does"
+  desc "升级MGDataBinder库"
   lane :MGLibs do |options|
   	libName = options[:lib]
     message = options[:message]
