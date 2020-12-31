@@ -33,7 +33,6 @@
     _count = 10;
     [self.view addSubview:self.displayTableView];
     
-    
 //    NSString *str1 = @"dfsaskjfnasdkfaskfaskfassdfa";
 //
 //    NSString *str2 = str1.mutableCopy;
