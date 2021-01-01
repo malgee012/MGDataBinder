@@ -20,7 +20,7 @@ or alternatively using `brew install fastlane`
 ```
 fastlane ios mg_update_lib
 ```
-版本库的发布&更新
+私有版本库的发布&更新
 ### ios MGLibs
 ```
 fastlane ios MGLibs
