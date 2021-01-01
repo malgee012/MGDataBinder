@@ -33,7 +33,8 @@ platform :ios do
   	libName = options[:lib]
     message = options[:message]
     tag = options[:tag]
-  	mg_update_lib(libName:libName, tag:tag, message:message)
+    is_public = options[:public]
+  	mg_update_lib(libName:libName, tag:tag, message:message, is_public:is_public)
 
   end
 end
