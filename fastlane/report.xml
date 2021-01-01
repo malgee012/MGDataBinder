@@ -5,47 +5,47 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.001704">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000385">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: import_from_git" time="5.36073">
+      <testcase classname="fastlane.lanes" name="1: import_from_git" time="6.774277">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: default_platform" time="0.000442">
+      <testcase classname="fastlane.lanes" name="2: default_platform" time="0.001045">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: Switch to ios mg_update_lib lane" time="0.001863">
+      <testcase classname="fastlane.lanes" name="3: Switch to ios mg_update_lib lane" time="0.000544">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: pod_lib_lint" time="24.759439">
+      <testcase classname="fastlane.lanes" name="4: pod_lib_lint" time="15.458688">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="5: git_add" time="0.063762">
+      <testcase classname="fastlane.lanes" name="5: git_add" time="0.040387">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="6: git_commit" time="0.086657">
+      <testcase classname="fastlane.lanes" name="6: git_commit" time="0.065852">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="7: push_to_git_remote" time="8.1513">
+      <testcase classname="fastlane.lanes" name="7: push_to_git_remote" time="5.73488">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="8: git_tag_exists" time="0.016613">
+      <testcase classname="fastlane.lanes" name="8: git_tag_exists" time="0.016017">
         
       </testcase>
     
