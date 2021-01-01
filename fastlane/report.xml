@@ -5,47 +5,52 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000298">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.001952">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: import_from_git" time="3.772433">
+      <testcase classname="fastlane.lanes" name="1: import_from_git" time="4.672741">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: default_platform" time="0.000588">
+      <testcase classname="fastlane.lanes" name="2: default_platform" time="0.001019">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: Switch to ios mg_update_lib lane" time="0.000396">
+      <testcase classname="fastlane.lanes" name="3: Switch to ios mg_update_lib lane" time="0.000568">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: pod_lib_lint" time="14.219159">
+      <testcase classname="fastlane.lanes" name="4: pod_lib_lint" time="14.118123">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="5: git_add" time="0.057079">
+      <testcase classname="fastlane.lanes" name="5: git_add" time="0.051773">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="6: git_commit" time="0.100847">
+      <testcase classname="fastlane.lanes" name="6: git_commit" time="0.082213">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="7: push_to_git_remote" time="4.969958">
+      <testcase classname="fastlane.lanes" name="7: push_to_git_remote" time="6.925917">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="8: git_tag_exists" time="0.016439">
+      <testcase classname="fastlane.lanes" name="8: git_tag_exists" time="0.016323">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="9: remove_git_tag" time="995.764849">
         
       </testcase>
     
