@@ -15,7 +15,7 @@
 
 ####################################################
 
-# eg:  fastlane MGLibs lib:MGDataBinder tag:1.0.0 message:使用fastlane更新
+# eg:  fastlane MGLibs lib:MGDataBinder tag:1.0.0 message:使用fastlane更新 public:true
 
 ####################################################
 
@@ -33,7 +33,7 @@ platform :ios do
   	libName = options[:lib]
     message = options[:message]
     tag = options[:tag]
-    is_public = options[:public]
+    is_public = options[:public]  # 是否为公有库true, 默认私有库
   	mg_update_lib(libName:libName, tag:tag, message:message, is_public:is_public)
 
   end
