@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MGDataBinder'
-  s.version          = '1.0.0.1'
+  s.version          = '1.0.0.2'
   s.summary          = 'A lightweight data binding that uses KVO to listen for changes in data and KVC to modify data.'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  链式绑定数据
                        DESC
 
   s.homepage         = 'https://github.com/Maling1255/MGDataBinder'
