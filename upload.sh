@@ -1,7 +1,7 @@
 #!/bin/bash
 
-read -p "请输入版本号 例如 1.0.0, 输入你的版本号:" MGVERSION
-read -p "请输入本次更新描述:" MGDESCRIBE
+read -p "请输入版本号 例如 1.0.0, 输入你的版本号: " MGVERSION
+read -p "请输入本次更新描述: " MGDESCRIBE
 
 echo 你输入的版本号:"$MGVERSION", 本次更新描述:"$MGDESCRIBE"
 
