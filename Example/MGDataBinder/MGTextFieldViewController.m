@@ -20,27 +20,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     [MGDataBinder binder]
     .bindBlockObjReturnObjSet(self.textLbl, binder_text, ^NSString *(NSString *text) {
-        return [NSString stringWithFormat:@"文本：%@", text];
+        return [NSString stringWithFormat:@"重新编译的文本%@~~~", text];
     })
     .bindEventBlockObjReturnObjSet(self.textField1, binder_text, UIControlEventEditingChanged, ^NSString *(NSString *text) {
-        if (text.length >= 8) {
-            text = [text substringToIndex:8];
+        if (text.length >= 20) {
+            text = [text substringToIndex:18];
         }
         return text;
-    });
+    })
+    .bindEventBlockObjReturnObjSet(self.textField2, binder_text, UIControlEventEditingChanged, ^NSString *(NSString *text) {
+        return [NSString stringWithFormat:@"_%@_",text];
+    })
+    ;
 }
 
 
 - (IBAction)clickbutton1:(id)sender {
  
-    self.textLbl.text = @"文本：12306";
+    self.textLbl.text = @"12306";
+    
+    [self.view endEditing:YES];
 }
 
 - (IBAction)clickbutton2:(id)sender {
-    
+    [self.view endEditing:YES];
 }
 
 - (void)injected {

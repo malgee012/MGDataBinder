@@ -16,7 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *signId;
 
 @property (nonatomic, strong) MGTargetEntityObserver *observer;
-@property (nonatomic, assign, getter=isRemoveObserver) BOOL removeObserver;
+@property (nonatomic, assign, getter=isRemoveObserver) BOOL removeObserver;  // 移除 Observer标记
+
 @property (nonatomic, weak) id target;
 @property (nonatomic, copy) NSString *property;
 @property (nonatomic, strong) MGPropertyType *propertyType;

@@ -13,9 +13,9 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface NSObject (MGBinder)
 
+// weak 防止循环引用(UI控件释放的时候 一块释放)
 @property (nonatomic, weak) MGTargetEntity *targetEntity;
 
-//@property (nonatomic, strong) MGTargetEntityObserver *entityObserver;
 @property (nonatomic, strong, nullable) NSMutableArray <MGTargetEntityObserver *>*entityObservers;
 
 - (NSString *)hash_id;

@@ -21,16 +21,16 @@ static NSString * const binderTargetEntitysHashMapKey = @"binderTargetEntitysHas
 
 - (id)copyWithZone:(NSZone *)zone {
     MGTargetEntityObserver *copyObserver = [[[self class] allocWithZone:zone] init];
-    [copyObserver setValue:self.bindId forKey:@"bindId"];
-    [copyObserver setValue:self.signId forKey:@"signId"];
+    [copyObserver setValue:self.bindId forKey:binder_id];
+    [copyObserver setValue:self.signId forKey:sign_id];
     copyObserver.addObserver = self.addObserver;
     return copyObserver;
 }
 
 - (id)mutableCopyWithZone:(NSZone *)zone {
     MGTargetEntityObserver *copyObserver = [[[self class] allocWithZone:zone] init];
-    [copyObserver setValue:self.bindId forKey:@"bindId"];
-    [copyObserver setValue:self.signId forKey:@"signId"];
+    [copyObserver setValue:self.bindId forKey:binder_id];
+    [copyObserver setValue:self.signId forKey:sign_id];
     copyObserver.addObserver = self.addObserver;
     return copyObserver;
 }
@@ -38,12 +38,12 @@ static NSString * const binderTargetEntitysHashMapKey = @"binderTargetEntitysHas
 - (void)addTargetObserverWithTargetEntity:(MGTargetEntity *)targetEntity {
     NSMutableArray <MGTargetEntityObserver *>*entityObservers = ((NSObject *)(targetEntity.target)).entityObservers;
     targetEntity.observer.addObserver = YES;
-    NSArray *signArray = [entityObservers valueForKeyPath:@"signId"];
+    NSArray *signArray = [entityObservers valueForKeyPath:sign_id];
     NSInteger index = [signArray indexOfObject:targetEntity.signId];
-    MGTargetEntityObserver *entityObsetver = entityObservers[index];
-    entityObsetver.addObserver = YES;
+    MGTargetEntityObserver *entityObserver = entityObservers[index];
+    entityObserver.addObserver = YES;
     
-    NSLog(@"🚀🚀添加  %@  ::::::::: %@  ::::::::: %@", targetEntity, [entityObservers valueForKeyPath:@"signId"], self);
+    NSLog(@"🚀🚀KVO     %@    %@", targetEntity, self);
     [targetEntity.target addObserver:self forKeyPath:targetEntity.property options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:(__bridge void * _Nullable)targetEntity];
 }
 
@@ -100,8 +100,13 @@ static NSString * const binderTargetEntitysHashMapKey = @"binderTargetEntitysHas
 }
 
 - (void)dealloc {
-//    NSLog(@"****************************************************** dealloc: %@", NSStringFromClass(self.class));
+//    NSLog(@"****************************************************** dealloc: %@", self);
     [self unbindWithBindId:self.bindId];
 }
+
+/**
+  UIViewController 释放 -> UI控件释放(weak  targetEntity释放(Observer释放) ) ->  通过 bindid释放所有
+ */
+
 
 @end

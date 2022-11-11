@@ -11,7 +11,7 @@
 #import "NSObject+MGBinder.h"
 #import <objc/runtime.h>
 #import "MGPropertyType.h"
-
+#import "MGDataBinderHelper.h"
 #import "MGTargetEntityObserver.h"
 @interface MGDataBinderManager ()
 
@@ -73,15 +73,17 @@
                                    blockType:(MGBlockType)blockType
                                  actionBlock:(id _Nullable)actionBlock {
     NSMutableArray <MGTargetEntity *>*targetEntitysArray = [self getTargetEntityArrayWithBindId:bindId];
+    // 签名 id
     NSString *signId = [self getSignIdWithTarget:target property:property bindId:bindId];
-    NSMutableArray *array = [targetEntitysArray valueForKeyPath:@"signId"];
+    NSMutableArray *array = [targetEntitysArray valueForKeyPath:sign_id];
     if ([array containsObject:signId]) {
+        // TODO: 返回对应的
         return nil;
     }
     
     MGTargetEntity *targetEntity = [[MGTargetEntity alloc] init];
-    [targetEntity setValue:signId forKey:@"signId"];
-    [targetEntity setValue:bindId forKey:@"bindId"];
+    [targetEntity setValue:signId forKey:sign_id];
+    [targetEntity setValue:bindId forKey:binder_id];
     targetEntity.target = target;
     targetEntity.property = property;
     targetEntity.propertyType = [MGPropertyType getPropertyTypeWithTarget:target property:property];
@@ -90,8 +92,8 @@
     targetEntity.controlEvent = controlEvent;
     ((NSObject *)(targetEntity.target)).targetEntity = targetEntity;
     MGTargetEntityObserver *observer = [MGTargetEntityObserver new];
-    [observer setValue:signId forKey:@"signId"];
-    [observer setValue:bindId forKey:@"bindId"];
+    [observer setValue:signId forKey:sign_id];
+    [observer setValue:bindId forKey:binder_id];
     targetEntity.observer = observer;
     targetEntity.observer.addObserver = NO;
     [self bindObserverWithTarget:target observer:observer];
@@ -100,16 +102,13 @@
 }
 
 - (void)bindObserverWithTarget:(__kindof NSObject *)target observer:(MGTargetEntityObserver *)observer {
-//    MGTargetEntityObserver *oldObserver = target.entityObserver;
-//    if (!oldObserver) {
-//        target.entityObserver = observer.mutableCopy;
-//    }
-    
     NSMutableArray *observers = target.entityObservers;
     if (!observers) {
         observers = [NSMutableArray array];
         target.entityObservers = observers;
     }
+    
+    // MARK: 需要深拷贝, 否则最后释放不掉
     [observers addObject:observer.mutableCopy];
 }
 

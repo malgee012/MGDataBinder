@@ -22,7 +22,7 @@
 @implementation MGTargetEntity
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%@  %@      <%@:%p> %@ %@ %@ observers:%@", _bindId, _signId, [self class], self, ({
+    return [NSString stringWithFormat:@"TargetEntity ==> \n{ bindid : %@\nsignId : %@\n<%@ : %p>\nclass : %@\nproperty : %@\nproperty_value : %@\nobservers : %@\n\n", _bindId, _signId, [self class], self, ({
         NSString *str = [NSString stringWithFormat:@"%@", _target];
         str = [str componentsSeparatedByString:@";"].firstObject;
         if ([str containsString:@"<UI"]) {
@@ -77,19 +77,19 @@
         return;
     }
 
+    NSLog(@"-----------------------------UI主动改变后的值：： %@   %@", [target valueForKeyPath:self.property], [[target valueForKeyPath:self.property] class]);
     MGTargetEntity *targetEntity = ((NSObject *)target).targetEntity;
     [targetEntity updateValue:value withTargetEntity:targetEntity];
-
-    NSLog(@"-----------------------------UI主动改变后的值：： %@   %@", [target valueForKeyPath:self.property], [[target valueForKeyPath:self.property] class]);
 }
 
 - (void)updateValue:(id)newValue withTargetEntity:(MGTargetEntity *)targetEntity {
     NSMutableArray <MGTargetEntity *>*targetEntitysArray = [[MGDataBinderManager sharedBinderManager] getTargetEntityArrayWithBindId:targetEntity.bindId];
     for (MGTargetEntity *entity in targetEntitysArray) {
         [entity setValue:newValue];
-        NSLog(@"::: %@ ", entity);
+        NSLog(@"更新值 %@ : %@", entity, newValue);
     }
 
+    // TODO: 这个位置 有点问题
     [targetEntitysArray setValue:@(NO) forKeyPath:@"changeValue"];
 }
 
@@ -185,7 +185,7 @@
 
 - (void)dealloc {
  
-//    NSLog(@"****************************************************** dealloc: %@", NSStringFromClass(self.class));
+    NSLog(@"****************************************************** dealloc: %@", self);
 }
 
 @end

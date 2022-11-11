@@ -342,7 +342,7 @@
 				ORGANIZATIONNAME = Maling1255;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = SAD9GVSU92;
+						DevelopmentTeam = P6BAKW6S45;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -599,7 +599,7 @@
 			baseConfigurationReference = 57FE532F0390364C6AD1C8A2 /* Pods-MGDataBinder_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SAD9GVSU92;
+				DEVELOPMENT_TEAM = P6BAKW6S45;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MGDataBinder/MGDataBinder-Prefix.pch";
 				INFOPLIST_FILE = "MGDataBinder/MGDataBinder-Info.plist";
@@ -616,7 +616,7 @@
 			baseConfigurationReference = 473C7A294B04151D413739EC /* Pods-MGDataBinder_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SAD9GVSU92;
+				DEVELOPMENT_TEAM = P6BAKW6S45;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MGDataBinder/MGDataBinder-Prefix.pch";
 				INFOPLIST_FILE = "MGDataBinder/MGDataBinder-Info.plist";

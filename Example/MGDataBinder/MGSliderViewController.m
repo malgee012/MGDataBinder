@@ -47,7 +47,7 @@
     self.slider.maximumValue = 100;
     
     [self.testButton addTarget:self action:@selector(clickButton1) forControlEvents:UIControlEventTouchUpInside];
-    [self.testButton addTarget:self action:@selector(clickButton1) forControlEvents:UIControlEventTouchUpInside];
+    [self.testButton addTarget:self action:@selector(clickButton2) forControlEvents:UIControlEventTouchUpInside];
     
     
     __weak typeof(self)weakSelf = self;
@@ -96,27 +96,23 @@
             NSLog(@"同步更新回调------ %@", obj);
         }
     })
-//    .bindBlockObjReturnObjSet(self.progressView, binder_progress, ^NSNumber *(NSNumber *value) {
-//        float tempValue = [value floatValue];
-//        tempValue = tempValue / 100.f;
-//        return @(tempValue);
-//    })
-    ;
-    
-    
-    
-    MGDataBinder *binder2 =  [MGDataBinder binder];
-    NSLog(@"创建bindid:: %@", binder2.bindId);
-
-    binder2
-    .bindSet(self.slider, binder_value)
-//    .bindSet(self.rightLbl, binder_text)
     .bindBlockObjReturnObjSet(self.progressView, binder_progress, ^NSNumber *(NSNumber *value) {
         float tempValue = [value floatValue];
         tempValue = tempValue / 100.f;
         return @(tempValue);
     })
     ;
+    
+    
+    // MARK: 绑定 UISlider 和 self.progressView
+//    MGDataBinder *binder2 =  [MGDataBinder binder];
+//    binder2
+//    .bindSet(self.slider, binder_value)
+//    .bindBlockObjReturnObjSet(self.progressView, binder_progress, ^NSNumber *(NSNumber *value) {
+//        float tempValue = [value floatValue];
+//        tempValue = tempValue / 100.f;
+//        return @(tempValue);
+//    });
     
 }
 
@@ -128,11 +124,8 @@ static int _count;
 
 int current = 0;
 - (IBAction)tapStepper:(UIStepper *)stepper {
-    
     int value = (int)stepper.value;
-    
     if (value > current) {
-        
         self.model.identification = [NSString stringWithFormat:@"%d", value];
     } else {
         self.model.identification = [NSString stringWithFormat:@"%d", ({
@@ -142,16 +135,13 @@ int current = 0;
             }
             temp;
         })];
-    
     }
-    
     current = value;
 }
 
 - (void)dealloc {
     
     for (int i = 0; i < self.view.subviews.count; i++) {
-        
         NSLog(@"🐱>> %@", self.view.subviews[i]);
     }
     

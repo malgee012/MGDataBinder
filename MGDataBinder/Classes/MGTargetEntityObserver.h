@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy, readonly) NSString *bindId;
 @property (nonatomic, copy, readonly) NSString *signId;
-@property (nonatomic, assign, getter=isAddObserver) BOOL addObserver;  // 是否添加KVO监听
+@property (nonatomic, assign, getter=isAddObserver) BOOL addObserver;  // 是否添加KVO监听标记
 
 - (void)addTargetObserverWithTargetEntity:(MGTargetEntity *)targetEntity;
 

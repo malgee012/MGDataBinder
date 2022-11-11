@@ -42,6 +42,9 @@ typedef NS_ENUM(NSUInteger, MGPropertyNumberType) {
 #define MGBlockReturnObj id _Nullable(^_Nullable block3)(void)
 #define MGBlockObjReturnObj id _Nullable(^_Nullable block4)(id _Nullable obj)
 
+static NSString * _Nonnull const binder_id = @"bindId";
+static NSString * _Nonnull const sign_id = @"signId";
+
 static NSString * _Nonnull const binder_text = @"text";
 static NSString * _Nonnull const binder_value = @"value";
 static NSString * _Nonnull const binder_progress = @"progress";
