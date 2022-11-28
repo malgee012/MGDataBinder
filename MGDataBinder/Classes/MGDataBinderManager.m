@@ -16,7 +16,7 @@
 @interface MGDataBinderManager ()
 
 @property(nonatomic, strong) NSMutableDictionary<NSString *, NSMutableArray<MGTargetEntity *>*> *binderTargetEntitysHashMap;
-
+@property (nonatomic, assign) BOOL enableLog;
 @end
 
 @implementation MGDataBinderManager
@@ -26,6 +26,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _instance = [[super allocWithZone:NULL] init];
+        _instance.enableLog = NO;
     });
     return _instance;
 }
@@ -140,7 +141,7 @@
     // [targetEntity.target addObserver:self forKeyPath:targetEntity.property options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:(__bridge void * _Nullable)targetEntity];
 //     [targetEntity.target removeObserver:self forKeyPath:targetEntity.property context:(__bridge void * _Nullable)targetEntity];
     
-    NSLog(@"****************************************************** dealloc: %@", NSStringFromClass(self.class));
+    MGLog(@"****************************************************** dealloc: %@", NSStringFromClass(self.class));
 }
 
 

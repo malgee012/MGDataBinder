@@ -16,6 +16,10 @@
     return binder;
 }
 
++ (void)setEnableLog:(BOOL)enable {
+    [[MGDataBinderManager sharedBinderManager] setValue:@(enable) forKey:@"enableLog"];
+}
+
 - (instancetype)init {
     if (self = [super init]) {
         _bindId = [self getBindId];
@@ -61,7 +65,7 @@
     };
 }
 
-- (MGBindBlockReturnObj)bindBlockReturnObjSet {
+- (MGBindBlockReturnObj)bindBlockRObjSet {
     return ^MGDataBinder * (id target, NSString *property, id(^block)(void)) {
         [self assertWithTarget:target property:property];
         [[MGDataBinderManager sharedBinderManager] bindTarget:target
@@ -73,7 +77,7 @@
     };
 }
 
-- (MGBindBlockObjReturnObj)bindBlockObjReturnObjSet {
+- (MGBindBlockObjReturnObj)bindBlockObjRObjSet {
     return ^MGDataBinder * (id target, NSString *property, id(^block)(id obj)) {
         [self assertWithTarget:target property:property];
         [[MGDataBinderManager sharedBinderManager] bindTarget:target
@@ -122,7 +126,7 @@
     };
 }
 
-- (MGBindEventBlockReturnObj)bindeEventBlockReturnObjSet {
+- (MGBindEventBlockReturnObj)bindeEventBlockRObjSet {
     return ^MGDataBinder * (id target, NSString *property, UIControlEvents controlEvent, id(^block)(void)) {
         [self assertWithTarget:target property:property];
         [[MGDataBinderManager sharedBinderManager] bindTarget:target
@@ -135,7 +139,7 @@
     };
 }
 
-- (MGBindEventBlockObjReturnObj)bindEventBlockObjReturnObjSet {
+- (MGBindEventBlockObjReturnObj)bindEventBlockObjRObjSet {
     return ^MGDataBinder * (id target, NSString *property, UIControlEvents controlEvent, id(^block)(id obj)) {
         [self assertWithTarget:target property:property];
         [[MGDataBinderManager sharedBinderManager] bindTarget:target
@@ -156,7 +160,7 @@
 
 - (void)dealloc {
  
-    NSLog(@"****************************************************** dealloc: %@", NSStringFromClass(self.class));
+    MGLog(@"****************************************************** dealloc: %@", NSStringFromClass(self.class));
 }
 
 @end

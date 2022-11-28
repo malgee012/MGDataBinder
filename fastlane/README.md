@@ -1,34 +1,40 @@
 fastlane documentation
-================
+----
+
 # Installation
 
 Make sure you have the latest version of the Xcode command line tools installed:
 
-```
+```sh
 xcode-select --install
 ```
 
-Install _fastlane_ using
-```
-[sudo] gem install fastlane -NV
-```
-or alternatively using `brew install fastlane`
+For _fastlane_ installation instructions, see [Installing _fastlane_](https://docs.fastlane.tools/#installing-fastlane)
 
 # Available Actions
+
 ## iOS
+
 ### ios mg_update_lib
+
+```sh
+[bundle exec] fastlane ios mg_update_lib
 ```
-fastlane ios mg_update_lib
-```
-私有版本库的发布&更新
+
+版本库的发布&更新
+
 ### ios MGLibs
+
+```sh
+[bundle exec] fastlane ios MGLibs
 ```
-fastlane ios MGLibs
-```
-升级MGDataBinder库
+
+升级MGDataBinder库, eg: fastlane MGLibs lib:MGDataBinder tag:1.0.0.3 message:使用fastlane更新 public:true
 
 ----
 
-This README.md is auto-generated and will be re-generated every time [fastlane](https://fastlane.tools) is run.
-More information about fastlane can be found on [fastlane.tools](https://fastlane.tools).
-The documentation of fastlane can be found on [docs.fastlane.tools](https://docs.fastlane.tools).
+This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.
+
+More information about _fastlane_ can be found on [fastlane.tools](https://fastlane.tools).
+
+The documentation of _fastlane_ can be found on [docs.fastlane.tools](https://docs.fastlane.tools).

@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MGDataBinderManager : NSObject
 
 + (instancetype)sharedBinderManager;
+
 - (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId;
 - (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId blockType:(MGBlockType)blockType actionBlock:(nullable id)actionBlock;
 - (void)bindTarget:(id)target property:(NSString *)property bindId:(NSString *)bindId controlEvent:(UIControlEvents)controlEvent;

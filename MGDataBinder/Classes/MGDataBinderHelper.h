@@ -35,6 +35,11 @@ typedef NS_ENUM(NSUInteger, MGPropertyNumberType) {
     MGPropertyNumberTypeNSUInteger,
 };
 
+#define MGLog(frmt, ...)\
+if ([[[MGDataBinderManager sharedBinderManager] valueForKey:@"enableLog"] boolValue]) {\
+    NSLog(@"[MGBinder]: %@", [NSString stringWithFormat:(frmt), ##__VA_ARGS__]);\
+}
+
 
 #define MGTargetProperty id _Nonnull targer, NSString * _Nonnull property
 #define MGBlock void(^_Nullable block1)(void)

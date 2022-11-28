@@ -11,3 +11,9 @@
 @implementation MGPerson
 
 @end
+
+
+@implementation MGStudent
+
+
+@end

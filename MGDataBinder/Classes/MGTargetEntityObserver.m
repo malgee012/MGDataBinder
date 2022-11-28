@@ -43,7 +43,7 @@ static NSString * const binderTargetEntitysHashMapKey = @"binderTargetEntitysHas
     MGTargetEntityObserver *entityObserver = entityObservers[index];
     entityObserver.addObserver = YES;
     
-    NSLog(@"🚀🚀KVO     %@    %@", targetEntity, self);
+    MGLog(@"🚀🚀KVO     %@    %@", targetEntity, self);
     [targetEntity.target addObserver:self forKeyPath:targetEntity.property options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:(__bridge void * _Nullable)targetEntity];
 }
 
@@ -56,9 +56,9 @@ static NSString * const binderTargetEntitysHashMapKey = @"binderTargetEntitysHas
     id oldValue = change[NSKeyValueChangeOldKey];
     id newValue = change[NSKeyValueChangeNewKey];
     
-    NSLog(@"\n------------------------------------------------------------------------------------------------------------------------------------------\n");
-    NSLog(@"oldValue: %@  type: %@", oldValue, [oldValue class]);
-    NSLog(@"newValue: %@  type: %@", newValue, [newValue class]);
+    MGLog(@"\n------------------------------------------------------------------------------------------------------------------------------------------\n");
+    MGLog(@"oldValue: %@  type: %@", oldValue, [oldValue class]);
+    MGLog(@"newValue: %@  type: %@", newValue, [newValue class]);
     
     if ([self compare:newValue another:oldValue]) {
         return;
@@ -88,7 +88,7 @@ static NSString * const binderTargetEntitysHashMapKey = @"binderTargetEntitysHas
         
         for (MGTargetEntityObserver *observer in observers) {
             if (targetEntity.target && observer && observer.isAddObserver && !targetEntity.isRemoveObserver) {
-                NSLog(@"🌶🌶释放 %@", targetEntity);
+                MGLog(@"🌶🌶释放 %@", targetEntity);
                 [targetEntity.target removeObserver:targetEntity.observer forKeyPath:targetEntity.property context:(__bridge void * _Nullable)targetEntity];
                 targetEntity.removeObserver = YES;
             }
@@ -100,7 +100,7 @@ static NSString * const binderTargetEntitysHashMapKey = @"binderTargetEntitysHas
 }
 
 - (void)dealloc {
-//    NSLog(@"****************************************************** dealloc: %@", self);
+//    MGlog(@"****************************************************** dealloc: %@", self);
     [self unbindWithBindId:self.bindId];
 }
 

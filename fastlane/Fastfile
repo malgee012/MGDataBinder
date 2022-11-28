@@ -28,7 +28,7 @@ import_from_git(
 default_platform(:ios)
 
 platform :ios do
-  desc "升级MGDataBinder库"
+  desc "升级MGDataBinder库, eg: fastlane MGLibs lib:MGDataBinder tag:1.0.0.3 message:使用fastlane更新 public:true"
   lane :MGLibs do |options|
   	libName = options[:lib]
     message = options[:message]

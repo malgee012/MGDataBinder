@@ -116,8 +116,8 @@ NSString *const MGPropertyTypeMethod = @"^{objc_method=}";
         }
     }
     
-//    NSLog(@"\n");
-//    NSLog(@"🔥\n _code: %@ \n _KVCDisabled:%d  \n _idType:%d \n _numberType: %d \n _boolType: %d\n _typeClass: %@ \n _fromFoundation: %d", _code, _KVCDisabled, _idType, _numberType, _boolType, _typeClass, _fromFoundation);
+//    MGLog(@"\n");
+//    MGLog(@"🔥\n _code: %@ \n _KVCDisabled:%d  \n _idType:%d \n _numberType: %d \n _boolType: %d\n _typeClass: %@ \n _fromFoundation: %d", _code, _KVCDisabled, _idType, _numberType, _boolType, _typeClass, _fromFoundation);
 }
 
 + (BOOL)isClassFromFoundation:(Class)c {

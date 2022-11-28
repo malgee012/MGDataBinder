@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MGDataBinder'
-  s.version          = '1.0.0.2'
+  s.version          = '1.0.0.3'
   s.summary          = 'A lightweight data binding that uses KVO to listen for changes in data and KVC to modify data.'
 
 # This description is used to generate tags and improve search results.

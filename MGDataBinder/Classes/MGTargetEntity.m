@@ -77,7 +77,7 @@
         return;
     }
 
-    NSLog(@"-----------------------------UI主动改变后的值：： %@   %@", [target valueForKeyPath:self.property], [[target valueForKeyPath:self.property] class]);
+    MGLog(@"-----------------------------UI主动改变后的值：： %@   %@", [target valueForKeyPath:self.property], [[target valueForKeyPath:self.property] class]);
     MGTargetEntity *targetEntity = ((NSObject *)target).targetEntity;
     [targetEntity updateValue:value withTargetEntity:targetEntity];
 }
@@ -86,7 +86,7 @@
     NSMutableArray <MGTargetEntity *>*targetEntitysArray = [[MGDataBinderManager sharedBinderManager] getTargetEntityArrayWithBindId:targetEntity.bindId];
     for (MGTargetEntity *entity in targetEntitysArray) {
         [entity setValue:newValue];
-        NSLog(@"更新值 %@ : %@", entity, newValue);
+        MGLog(@"更新值 %@ : %@", entity, newValue);
     }
 
     // TODO: 这个位置 有点问题
@@ -115,15 +115,15 @@
     if (self.propertyType.isKVCDisabled || value == nil) return;
     self.changeValue = YES;
     
-//    NSLog(@"************************************************ %@  %@", value, [value class]);
+//    MGlog(@"************************************************ %@  %@", value, [value class]);
     if (self.propertyType.isNumberType) {
         value = [self wrapNumberValue:value];
     } else if ([value isKindOfClass:[NSNumber class]]) {
         value = [NSString stringWithFormat:@"%@", value];
     }
     
-//    NSLog(@"------------------------------------------------ %@  %@  %@  %@ ", value, [value class], self.target, self.property);
-//    NSLog(@"\n");
+//    MGlog(@"------------------------------------------------ %@  %@  %@  %@ ", value, [value class], self.target, self.property);
+//    MGlog(@"\n");
     
     [self.target setValue:value forKeyPath:self.property];
 }
@@ -185,7 +185,7 @@
 
 - (void)dealloc {
  
-    NSLog(@"****************************************************** dealloc: %@", self);
+//    MGlog(@"****************************************************** dealloc: %@", self);
 }
 
 @end

@@ -9,8 +9,15 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+@class MGStudent;
 @interface MGPerson : NSObject
+
+@property (nonatomic, strong) MGStudent *student;
+@property (nonatomic, copy) NSString *age;
+
+@end
+
+@interface MGStudent : NSObject
 
 @property (nonatomic, copy) NSString *age;
 

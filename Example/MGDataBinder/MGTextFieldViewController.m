@@ -21,16 +21,16 @@
     [super viewDidLoad];
     
     [MGDataBinder binder]
-    .bindBlockObjReturnObjSet(self.textLbl, binder_text, ^NSString *(NSString *text) {
+    .bindBlockObjRObjSet(self.textLbl, binder_text, ^NSString *(NSString *text) {
         return [NSString stringWithFormat:@"重新编译的文本%@~~~", text];
     })
-    .bindEventBlockObjReturnObjSet(self.textField1, binder_text, UIControlEventEditingChanged, ^NSString *(NSString *text) {
+    .bindEventBlockObjRObjSet(self.textField1, binder_text, UIControlEventEditingChanged, ^NSString *(NSString *text) {
         if (text.length >= 20) {
             text = [text substringToIndex:18];
         }
         return text;
     })
-    .bindEventBlockObjReturnObjSet(self.textField2, binder_text, UIControlEventEditingChanged, ^NSString *(NSString *text) {
+    .bindEventBlockObjRObjSet(self.textField2, binder_text, UIControlEventEditingChanged, ^NSString *(NSString *text) {
         return [NSString stringWithFormat:@"_%@_",text];
     })
     ;
