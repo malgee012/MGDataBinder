@@ -22,7 +22,6 @@ git push --tags
 
 pod trunk push MGDataBinder.podspec --verbose --use-libraries --allow-warnings
 
-
 # pod repo push MGSpecs MGNetwork.podspec --allow-warnings  --verbose
 
 
