@@ -13,23 +13,13 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
-## iOS
-
-### ios mg_update_lib
+### UCLib
 
 ```sh
-[bundle exec] fastlane ios mg_update_lib
+[bundle exec] fastlane UCLib
 ```
 
-版本库的发布&更新
-
-### ios MGLibs
-
-```sh
-[bundle exec] fastlane ios MGLibs
-```
-
-升级MGDataBinder库, eg: fastlane MGLibs lib:MGDataBinder tag:1.0.0.3 message:使用fastlane更新 public:true
+UCLib 针对私有库快速升级维护 eg: fastlane UCLib target:MGDataBinder tag:1.0.0.3 msg:新增模型数组方法
 
 ----
 

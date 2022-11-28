@@ -22,7 +22,7 @@ pod 'MGDataBinder'
 
 ## Author
 
-Maling1255, 951684507@qq.com
+Maling1255,      951684507@qq.com
 
 ## License
 
