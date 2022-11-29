@@ -21,6 +21,7 @@
     [super viewDidLoad];
     
     [MGDataBinder binder]
+//    .bindSet(self.textLbl, @keypath2(self.textLbl, text))
     .bindBlockObjRObjSet(self.textLbl, binder_text, ^NSString *(NSString *text) {
         return [NSString stringWithFormat:@"重新编译的文本%@~~~", text];
     })

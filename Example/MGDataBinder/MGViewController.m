@@ -88,8 +88,12 @@
     }
 }
 
+#define metamacro_concat_(A, B) A ## B
 
 - (void)viewDidAppear:(BOOL)animated {
+    
+    
+
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{    
         NSLog(@"绑定的内容:::: %@", [[MGDataBinderManager sharedBinderManager] valueForKeyPath:@"binderTargetEntitysHashMap"]);

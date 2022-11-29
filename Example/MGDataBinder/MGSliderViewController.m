@@ -59,12 +59,12 @@
 //    NSLog(@"创建bindid:: %@", binder.bindId);
     Binder()
     .bindSet(self.model, @"identification")
-    .bindBlockObjSet(self.model, @"person.age", ^(id obj){
-        NSLog(@"age: %@", obj);
-    })
-    .bindBlockObjSet(self.model, @"person.student.age", ^(id obj){
-        NSLog(@"age_____: %@  %@", obj, weakSelf.model.person.student.age);
-    })
+//    .bindBlockObjSet(self.model, @"person.age", ^(id obj){
+//        NSLog(@"age: %@", obj);
+//    })
+//    .bindBlockObjSet(self.model, @"person.student.age", ^(id obj){
+//        NSLog(@"age_____: %@  %@", obj, weakSelf.model.person.student.age);
+//    })
     
 //    .bindSet(self.model, @"myBlock")
 //    .bindSet(self.model, @"delegate")
